@@ -1,0 +1,37 @@
+# Ignore backups and large media to prevent >2GiB uploads
+**/*backup*
+**/*backup*/*
+**/*bak*
+**/backup_before_restore*
+peggy-images-backup*
+images.bak*
+public/**/videos/**
+**/videos/**
+**/*.mp4
+**/*.mov
+**/*.mkv
+**/*.avi
+**/*.webm
+
+# Ignore local build artifacts and node modules
+node_modules
+dist
+.next
+build
+# Ignore backups and large media folders
+public/backup*
+public/**/backup*
+public/images.bak*
+public/**/images.bak*
+**/backup_before_restore_*
+
+# Ignore git and node modules
+.git
+node_modules
+.env
+.env.*
+!.env.example
+
+# Ignore large video files (if you prefer to keep videos out of deploy)
+**/*.mov
+**/*.mp4

@@ -1,0 +1,14 @@
+.footer {
+  align-items: center;
+  background: #2a2025;
+  color: #fffaf7;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 28px 32px;
+}
+
+.footer p {
+  margin: 0;
+}

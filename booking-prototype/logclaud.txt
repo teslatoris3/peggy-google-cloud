@@ -1,0 +1,1362 @@
+.
+├── api
+│   └── index.js
+├── db.js
+├── logclaud.txt
+├── node_modules
+│   ├── 24
+│   │   └── package.json
+│   ├── accepts
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── array-flatten
+│   │   ├── array-flatten.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── body-parser
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── lib
+│   │   │   ├── read.js
+│   │   │   └── types
+│   │   │       ├── json.js
+│   │   │       ├── raw.js
+│   │   │       ├── text.js
+│   │   │       └── urlencoded.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── bytes
+│   │   ├── History.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── Readme.md
+│   ├── call-bind-apply-helpers
+│   │   ├── actualApply.d.ts
+│   │   ├── actualApply.js
+│   │   ├── applyBind.d.ts
+│   │   ├── applyBind.js
+│   │   ├── CHANGELOG.md
+│   │   ├── functionApply.d.ts
+│   │   ├── functionApply.js
+│   │   ├── functionCall.d.ts
+│   │   ├── functionCall.js
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── reflectApply.d.ts
+│   │   ├── reflectApply.js
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── call-bound
+│   │   ├── CHANGELOG.md
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── content-disposition
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── content-type
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── cookie
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── SECURITY.md
+│   ├── cookie-signature
+│   │   ├── History.md
+│   │   ├── index.js
+│   │   ├── package.json
+│   │   └── Readme.md
+│   ├── debug
+│   │   ├── CHANGELOG.md
+│   │   ├── component.json
+│   │   ├── karma.conf.js
+│   │   ├── LICENSE
+│   │   ├── Makefile
+│   │   ├── node.js
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── src
+│   │       ├── browser.js
+│   │       ├── debug.js
+│   │       ├── index.js
+│   │       ├── inspector-log.js
+│   │       └── node.js
+│   ├── depd
+│   │   ├── History.md
+│   │   ├── index.js
+│   │   ├── lib
+│   │   │   └── browser
+│   │   │       └── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── Readme.md
+│   ├── destroy
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── dotenv
+│   │   ├── CHANGELOG.md
+│   │   ├── config.d.ts
+│   │   ├── config.js
+│   │   ├── lib
+│   │   │   ├── cli-options.js
+│   │   │   ├── env-options.js
+│   │   │   ├── main.d.ts
+│   │   │   └── main.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README-es.md
+│   │   ├── README.md
+│   │   └── SECURITY.md
+│   ├── dunder-proto
+│   │   ├── CHANGELOG.md
+│   │   ├── get.d.ts
+│   │   ├── get.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── set.d.ts
+│   │   ├── set.js
+│   │   ├── test
+│   │   │   ├── get.js
+│   │   │   ├── index.js
+│   │   │   └── set.js
+│   │   └── tsconfig.json
+│   ├── ee-first
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── encodeurl
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── escape-html
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── Readme.md
+│   ├── es-define-property
+│   │   ├── CHANGELOG.md
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── es-errors
+│   │   ├── CHANGELOG.md
+│   │   ├── eval.d.ts
+│   │   ├── eval.js
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── range.d.ts
+│   │   ├── range.js
+│   │   ├── README.md
+│   │   ├── ref.d.ts
+│   │   ├── ref.js
+│   │   ├── syntax.d.ts
+│   │   ├── syntax.js
+│   │   ├── test
+│   │   │   └── index.js
+│   │   ├── tsconfig.json
+│   │   ├── type.d.ts
+│   │   ├── type.js
+│   │   ├── uri.d.ts
+│   │   └── uri.js
+│   ├── es-object-atoms
+│   │   ├── CHANGELOG.md
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── isObject.d.ts
+│   │   ├── isObject.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── RequireObjectCoercible.d.ts
+│   │   ├── RequireObjectCoercible.js
+│   │   ├── test
+│   │   │   └── index.js
+│   │   ├── ToObject.d.ts
+│   │   ├── ToObject.js
+│   │   └── tsconfig.json
+│   ├── etag
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── express
+│   │   ├── History.md
+│   │   ├── index.js
+│   │   ├── lib
+│   │   │   ├── application.js
+│   │   │   ├── express.js
+│   │   │   ├── middleware
+│   │   │   │   ├── init.js
+│   │   │   │   └── query.js
+│   │   │   ├── request.js
+│   │   │   ├── response.js
+│   │   │   ├── router
+│   │   │   │   ├── index.js
+│   │   │   │   ├── layer.js
+│   │   │   │   └── route.js
+│   │   │   ├── utils.js
+│   │   │   └── view.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── Readme.md
+│   ├── finalhandler
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── SECURITY.md
+│   ├── forwarded
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── fresh
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── function-bind
+│   │   ├── CHANGELOG.md
+│   │   ├── implementation.js
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── test
+│   │       └── index.js
+│   ├── get-intrinsic
+│   │   ├── CHANGELOG.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── test
+│   │       └── GetIntrinsic.js
+│   ├── get-proto
+│   │   ├── CHANGELOG.md
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── Object.getPrototypeOf.d.ts
+│   │   ├── Object.getPrototypeOf.js
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── Reflect.getPrototypeOf.d.ts
+│   │   ├── Reflect.getPrototypeOf.js
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── gopd
+│   │   ├── CHANGELOG.md
+│   │   ├── gOPD.d.ts
+│   │   ├── gOPD.js
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── hasown
+│   │   ├── CHANGELOG.md
+│   │   ├── eslint.config.mjs
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── tsconfig.json
+│   ├── has-symbols
+│   │   ├── CHANGELOG.md
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── shams.d.ts
+│   │   ├── shams.js
+│   │   ├── test
+│   │   │   ├── index.js
+│   │   │   ├── shams
+│   │   │   │   ├── core-js.js
+│   │   │   │   └── get-own-property-symbols.js
+│   │   │   └── tests.js
+│   │   └── tsconfig.json
+│   ├── http-errors
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── iconv-lite
+│   │   ├── Changelog.md
+│   │   ├── encodings
+│   │   │   ├── dbcs-codec.js
+│   │   │   ├── dbcs-data.js
+│   │   │   ├── index.js
+│   │   │   ├── internal.js
+│   │   │   ├── sbcs-codec.js
+│   │   │   ├── sbcs-data-generated.js
+│   │   │   ├── sbcs-data.js
+│   │   │   ├── tables
+│   │   │   │   ├── big5-added.json
+│   │   │   │   ├── cp936.json
+│   │   │   │   ├── cp949.json
+│   │   │   │   ├── cp950.json
+│   │   │   │   ├── eucjp.json
+│   │   │   │   ├── gb18030-ranges.json
+│   │   │   │   ├── gbk-added.json
+│   │   │   │   └── shiftjis.json
+│   │   │   ├── utf16.js
+│   │   │   └── utf7.js
+│   │   ├── lib
+│   │   │   ├── bom-handling.js
+│   │   │   ├── extend-node.js
+│   │   │   ├── index.d.ts
+│   │   │   ├── index.js
+│   │   │   └── streams.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── inherits
+│   │   ├── inherits_browser.js
+│   │   ├── inherits.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── ipaddr.js
+│   │   ├── ipaddr.min.js
+│   │   ├── lib
+│   │   │   ├── ipaddr.js
+│   │   │   └── ipaddr.js.d.ts
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── math-intrinsics
+│   │   ├── abs.d.ts
+│   │   ├── abs.js
+│   │   ├── CHANGELOG.md
+│   │   ├── constants
+│   │   │   ├── maxArrayLength.d.ts
+│   │   │   ├── maxArrayLength.js
+│   │   │   ├── maxSafeInteger.d.ts
+│   │   │   ├── maxSafeInteger.js
+│   │   │   ├── maxValue.d.ts
+│   │   │   └── maxValue.js
+│   │   ├── floor.d.ts
+│   │   ├── floor.js
+│   │   ├── isFinite.d.ts
+│   │   ├── isFinite.js
+│   │   ├── isInteger.d.ts
+│   │   ├── isInteger.js
+│   │   ├── isNaN.d.ts
+│   │   ├── isNaN.js
+│   │   ├── isNegativeZero.d.ts
+│   │   ├── isNegativeZero.js
+│   │   ├── LICENSE
+│   │   ├── max.d.ts
+│   │   ├── max.js
+│   │   ├── min.d.ts
+│   │   ├── min.js
+│   │   ├── mod.d.ts
+│   │   ├── mod.js
+│   │   ├── package.json
+│   │   ├── pow.d.ts
+│   │   ├── pow.js
+│   │   ├── README.md
+│   │   ├── round.d.ts
+│   │   ├── round.js
+│   │   ├── sign.d.ts
+│   │   ├── sign.js
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── media-typer
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── merge-descriptors
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── methods
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── mime
+│   │   ├── CHANGELOG.md
+│   │   ├── cli.js
+│   │   ├── LICENSE
+│   │   ├── mime.js
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── src
+│   │   │   ├── build.js
+│   │   │   └── test.js
+│   │   └── types.json
+│   ├── mime-db
+│   │   ├── db.json
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── mime-types
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── ms
+│   │   ├── index.js
+│   │   ├── license.md
+│   │   ├── package.json
+│   │   └── readme.md
+│   ├── negotiator
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── lib
+│   │   │   ├── charset.js
+│   │   │   ├── encoding.js
+│   │   │   ├── language.js
+│   │   │   └── mediaType.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── object-inspect
+│   │   ├── CHANGELOG.md
+│   │   ├── example
+│   │   │   ├── all.js
+│   │   │   ├── circular.js
+│   │   │   ├── fn.js
+│   │   │   └── inspect.js
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── package-support.json
+│   │   ├── readme.markdown
+│   │   ├── test
+│   │   │   ├── bigint.js
+│   │   │   ├── browser
+│   │   │   │   └── dom.js
+│   │   │   ├── circular.js
+│   │   │   ├── deep.js
+│   │   │   ├── element.js
+│   │   │   ├── err.js
+│   │   │   ├── fakes.js
+│   │   │   ├── fn.js
+│   │   │   ├── global.js
+│   │   │   ├── has.js
+│   │   │   ├── holes.js
+│   │   │   ├── indent-option.js
+│   │   │   ├── inspect.js
+│   │   │   ├── lowbyte.js
+│   │   │   ├── number.js
+│   │   │   ├── quoteStyle.js
+│   │   │   ├── toStringTag.js
+│   │   │   ├── undef.js
+│   │   │   └── values.js
+│   │   ├── test-core-js.js
+│   │   └── util.inspect.js
+│   ├── on-finished
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── parseurl
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── path-to-regexp
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── Readme.md
+│   ├── proxy-addr
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── qs
+│   │   ├── CHANGELOG.md
+│   │   ├── dist
+│   │   │   └── qs.js
+│   │   ├── eslint.config.mjs
+│   │   ├── lib
+│   │   │   ├── formats.js
+│   │   │   ├── index.js
+│   │   │   ├── parse.js
+│   │   │   ├── stringify.js
+│   │   │   └── utils.js
+│   │   ├── LICENSE.md
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── test
+│   │       ├── empty-keys-cases.js
+│   │       ├── parse.js
+│   │       ├── stringify.js
+│   │       └── utils.js
+│   ├── range-parser
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── raw-body
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── safe-buffer
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── safer-buffer
+│   │   ├── dangerous.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── Porting-Buffer.md
+│   │   ├── Readme.md
+│   │   ├── safer.js
+│   │   └── tests.js
+│   ├── send
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── node_modules
+│   │   │   └── ms
+│   │   │       ├── index.js
+│   │   │       ├── license.md
+│   │   │       ├── package.json
+│   │   │       └── readme.md
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── SECURITY.md
+│   ├── serve-static
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── setprototypeof
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   └── test
+│   │       └── index.js
+│   ├── side-channel
+│   │   ├── CHANGELOG.md
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── side-channel-list
+│   │   ├── CHANGELOG.md
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── list.d.ts
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── side-channel-map
+│   │   ├── CHANGELOG.md
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── side-channel-weakmap
+│   │   ├── CHANGELOG.md
+│   │   ├── index.d.ts
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── test
+│   │   │   └── index.js
+│   │   └── tsconfig.json
+│   ├── statuses
+│   │   ├── codes.json
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── stripe
+│   │   ├── CHANGELOG.md
+│   │   ├── cjs
+│   │   │   ├── apiVersion.js
+│   │   │   ├── autoPagination.js
+│   │   │   ├── crypto
+│   │   │   │   ├── CryptoProvider.js
+│   │   │   │   ├── NodeCryptoProvider.js
+│   │   │   │   └── SubtleCryptoProvider.js
+│   │   │   ├── Error.js
+│   │   │   ├── multipart.js
+│   │   │   ├── net
+│   │   │   │   ├── FetchHttpClient.js
+│   │   │   │   ├── HttpClient.js
+│   │   │   │   └── NodeHttpClient.js
+│   │   │   ├── package.json
+│   │   │   ├── platform
+│   │   │   │   ├── NodePlatformFunctions.js
+│   │   │   │   ├── PlatformFunctions.js
+│   │   │   │   └── WebPlatformFunctions.js
+│   │   │   ├── RequestSender.js
+│   │   │   ├── ResourceNamespace.js
+│   │   │   ├── resources
+│   │   │   │   ├── AccountLinks.js
+│   │   │   │   ├── Accounts.js
+│   │   │   │   ├── ApplePayDomains.js
+│   │   │   │   ├── ApplicationFees.js
+│   │   │   │   ├── Apps
+│   │   │   │   │   └── Secrets.js
+│   │   │   │   ├── Balance.js
+│   │   │   │   ├── BalanceTransactions.js
+│   │   │   │   ├── BillingPortal
+│   │   │   │   │   ├── Configurations.js
+│   │   │   │   │   └── Sessions.js
+│   │   │   │   ├── Charges.js
+│   │   │   │   ├── Checkout
+│   │   │   │   │   └── Sessions.js
+│   │   │   │   ├── CountrySpecs.js
+│   │   │   │   ├── Coupons.js
+│   │   │   │   ├── CreditNotes.js
+│   │   │   │   ├── Customers.js
+│   │   │   │   ├── Disputes.js
+│   │   │   │   ├── EphemeralKeys.js
+│   │   │   │   ├── Events.js
+│   │   │   │   ├── ExchangeRates.js
+│   │   │   │   ├── FileLinks.js
+│   │   │   │   ├── Files.js
+│   │   │   │   ├── FinancialConnections
+│   │   │   │   │   ├── Accounts.js
+│   │   │   │   │   └── Sessions.js
+│   │   │   │   ├── Identity
+│   │   │   │   │   ├── VerificationReports.js
+│   │   │   │   │   └── VerificationSessions.js
+│   │   │   │   ├── InvoiceItems.js
+│   │   │   │   ├── Invoices.js
+│   │   │   │   ├── Issuing
+│   │   │   │   │   ├── Authorizations.js
+│   │   │   │   │   ├── Cardholders.js
+│   │   │   │   │   ├── Cards.js
+│   │   │   │   │   ├── Disputes.js
+│   │   │   │   │   └── Transactions.js
+│   │   │   │   ├── Mandates.js
+│   │   │   │   ├── OAuth.js
+│   │   │   │   ├── PaymentIntents.js
+│   │   │   │   ├── PaymentLinks.js
+│   │   │   │   ├── PaymentMethods.js
+│   │   │   │   ├── Payouts.js
+│   │   │   │   ├── Plans.js
+│   │   │   │   ├── Prices.js
+│   │   │   │   ├── Products.js
+│   │   │   │   ├── PromotionCodes.js
+│   │   │   │   ├── Quotes.js
+│   │   │   │   ├── Radar
+│   │   │   │   │   ├── EarlyFraudWarnings.js
+│   │   │   │   │   ├── ValueListItems.js
+│   │   │   │   │   └── ValueLists.js
+│   │   │   │   ├── Refunds.js
+│   │   │   │   ├── Reporting
+│   │   │   │   │   ├── ReportRuns.js
+│   │   │   │   │   └── ReportTypes.js
+│   │   │   │   ├── Reviews.js
+│   │   │   │   ├── SetupAttempts.js
+│   │   │   │   ├── SetupIntents.js
+│   │   │   │   ├── ShippingRates.js
+│   │   │   │   ├── Sigma
+│   │   │   │   │   └── ScheduledQueryRuns.js
+│   │   │   │   ├── Sources.js
+│   │   │   │   ├── SubscriptionItems.js
+│   │   │   │   ├── SubscriptionSchedules.js
+│   │   │   │   ├── Subscriptions.js
+│   │   │   │   ├── Tax
+│   │   │   │   │   ├── Calculations.js
+│   │   │   │   │   ├── Settings.js
+│   │   │   │   │   └── Transactions.js
+│   │   │   │   ├── TaxCodes.js
+│   │   │   │   ├── TaxRates.js
+│   │   │   │   ├── Terminal
+│   │   │   │   │   ├── Configurations.js
+│   │   │   │   │   ├── ConnectionTokens.js
+│   │   │   │   │   ├── Locations.js
+│   │   │   │   │   └── Readers.js
+│   │   │   │   ├── TestHelpers
+│   │   │   │   │   ├── Customers.js
+│   │   │   │   │   ├── Issuing
+│   │   │   │   │   │   └── Cards.js
+│   │   │   │   │   ├── Refunds.js
+│   │   │   │   │   ├── Terminal
+│   │   │   │   │   │   └── Readers.js
+│   │   │   │   │   ├── TestClocks.js
+│   │   │   │   │   └── Treasury
+│   │   │   │   │       ├── InboundTransfers.js
+│   │   │   │   │       ├── OutboundPayments.js
+│   │   │   │   │       ├── OutboundTransfers.js
+│   │   │   │   │       ├── ReceivedCredits.js
+│   │   │   │   │       └── ReceivedDebits.js
+│   │   │   │   ├── Tokens.js
+│   │   │   │   ├── Topups.js
+│   │   │   │   ├── Transfers.js
+│   │   │   │   ├── Treasury
+│   │   │   │   │   ├── CreditReversals.js
+│   │   │   │   │   ├── DebitReversals.js
+│   │   │   │   │   ├── FinancialAccounts.js
+│   │   │   │   │   ├── InboundTransfers.js
+│   │   │   │   │   ├── OutboundPayments.js
+│   │   │   │   │   ├── OutboundTransfers.js
+│   │   │   │   │   ├── ReceivedCredits.js
+│   │   │   │   │   ├── ReceivedDebits.js
+│   │   │   │   │   ├── TransactionEntries.js
+│   │   │   │   │   └── Transactions.js
+│   │   │   │   └── WebhookEndpoints.js
+│   │   │   ├── resources.js
+│   │   │   ├── stripe.cjs.node.js
+│   │   │   ├── stripe.cjs.worker.js
+│   │   │   ├── stripe.core.js
+│   │   │   ├── StripeEmitter.js
+│   │   │   ├── StripeMethod.js
+│   │   │   ├── StripeResource.js
+│   │   │   ├── utils.js
+│   │   │   └── Webhooks.js
+│   │   ├── esm
+│   │   │   ├── apiVersion.js
+│   │   │   ├── autoPagination.js
+│   │   │   ├── crypto
+│   │   │   │   ├── CryptoProvider.js
+│   │   │   │   ├── NodeCryptoProvider.js
+│   │   │   │   └── SubtleCryptoProvider.js
+│   │   │   ├── Error.js
+│   │   │   ├── multipart.js
+│   │   │   ├── net
+│   │   │   │   ├── FetchHttpClient.js
+│   │   │   │   ├── HttpClient.js
+│   │   │   │   └── NodeHttpClient.js
+│   │   │   ├── package.json
+│   │   │   ├── platform
+│   │   │   │   ├── NodePlatformFunctions.js
+│   │   │   │   ├── PlatformFunctions.js
+│   │   │   │   └── WebPlatformFunctions.js
+│   │   │   ├── RequestSender.js
+│   │   │   ├── ResourceNamespace.js
+│   │   │   ├── resources
+│   │   │   │   ├── AccountLinks.js
+│   │   │   │   ├── Accounts.js
+│   │   │   │   ├── ApplePayDomains.js
+│   │   │   │   ├── ApplicationFees.js
+│   │   │   │   ├── Apps
+│   │   │   │   │   └── Secrets.js
+│   │   │   │   ├── Balance.js
+│   │   │   │   ├── BalanceTransactions.js
+│   │   │   │   ├── BillingPortal
+│   │   │   │   │   ├── Configurations.js
+│   │   │   │   │   └── Sessions.js
+│   │   │   │   ├── Charges.js
+│   │   │   │   ├── Checkout
+│   │   │   │   │   └── Sessions.js
+│   │   │   │   ├── CountrySpecs.js
+│   │   │   │   ├── Coupons.js
+│   │   │   │   ├── CreditNotes.js
+│   │   │   │   ├── Customers.js
+│   │   │   │   ├── Disputes.js
+│   │   │   │   ├── EphemeralKeys.js
+│   │   │   │   ├── Events.js
+│   │   │   │   ├── ExchangeRates.js
+│   │   │   │   ├── FileLinks.js
+│   │   │   │   ├── Files.js
+│   │   │   │   ├── FinancialConnections
+│   │   │   │   │   ├── Accounts.js
+│   │   │   │   │   └── Sessions.js
+│   │   │   │   ├── Identity
+│   │   │   │   │   ├── VerificationReports.js
+│   │   │   │   │   └── VerificationSessions.js
+│   │   │   │   ├── InvoiceItems.js
+│   │   │   │   ├── Invoices.js
+│   │   │   │   ├── Issuing
+│   │   │   │   │   ├── Authorizations.js
+│   │   │   │   │   ├── Cardholders.js
+│   │   │   │   │   ├── Cards.js
+│   │   │   │   │   ├── Disputes.js
+│   │   │   │   │   └── Transactions.js
+│   │   │   │   ├── Mandates.js
+│   │   │   │   ├── OAuth.js
+│   │   │   │   ├── PaymentIntents.js
+│   │   │   │   ├── PaymentLinks.js
+│   │   │   │   ├── PaymentMethods.js
+│   │   │   │   ├── Payouts.js
+│   │   │   │   ├── Plans.js
+│   │   │   │   ├── Prices.js
+│   │   │   │   ├── Products.js
+│   │   │   │   ├── PromotionCodes.js
+│   │   │   │   ├── Quotes.js
+│   │   │   │   ├── Radar
+│   │   │   │   │   ├── EarlyFraudWarnings.js
+│   │   │   │   │   ├── ValueListItems.js
+│   │   │   │   │   └── ValueLists.js
+│   │   │   │   ├── Refunds.js
+│   │   │   │   ├── Reporting
+│   │   │   │   │   ├── ReportRuns.js
+│   │   │   │   │   └── ReportTypes.js
+│   │   │   │   ├── Reviews.js
+│   │   │   │   ├── SetupAttempts.js
+│   │   │   │   ├── SetupIntents.js
+│   │   │   │   ├── ShippingRates.js
+│   │   │   │   ├── Sigma
+│   │   │   │   │   └── ScheduledQueryRuns.js
+│   │   │   │   ├── Sources.js
+│   │   │   │   ├── SubscriptionItems.js
+│   │   │   │   ├── SubscriptionSchedules.js
+│   │   │   │   ├── Subscriptions.js
+│   │   │   │   ├── Tax
+│   │   │   │   │   ├── Calculations.js
+│   │   │   │   │   ├── Settings.js
+│   │   │   │   │   └── Transactions.js
+│   │   │   │   ├── TaxCodes.js
+│   │   │   │   ├── TaxRates.js
+│   │   │   │   ├── Terminal
+│   │   │   │   │   ├── Configurations.js
+│   │   │   │   │   ├── ConnectionTokens.js
+│   │   │   │   │   ├── Locations.js
+│   │   │   │   │   └── Readers.js
+│   │   │   │   ├── TestHelpers
+│   │   │   │   │   ├── Customers.js
+│   │   │   │   │   ├── Issuing
+│   │   │   │   │   │   └── Cards.js
+│   │   │   │   │   ├── Refunds.js
+│   │   │   │   │   ├── Terminal
+│   │   │   │   │   │   └── Readers.js
+│   │   │   │   │   ├── TestClocks.js
+│   │   │   │   │   └── Treasury
+│   │   │   │   │       ├── InboundTransfers.js
+│   │   │   │   │       ├── OutboundPayments.js
+│   │   │   │   │       ├── OutboundTransfers.js
+│   │   │   │   │       ├── ReceivedCredits.js
+│   │   │   │   │       └── ReceivedDebits.js
+│   │   │   │   ├── Tokens.js
+│   │   │   │   ├── Topups.js
+│   │   │   │   ├── Transfers.js
+│   │   │   │   ├── Treasury
+│   │   │   │   │   ├── CreditReversals.js
+│   │   │   │   │   ├── DebitReversals.js
+│   │   │   │   │   ├── FinancialAccounts.js
+│   │   │   │   │   ├── InboundTransfers.js
+│   │   │   │   │   ├── OutboundPayments.js
+│   │   │   │   │   ├── OutboundTransfers.js
+│   │   │   │   │   ├── ReceivedCredits.js
+│   │   │   │   │   ├── ReceivedDebits.js
+│   │   │   │   │   ├── TransactionEntries.js
+│   │   │   │   │   └── Transactions.js
+│   │   │   │   └── WebhookEndpoints.js
+│   │   │   ├── resources.js
+│   │   │   ├── stripe.core.js
+│   │   │   ├── StripeEmitter.js
+│   │   │   ├── stripe.esm.node.js
+│   │   │   ├── stripe.esm.worker.js
+│   │   │   ├── StripeMethod.js
+│   │   │   ├── StripeResource.js
+│   │   │   ├── utils.js
+│   │   │   └── Webhooks.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   ├── README.md
+│   │   ├── types
+│   │   │   ├── AccountLinks.d.ts
+│   │   │   ├── AccountLinksResource.d.ts
+│   │   │   ├── Accounts.d.ts
+│   │   │   ├── AccountsResource.d.ts
+│   │   │   ├── ApplePayDomains.d.ts
+│   │   │   ├── ApplePayDomainsResource.d.ts
+│   │   │   ├── ApplicationFees.d.ts
+│   │   │   ├── ApplicationFeesResource.d.ts
+│   │   │   ├── Applications.d.ts
+│   │   │   ├── Apps
+│   │   │   │   ├── Secrets.d.ts
+│   │   │   │   └── SecretsResource.d.ts
+│   │   │   ├── Balance.d.ts
+│   │   │   ├── BalanceResource.d.ts
+│   │   │   ├── BalanceTransactions.d.ts
+│   │   │   ├── BalanceTransactionsResource.d.ts
+│   │   │   ├── BankAccounts.d.ts
+│   │   │   ├── BillingPortal
+│   │   │   │   ├── Configurations.d.ts
+│   │   │   │   ├── ConfigurationsResource.d.ts
+│   │   │   │   ├── Sessions.d.ts
+│   │   │   │   └── SessionsResource.d.ts
+│   │   │   ├── Capabilities.d.ts
+│   │   │   ├── Cards.d.ts
+│   │   │   ├── CashBalances.d.ts
+│   │   │   ├── Charges.d.ts
+│   │   │   ├── ChargesResource.d.ts
+│   │   │   ├── Checkout
+│   │   │   │   ├── Sessions.d.ts
+│   │   │   │   └── SessionsResource.d.ts
+│   │   │   ├── ConnectCollectionTransfers.d.ts
+│   │   │   ├── CountrySpecs.d.ts
+│   │   │   ├── CountrySpecsResource.d.ts
+│   │   │   ├── Coupons.d.ts
+│   │   │   ├── CouponsResource.d.ts
+│   │   │   ├── CreditNoteLineItems.d.ts
+│   │   │   ├── CreditNotes.d.ts
+│   │   │   ├── CreditNotesResource.d.ts
+│   │   │   ├── crypto
+│   │   │   │   └── crypto.d.ts
+│   │   │   ├── CustomerBalanceTransactions.d.ts
+│   │   │   ├── CustomerCashBalanceTransactions.d.ts
+│   │   │   ├── Customers.d.ts
+│   │   │   ├── CustomersResource.d.ts
+│   │   │   ├── Discounts.d.ts
+│   │   │   ├── Disputes.d.ts
+│   │   │   ├── DisputesResource.d.ts
+│   │   │   ├── EphemeralKeys.d.ts
+│   │   │   ├── EphemeralKeysResource.d.ts
+│   │   │   ├── Errors.d.ts
+│   │   │   ├── Events.d.ts
+│   │   │   ├── EventsResource.d.ts
+│   │   │   ├── ExchangeRates.d.ts
+│   │   │   ├── ExchangeRatesResource.d.ts
+│   │   │   ├── FeeRefunds.d.ts
+│   │   │   ├── FileLinks.d.ts
+│   │   │   ├── FileLinksResource.d.ts
+│   │   │   ├── Files.d.ts
+│   │   │   ├── FilesResource.d.ts
+│   │   │   ├── FinancialConnections
+│   │   │   │   ├── AccountOwners.d.ts
+│   │   │   │   ├── AccountOwnerships.d.ts
+│   │   │   │   ├── Accounts.d.ts
+│   │   │   │   ├── AccountsResource.d.ts
+│   │   │   │   ├── Sessions.d.ts
+│   │   │   │   └── SessionsResource.d.ts
+│   │   │   ├── FundingInstructions.d.ts
+│   │   │   ├── Identity
+│   │   │   │   ├── VerificationReports.d.ts
+│   │   │   │   ├── VerificationReportsResource.d.ts
+│   │   │   │   ├── VerificationSessions.d.ts
+│   │   │   │   └── VerificationSessionsResource.d.ts
+│   │   │   ├── index.d.ts
+│   │   │   ├── InvoiceItems.d.ts
+│   │   │   ├── InvoiceItemsResource.d.ts
+│   │   │   ├── InvoiceLineItems.d.ts
+│   │   │   ├── Invoices.d.ts
+│   │   │   ├── InvoicesResource.d.ts
+│   │   │   ├── Issuing
+│   │   │   │   ├── Authorizations.d.ts
+│   │   │   │   ├── AuthorizationsResource.d.ts
+│   │   │   │   ├── Cardholders.d.ts
+│   │   │   │   ├── CardholdersResource.d.ts
+│   │   │   │   ├── Cards.d.ts
+│   │   │   │   ├── CardsResource.d.ts
+│   │   │   │   ├── Disputes.d.ts
+│   │   │   │   ├── DisputesResource.d.ts
+│   │   │   │   ├── Transactions.d.ts
+│   │   │   │   └── TransactionsResource.d.ts
+│   │   │   ├── lib.d.ts
+│   │   │   ├── LineItems.d.ts
+│   │   │   ├── LoginLinks.d.ts
+│   │   │   ├── Mandates.d.ts
+│   │   │   ├── MandatesResource.d.ts
+│   │   │   ├── net
+│   │   │   │   └── net.d.ts
+│   │   │   ├── OAuth.d.ts
+│   │   │   ├── PaymentIntents.d.ts
+│   │   │   ├── PaymentIntentsResource.d.ts
+│   │   │   ├── PaymentLinks.d.ts
+│   │   │   ├── PaymentLinksResource.d.ts
+│   │   │   ├── PaymentMethods.d.ts
+│   │   │   ├── PaymentMethodsResource.d.ts
+│   │   │   ├── Payouts.d.ts
+│   │   │   ├── PayoutsResource.d.ts
+│   │   │   ├── Persons.d.ts
+│   │   │   ├── Plans.d.ts
+│   │   │   ├── PlansResource.d.ts
+│   │   │   ├── PlatformTaxFees.d.ts
+│   │   │   ├── Prices.d.ts
+│   │   │   ├── PricesResource.d.ts
+│   │   │   ├── Products.d.ts
+│   │   │   ├── ProductsResource.d.ts
+│   │   │   ├── PromotionCodes.d.ts
+│   │   │   ├── PromotionCodesResource.d.ts
+│   │   │   ├── Quotes.d.ts
+│   │   │   ├── QuotesResource.d.ts
+│   │   │   ├── Radar
+│   │   │   │   ├── EarlyFraudWarnings.d.ts
+│   │   │   │   ├── EarlyFraudWarningsResource.d.ts
+│   │   │   │   ├── ValueListItems.d.ts
+│   │   │   │   ├── ValueListItemsResource.d.ts
+│   │   │   │   ├── ValueLists.d.ts
+│   │   │   │   └── ValueListsResource.d.ts
+│   │   │   ├── Refunds.d.ts
+│   │   │   ├── RefundsResource.d.ts
+│   │   │   ├── Reporting
+│   │   │   │   ├── ReportRuns.d.ts
+│   │   │   │   ├── ReportRunsResource.d.ts
+│   │   │   │   ├── ReportTypes.d.ts
+│   │   │   │   └── ReportTypesResource.d.ts
+│   │   │   ├── ReserveTransactions.d.ts
+│   │   │   ├── Reviews.d.ts
+│   │   │   ├── ReviewsResource.d.ts
+│   │   │   ├── SetupAttempts.d.ts
+│   │   │   ├── SetupAttemptsResource.d.ts
+│   │   │   ├── SetupIntents.d.ts
+│   │   │   ├── SetupIntentsResource.d.ts
+│   │   │   ├── shared.d.ts
+│   │   │   ├── ShippingRates.d.ts
+│   │   │   ├── ShippingRatesResource.d.ts
+│   │   │   ├── Sigma
+│   │   │   │   ├── ScheduledQueryRuns.d.ts
+│   │   │   │   └── ScheduledQueryRunsResource.d.ts
+│   │   │   ├── SourceMandateNotifications.d.ts
+│   │   │   ├── Sources.d.ts
+│   │   │   ├── SourcesResource.d.ts
+│   │   │   ├── SourceTransactions.d.ts
+│   │   │   ├── SubscriptionItems.d.ts
+│   │   │   ├── SubscriptionItemsResource.d.ts
+│   │   │   ├── SubscriptionSchedules.d.ts
+│   │   │   ├── SubscriptionSchedulesResource.d.ts
+│   │   │   ├── Subscriptions.d.ts
+│   │   │   ├── SubscriptionsResource.d.ts
+│   │   │   ├── Tax
+│   │   │   │   ├── CalculationLineItems.d.ts
+│   │   │   │   ├── Calculations.d.ts
+│   │   │   │   ├── CalculationsResource.d.ts
+│   │   │   │   ├── Settings.d.ts
+│   │   │   │   ├── SettingsResource.d.ts
+│   │   │   │   ├── TransactionLineItems.d.ts
+│   │   │   │   ├── Transactions.d.ts
+│   │   │   │   └── TransactionsResource.d.ts
+│   │   │   ├── TaxCodes.d.ts
+│   │   │   ├── TaxCodesResource.d.ts
+│   │   │   ├── TaxDeductedAtSources.d.ts
+│   │   │   ├── TaxIds.d.ts
+│   │   │   ├── TaxRates.d.ts
+│   │   │   ├── TaxRatesResource.d.ts
+│   │   │   ├── Terminal
+│   │   │   │   ├── Configurations.d.ts
+│   │   │   │   ├── ConfigurationsResource.d.ts
+│   │   │   │   ├── ConnectionTokens.d.ts
+│   │   │   │   ├── ConnectionTokensResource.d.ts
+│   │   │   │   ├── Locations.d.ts
+│   │   │   │   ├── LocationsResource.d.ts
+│   │   │   │   ├── Readers.d.ts
+│   │   │   │   └── ReadersResource.d.ts
+│   │   │   ├── test
+│   │   │   │   ├── tsconfig.json
+│   │   │   │   └── typescriptTest.ts
+│   │   │   ├── TestHelpers
+│   │   │   │   ├── CustomersResource.d.ts
+│   │   │   │   ├── Issuing
+│   │   │   │   │   └── CardsResource.d.ts
+│   │   │   │   ├── RefundsResource.d.ts
+│   │   │   │   ├── Terminal
+│   │   │   │   │   └── ReadersResource.d.ts
+│   │   │   │   ├── TestClocks.d.ts
+│   │   │   │   ├── TestClocksResource.d.ts
+│   │   │   │   └── Treasury
+│   │   │   │       ├── InboundTransfersResource.d.ts
+│   │   │   │       ├── OutboundPaymentsResource.d.ts
+│   │   │   │       ├── OutboundTransfersResource.d.ts
+│   │   │   │       ├── ReceivedCreditsResource.d.ts
+│   │   │   │       └── ReceivedDebitsResource.d.ts
+│   │   │   ├── Tokens.d.ts
+│   │   │   ├── TokensResource.d.ts
+│   │   │   ├── Topups.d.ts
+│   │   │   ├── TopupsResource.d.ts
+│   │   │   ├── TransferReversals.d.ts
+│   │   │   ├── Transfers.d.ts
+│   │   │   ├── TransfersResource.d.ts
+│   │   │   ├── Treasury
+│   │   │   │   ├── CreditReversals.d.ts
+│   │   │   │   ├── CreditReversalsResource.d.ts
+│   │   │   │   ├── DebitReversals.d.ts
+│   │   │   │   ├── DebitReversalsResource.d.ts
+│   │   │   │   ├── FinancialAccountFeatures.d.ts
+│   │   │   │   ├── FinancialAccounts.d.ts
+│   │   │   │   ├── FinancialAccountsResource.d.ts
+│   │   │   │   ├── InboundTransfers.d.ts
+│   │   │   │   ├── InboundTransfersResource.d.ts
+│   │   │   │   ├── OutboundPayments.d.ts
+│   │   │   │   ├── OutboundPaymentsResource.d.ts
+│   │   │   │   ├── OutboundTransfers.d.ts
+│   │   │   │   ├── OutboundTransfersResource.d.ts
+│   │   │   │   ├── ReceivedCredits.d.ts
+│   │   │   │   ├── ReceivedCreditsResource.d.ts
+│   │   │   │   ├── ReceivedDebits.d.ts
+│   │   │   │   ├── ReceivedDebitsResource.d.ts
+│   │   │   │   ├── TransactionEntries.d.ts
+│   │   │   │   ├── TransactionEntriesResource.d.ts
+│   │   │   │   ├── Transactions.d.ts
+│   │   │   │   └── TransactionsResource.d.ts
+│   │   │   ├── UpcomingInvoices.d.ts
+│   │   │   ├── UsageRecords.d.ts
+│   │   │   ├── UsageRecordSummaries.d.ts
+│   │   │   ├── WebhookEndpoints.d.ts
+│   │   │   ├── WebhookEndpointsResource.d.ts
+│   │   │   └── Webhooks.d.ts
+│   │   └── VERSION
+│   ├── toidentifier
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── type-is
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── @types
+│   │   └── node
+│   │       ├── assert
+│   │       │   └── strict.d.ts
+│   │       ├── assert.d.ts
+│   │       ├── async_hooks.d.ts
+│   │       ├── buffer.buffer.d.ts
+│   │       ├── buffer.d.ts
+│   │       ├── child_process.d.ts
+│   │       ├── cluster.d.ts
+│   │       ├── compatibility
+│   │       │   └── iterators.d.ts
+│   │       ├── console.d.ts
+│   │       ├── constants.d.ts
+│   │       ├── crypto.d.ts
+│   │       ├── dgram.d.ts
+│   │       ├── diagnostics_channel.d.ts
+│   │       ├── dns
+│   │       │   └── promises.d.ts
+│   │       ├── dns.d.ts
+│   │       ├── domain.d.ts
+│   │       ├── events.d.ts
+│   │       ├── fs
+│   │       │   └── promises.d.ts
+│   │       ├── fs.d.ts
+│   │       ├── globals.d.ts
+│   │       ├── globals.typedarray.d.ts
+│   │       ├── http2.d.ts
+│   │       ├── http.d.ts
+│   │       ├── https.d.ts
+│   │       ├── index.d.ts
+│   │       ├── inspector
+│   │       │   └── promises.d.ts
+│   │       ├── inspector.d.ts
+│   │       ├── inspector.generated.d.ts
+│   │       ├── LICENSE
+│   │       ├── module.d.ts
+│   │       ├── net.d.ts
+│   │       ├── os.d.ts
+│   │       ├── package.json
+│   │       ├── path
+│   │       │   ├── posix.d.ts
+│   │       │   └── win32.d.ts
+│   │       ├── path.d.ts
+│   │       ├── perf_hooks.d.ts
+│   │       ├── process.d.ts
+│   │       ├── punycode.d.ts
+│   │       ├── querystring.d.ts
+│   │       ├── quic.d.ts
+│   │       ├── readline
+│   │       │   └── promises.d.ts
+│   │       ├── readline.d.ts
+│   │       ├── README.md
+│   │       ├── repl.d.ts
+│   │       ├── sea.d.ts
+│   │       ├── sqlite.d.ts
+│   │       ├── stream
+│   │       │   ├── consumers.d.ts
+│   │       │   ├── iter.d.ts
+│   │       │   ├── promises.d.ts
+│   │       │   └── web.d.ts
+│   │       ├── stream.d.ts
+│   │       ├── string_decoder.d.ts
+│   │       ├── test
+│   │       │   └── reporters.d.ts
+│   │       ├── test.d.ts
+│   │       ├── timers
+│   │       │   └── promises.d.ts
+│   │       ├── timers.d.ts
+│   │       ├── tls.d.ts
+│   │       ├── trace_events.d.ts
+│   │       ├── ts5.6
+│   │       │   ├── buffer.buffer.d.ts
+│   │       │   ├── compatibility
+│   │       │   │   └── float16array.d.ts
+│   │       │   ├── globals.typedarray.d.ts
+│   │       │   └── index.d.ts
+│   │       ├── ts5.7
+│   │       │   ├── compatibility
+│   │       │   │   └── float16array.d.ts
+│   │       │   └── index.d.ts
+│   │       ├── tty.d.ts
+│   │       ├── url.d.ts
+│   │       ├── util
+│   │       │   └── types.d.ts
+│   │       ├── util.d.ts
+│   │       ├── v8.d.ts
+│   │       ├── vm.d.ts
+│   │       ├── wasi.d.ts
+│   │       ├── web-globals
+│   │       │   ├── abortcontroller.d.ts
+│   │       │   ├── blob.d.ts
+│   │       │   ├── console.d.ts
+│   │       │   ├── crypto.d.ts
+│   │       │   ├── domexception.d.ts
+│   │       │   ├── encoding.d.ts
+│   │       │   ├── events.d.ts
+│   │       │   ├── fetch.d.ts
+│   │       │   ├── importmeta.d.ts
+│   │       │   ├── messaging.d.ts
+│   │       │   ├── navigator.d.ts
+│   │       │   ├── performance.d.ts
+│   │       │   ├── storage.d.ts
+│   │       │   ├── streams.d.ts
+│   │       │   ├── timers.d.ts
+│   │       │   └── url.d.ts
+│   │       ├── worker_threads.d.ts
+│   │       ├── zlib
+│   │       │   └── iter.d.ts
+│   │       └── zlib.d.ts
+│   ├── undici-types
+│   │   ├── agent.d.ts
+│   │   ├── api.d.ts
+│   │   ├── balanced-pool.d.ts
+│   │   ├── cache.d.ts
+│   │   ├── cache-interceptor.d.ts
+│   │   ├── client.d.ts
+│   │   ├── client-stats.d.ts
+│   │   ├── connector.d.ts
+│   │   ├── content-type.d.ts
+│   │   ├── cookies.d.ts
+│   │   ├── diagnostics-channel.d.ts
+│   │   ├── dispatcher.d.ts
+│   │   ├── env-http-proxy-agent.d.ts
+│   │   ├── errors.d.ts
+│   │   ├── eventsource.d.ts
+│   │   ├── fetch.d.ts
+│   │   ├── formdata.d.ts
+│   │   ├── global-dispatcher.d.ts
+│   │   ├── global-origin.d.ts
+│   │   ├── h2c-client.d.ts
+│   │   ├── handlers.d.ts
+│   │   ├── header.d.ts
+│   │   ├── index.d.ts
+│   │   ├── interceptors.d.ts
+│   │   ├── LICENSE
+│   │   ├── mock-agent.d.ts
+│   │   ├── mock-call-history.d.ts
+│   │   ├── mock-client.d.ts
+│   │   ├── mock-errors.d.ts
+│   │   ├── mock-interceptor.d.ts
+│   │   ├── mock-pool.d.ts
+│   │   ├── package.json
+│   │   ├── patch.d.ts
+│   │   ├── pool.d.ts
+│   │   ├── pool-stats.d.ts
+│   │   ├── proxy-agent.d.ts
+│   │   ├── readable.d.ts
+│   │   ├── README.md
+│   │   ├── retry-agent.d.ts
+│   │   ├── retry-handler.d.ts
+│   │   ├── round-robin-pool.d.ts
+│   │   ├── snapshot-agent.d.ts
+│   │   ├── socks5-proxy-agent.d.ts
+│   │   ├── util.d.ts
+│   │   ├── utility.d.ts
+│   │   ├── webidl.d.ts
+│   │   └── websocket.d.ts
+│   ├── unpipe
+│   │   ├── HISTORY.md
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   ├── utils-merge
+│   │   ├── index.js
+│   │   ├── LICENSE
+│   │   ├── package.json
+│   │   └── README.md
+│   └── vary
+│       ├── HISTORY.md
+│       ├── index.js
+│       ├── LICENSE
+│       ├── package.json
+│       └── README.md
+├── package.json
+├── package-lock.json
+├── persist.json
+├── public
+│   ├── admin.html
+│   ├── approval-result.html
+│   ├── cancel.html
+│   ├── index.html
+│   └── success.html
+├── README.md
+├── server.js
+└── vercel.json
+
+197 directories, 1162 files

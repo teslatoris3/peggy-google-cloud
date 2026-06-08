@@ -1,0 +1,3834 @@
+{
+  "images": {
+    "peggy-beauty-clone/public/images/hero.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/hero-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/hero-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/hero-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/hero-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/hero-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/hero-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/hero-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/hero-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/logo.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/logo-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/logo-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/logo-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/logo-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/logo-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/logo-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/logo-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/logo-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/about_page_banner.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/about_page_banner-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/about_page_banner-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/about_page_banner-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/about_page_banner-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/about_page_banner-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/about_page_banner-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/about_page_banner-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/about_page_banner-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/define-logo-2.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/define-logo-2-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/define-logo-2-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/define-logo-2-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/define-logo-2-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/define-logo-2-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/define-logo-2-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/define-logo-2-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/define-logo-2-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/brands/bellami.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/bellami-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/bellami-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/bellami-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/bellami-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/bellami-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/bellami-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/bellami-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/bellami-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/brands/haircare.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/haircare-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/haircare-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/haircare-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/haircare-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/haircare-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/haircare-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/haircare-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/haircare-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/brands/loreal.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/loreal-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/loreal-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/loreal-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/loreal-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/loreal-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/loreal-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/loreal-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/loreal-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/brands/salon-logo.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/salon-logo-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/salon-logo-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/salon-logo-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/salon-logo-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/salon-logo-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/salon-logo-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/salon-logo-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/salon-logo-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/brands/oribe.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/oribe-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/brands/oribe-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/oribe-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/brands/oribe-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/oribe-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/brands/oribe-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/oribe-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/brands/oribe-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/about-peggy.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/about-peggy-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/about-peggy-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/about-peggy-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/about-peggy-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/about-peggy-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/about-peggy-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/about-peggy-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/about-peggy-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/about_page_banner.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/about_page_banner-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/about_page_banner-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/about_page_banner-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/about_page_banner-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/about_page_banner-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/about_page_banner-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/about_page_banner-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/about_page_banner-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/about_pink_page.jpeg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/about_pink_page-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/about_pink_page-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/about_pink_page-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/about_pink_page-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/about_pink_page-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/about_pink_page-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/about_pink_page-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/about_pink_page-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/peggy-portrait.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/peggy-portrait-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/peggy-portrait-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/peggy-portrait-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/peggy-portrait-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/peggy-portrait-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/peggy-portrait-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/peggy-portrait-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/peggy-portrait-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/salon-banner.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon-banner-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon-banner-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon-banner-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon-banner-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon-banner-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon-banner-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon-banner-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon-banner-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/salon-interior.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon-interior-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon-interior-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon-interior-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon-interior-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon-interior-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon-interior-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon-interior-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon-interior-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/services/hair-color.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/hair-color-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/hair-color-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/hair-color-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/hair-color-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/hair-color-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/hair-color-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/hair-color-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/hair-color-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/services/hair-cutting.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/hair-cutting-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/hair-cutting-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/hair-cutting-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/hair-cutting-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/hair-cutting-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/hair-cutting-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/hair-cutting-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/hair-cutting-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/services/hair-styling.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/hair-styling-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/hair-styling-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/hair-styling-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/hair-styling-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/hair-styling-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/hair-styling-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/hair-styling-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/hair-styling-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/services/makeup.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/makeup-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/makeup-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/makeup-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/makeup-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/makeup-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/makeup-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/makeup-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/makeup-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/services/hair-treatments.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/hair-treatments-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/hair-treatments-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/hair-treatments-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/hair-treatments-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/hair-treatments-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/hair-treatments-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/hair-treatments-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/hair-treatments-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/services/threading_waxing.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/threading_waxing-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/threading_waxing-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/threading_waxing-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/threading_waxing-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/threading_waxing-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/threading_waxing-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/threading_waxing-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/threading_waxing-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/services/makeup.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/makeup-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/makeup-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/makeup-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/makeup-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/makeup-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/makeup-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/makeup-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/makeup-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/services/waxing.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/waxing-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/services/waxing-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/waxing-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/services/waxing-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/waxing-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/services/waxing-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/waxing-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/services/waxing-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/1.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/1-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/1-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/1-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/1-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/1-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/1-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/1-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/1-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/2.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/2-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/2-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/2-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/2-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/2-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/2-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/2-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/2-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/3.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/3-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/3-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/3-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/3-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/3-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/3-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/3-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/3-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/5.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/5-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/5-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/5-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/5-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/5-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/5-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/5-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/5-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/4.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/4-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/4-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/4-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/4-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/4-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/4-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/4-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/4-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/6.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/6-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/6-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/6-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/6-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/6-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/6-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/6-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/6-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/featured1.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/featured1-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/featured1-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/featured1-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/featured1-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/featured1-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/featured1-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/featured1-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/featured1-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/main3.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/main3-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/main3-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/main3-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/main3-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/main3-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/main3-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/main3-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/main3-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/main2.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/main2-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/main2-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/main2-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/main2-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/main2-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/main2-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/main2-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/main2-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/main11.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/main11-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/main11-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/main11-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/main11-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/main11-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/main11-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/main11-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/main11-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/slider-1.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/slider/slider.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/slider-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/slider/slider-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/slider-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/slider/slider-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/slider/slider-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/salon/peggy-portrait.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon/peggy-portrait-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon/peggy-portrait-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon/peggy-portrait-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon/peggy-portrait-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon/peggy-portrait-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon/peggy-portrait-1600.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon/peggy-portrait-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon/peggy-portrait-1024.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/salon/about-peggy.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon/about-peggy-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon/about-peggy-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon/about-peggy-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon/about-peggy-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon/about-peggy-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon/about-peggy-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon/about-peggy-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon/about-peggy-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/salon/salon-banner.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-banner-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-banner-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-banner-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-banner-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-banner-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-banner-1600.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-banner-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-banner-1024.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/salon/salon/salon-interior.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-interior-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-interior-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-interior-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-interior-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-interior-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-interior-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-interior-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/salon/salon/salon-interior-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/featured_remote.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/featured_remote_resized.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote_resized-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote_resized-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote_resized-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote_resized-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote_resized-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote_resized-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote_resized-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/featured_remote_resized-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_0830.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_0830-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_0830-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_0830-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_0830-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_0830-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_0830-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_0830-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_0830-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_2569.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2569-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2569-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2569-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2569-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2569-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2569-1600.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2569-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2569-1024.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_2780.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2780-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2780-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2780-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2780-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2780-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2780-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2780-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2780-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3176.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3176-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3176-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3176-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3176-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3176-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3176-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3176-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3176-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_2791.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2791-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2791-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2791-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2791-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2791-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2791-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2791-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_2791-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3178.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3178-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3178-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3178-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3178-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3178-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3178-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3178-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3178-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3272.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3272-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3272-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3272-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3272-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3272-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3272-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3272-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3272-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3751.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3751-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3751-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3751-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3751-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3751-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3751-1600.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3751-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3751-1024.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3750.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3750-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3750-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3750-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3750-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3750-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3750-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3750-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3750-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3546.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3546-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3546-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3546-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3546-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3546-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3546-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3546-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3546-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3914.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3914-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3914-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3914-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3914-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3914-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3914-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3914-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3914-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3848.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3848-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3848-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3848-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3848-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3848-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3848-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3848-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3848-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3923.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3923-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3923-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3923-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3923-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3923-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3923-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3923-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3923-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_4129.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4129-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4129-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4129-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4129-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4129-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4129-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4129-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4129-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_3956.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3956-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3956-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3956-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3956-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3956-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3956-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3956-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3956-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_4293-1.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_4293.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4293-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_4158.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4158-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4158-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4158-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4158-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4158-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4158-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4158-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4158-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_4371.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4371-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4371-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4371-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4371-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4371-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4371-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4371-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4371-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_4482.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4482-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4482-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4482-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4482-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4482-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4482-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4482-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4482-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/img_4555.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4555-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4555-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4555-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4555-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4555-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4555-1600.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4555-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/img_4555-1024.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_0830.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_0830-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_0830-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_0830-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_0830-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_0830-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_0830-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_0830-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_0830-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_2780.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2780-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2780-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2780-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2780-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2780-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2780-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2780-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2780-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_2569.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2569-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2569-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2569-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2569-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2569-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2569-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2569-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2569-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_2791.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2791-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2791-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2791-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2791-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2791-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2791-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2791-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_2791-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3272.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3272-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3272-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3272-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3272-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3272-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3272-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3272-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3272-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3176.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3176-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3176-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3176-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3176-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3176-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3176-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3176-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3176-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3546.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3546-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3546-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3546-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3546-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3546-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3546-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3546-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3546-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3750.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3750-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3750-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3750-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3750-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3750-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3750-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3750-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3750-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3923.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3923-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3923-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3923-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3923-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3923-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3923-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3923-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3923-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3751.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3751-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3751-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3751-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3751-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3751-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3751-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3751-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3751-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3848.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3848-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3848-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3848-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3848-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3848-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3848-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3848-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3848-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3914.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3914-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3914-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3914-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3914-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3914-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3914-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3914-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3914-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_3956.jpg": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3956-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3956-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3956-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3956-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3956-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3956-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3956-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3956-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_4129.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4129-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4129-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4129-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4129-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4129-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4129-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4129-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4129-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4293-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_4158.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4158-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4158-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4158-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4158-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4158-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4158-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4158-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4158-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_4555.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4555-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4555-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4555-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4555-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4555-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4555-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4555-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4555-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_4371.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4371-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4371-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4371-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4371-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4371-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4371-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4371-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4371-1600.webp"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/photos/photos/img_4482.png": {
+      "variants": [
+        {
+          "format": "avif",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4482-320.avif"
+        },
+        {
+          "format": "webp",
+          "width": 320,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4482-320.webp"
+        },
+        {
+          "format": "avif",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4482-640.avif"
+        },
+        {
+          "format": "webp",
+          "width": 640,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4482-640.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4482-1024.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1024,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4482-1024.webp"
+        },
+        {
+          "format": "avif",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4482-1600.avif"
+        },
+        {
+          "format": "webp",
+          "width": 1600,
+          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_4482-1600.webp"
+        }
+      ]
+    }
+  },
+  "videos": {
+    "peggy-beauty-clone/public/images/gallery/videos/img_3691-opt.mp4": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3691-opt-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3691-opt-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_3691.mov": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3691-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3691-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_3765-opt.mp4": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3765-opt-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3765-opt-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_3765.mp4": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3765-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3765-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_3966-opt.mp4": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3966-opt-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3966-opt-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_3966.mov": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3966-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_3966-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_4235.mov": {
+      "variants": []
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_4262-opt.mp4": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4262-opt-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4262-opt-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_4262.mov": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4262-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4262-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_4267-opt.mp4": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4267-opt-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4267-opt-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_4267.mp4": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4267-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4267-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_4417-opt.mp4": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4417-opt-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4417-opt-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_4417.mov": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4417-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4417-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_4558-opt.mp4": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4558-opt-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4558-opt-opt.webm"
+        }
+      ]
+    },
+    "peggy-beauty-clone/public/images/gallery/videos/img_4558.mov": {
+      "variants": [
+        {
+          "format": "mp4",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4558-opt.mp4"
+        },
+        {
+          "format": "webm",
+          "file": "peggy-beauty-clone/public/images/gallery/videos/img_4558-opt.webm"
+        }
+      ]
+    }
+  },
+  "failures": {
+    "images": [],
+    "videos": []
+  },
+  "generatedAt": "2026-06-07T13:25:19.714Z"
+}

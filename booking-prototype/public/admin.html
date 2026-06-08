@@ -1,0 +1,166 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peggy — Bookings Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--brand-bg:#F7F3F0;--brand-accent:#C7936B;--brand-deep:#222228;--muted:#6B6B6B}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial;background:var(--brand-bg);color:var(--brand-deep);padding:20px}
+    .wrap{max-width:980px;margin:0 auto}
+    h1{font-family:'Playfair Display',serif;margin:0 0 6px;font-size:28px}
+    .note{color:var(--muted);margin-bottom:12px}
+    table{width:100%;border-collapse:collapse}
+    thead th{background:#fff;border-bottom:2px solid #efe8e2;padding:12px;text-align:left}
+    tbody td{background:#fff;border:1px solid #efe8e2;padding:12px;vertical-align:top}
+    .actions button{background:var(--brand-accent);border:none;padding:8px 10px;border-radius:8px;margin-right:8px;color:#111;cursor:pointer}
+
+    /* Mobile friendly cards */
+    .card-list{display:none}
+    @media (max-width:860px){
+      table{display:none}
+      .card-list{display:block;gap:12px;display:grid}
+      .card{background:#fff;padding:12px;border:1px solid #efe8e2;border-radius:10px}
+      .card .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
+      .card .row{display:flex;justify-content:space-between;align-items:center}
+      .card .row button{margin-left:8px}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <h1>Bookings Admin</h1>
+    <div class="note">Approve or reject bookings. This admin view is responsive for mobile devices.</div>
+    <div id="info"></div>
+
+    <table aria-hidden="false">
+      <thead>
+        <tr><th>ID</th><th>Customer</th><th>Birthday</th><th>Service</th><th>Deposit</th><th>Status</th><th>Actions</th></tr>
+      </thead>
+      <tbody id="rows"></tbody>
+    </table>
+
+    <div class="card-list" id="cards"></div>
+    
+    <h2 style="margin-top:24px;font-family:'Playfair Display',serif">Clients</h2>
+    <div class="note">Client list with birthdays for outreach.</div>
+    <table style="margin-top:8px">
+      <thead><tr><th>ID</th><th>Name</th><th>Birthday</th><th>Email</th><th>Phone</th><th>Last Sent</th><th>Disabled</th><th>Actions</th></tr></thead>
+      <tbody id="clients"></tbody>
+    </table>
+  </div>
+
+  <script>
+    async function load() {
+      const res = await fetch('/admin/bookings');
+      const data = await res.json();
+      const rows = document.getElementById('rows');
+      const cards = document.getElementById('cards');
+      rows.innerHTML = '';
+      cards.innerHTML = '';
+
+      data.forEach(b => {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td>${b.id}</td>
+          <td>${b.customerName}<br><small style="color:${getComputedStyle(document.documentElement).getPropertyValue('--muted')||'#666'}">${b.email}</small></td>
+          <td>${b.birthday || ''}</td>
+          <td>${b.serviceName}</td>
+          <td>${b.depositAmount} ${b.currency || 'USD'}</td>
+          <td id="status-${b.id}">${b.status}</td>
+          <td class="actions">
+            <button onclick="action('${b.id}','approve')">Approve</button>
+            <button onclick="action('${b.id}','reject')">Reject</button>
+          </td>
+        `;
+        rows.appendChild(tr);
+
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+          <div class="meta">#${b.id} — <strong>${b.serviceName}</strong></div>
+          <div style="font-weight:600">${b.customerName}</div>
+          <div class="meta">${b.email} • ${b.birthday || ''} • ${b.depositAmount} ${b.currency || 'USD'}</div>
+          <div style="margin-top:10px;display:flex;gap:8px;align-items:center"><div id="status-card-${b.id}">${b.status}</div>
+            <div style="margin-left:auto">
+              <button onclick="action('${b.id}','approve')">Approve</button>
+              <button onclick="action('${b.id}','reject')">Reject</button>
+            </div>
+          </div>
+        `;
+        cards.appendChild(card);
+      });
+    }
+
+    async function action(id, act) {
+      const res = await fetch(`/admin/bookings/${id}/${act}`, { method: 'POST' });
+      const json = await res.json();
+      if (json.ok) {
+        const statusEl = document.getElementById('status-' + id);
+        const statusCard = document.getElementById('status-card-' + id);
+        if (statusEl) statusEl.textContent = json.booking.status;
+        if (statusCard) statusCard.textContent = json.booking.status;
+      } else {
+        alert('Error: ' + (json.error || 'unknown'));
+      }
+    }
+
+    load();
+    setInterval(load, 5000);
+
+    async function loadClients() {
+      try {
+        const res = await fetch('/admin/clients');
+        const data = await res.json();
+        const el = document.getElementById('clients');
+        el.innerHTML = '';
+        data.forEach(c => {
+          const tr = document.createElement('tr');
+          const disabled = c.disabledBirthday ? 'Yes' : 'No';
+          const last = c.lastBirthdaySent || '';
+          const actions = [];
+          if (c.disabledBirthday) {
+            actions.push(`<button onclick="enableClient(${c.id})">Enable</button>`);
+          } else {
+            actions.push(`<button onclick="disableClient(${c.id})">Disable</button>`);
+          }
+          actions.push(`<button onclick="sendBirthdayNow(${c.id})">Send now</button>`);
+          tr.innerHTML = `<td>${c.id}</td><td>${c.name}</td><td>${c.birthday||''}</td><td>${c.email||''}</td><td>${c.phone||''}</td><td>${last}</td><td>${disabled}</td><td>${actions.join(' ')}</td>`;
+          el.appendChild(tr);
+        });
+      } catch (e) { console.error('loadClients err', e && e.message); }
+    }
+
+    loadClients();
+    setInterval(loadClients, 60 * 60 * 1000);
+    
+    async function disableClient(id) {
+      try {
+        const res = await fetch(`/admin/clients/${id}/disable`, { method: 'POST' });
+        const j = await res.json();
+        if (j.ok) loadClients(); else alert('Error disabling');
+      } catch (e) { console.error(e); alert('Error disabling'); }
+    }
+
+    async function enableClient(id) {
+      try {
+        const res = await fetch(`/admin/clients/${id}/enable`, { method: 'POST' });
+        const j = await res.json();
+        if (j.ok) loadClients(); else alert('Error enabling');
+      } catch (e) { console.error(e); alert('Error enabling'); }
+    }
+
+    async function sendBirthdayNow(id) {
+      try {
+        const res = await fetch(`/admin/clients/${id}/send-birthday-now`, { method: 'POST' });
+        const j = await res.json();
+        if (j.ok) alert('Sent'); else alert('Error sending');
+        loadClients();
+      } catch (e) { console.error(e); alert('Error sending'); }
+    }
+  </script>
+</body>
+</html>

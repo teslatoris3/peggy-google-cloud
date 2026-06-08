@@ -1,0 +1,17 @@
+.booking-button {
+  background: #b04473;
+  border: 0;
+  border-radius: 999px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-flex;
+  font-weight: 800;
+  justify-content: center;
+  margin-top: 16px;
+  min-width: 128px;
+  padding: 12px 20px;
+}
+
+.booking-button:hover {
+  background: #8f315b;
+}

@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=Playfair+Display:wght@400;600;700;900&family=Great+Vibes&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-gold: #C9A96E;
+  --color-deep-black: #0A0A0A;
+  --color-offwhite-cream: #FAF7F2;
+  --color-charcoal: #2C2C2C;
+  --color-muted-text: #6B6B6B;
+  --font-playfair: 'Playfair Display', Georgia, "Times New Roman", serif;
+  --font-inter: 'Inter', ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+html {
+  /* Increased base font size by 2% to scale all rem-based text */
+  font-size: 22.44px; /* 22px * 1.02 */
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* FAQ specific typography — use the overrides in app/globals.css instead */
+/* Kept minimal here to avoid conflicts. */
+
+
+body {
+  font-family: var(--font-inter), system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial;
+  line-height: 1.7;
+  background-color: var(--color-offwhite-cream);
+  color: var(--color-charcoal);
+  overflow-x: hidden;
+  width: 100%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+}
+
+/* Custom scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-charcoal) transparent;
+}
+
+/* Webkit */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 9999px;
+  border: 2px solid transparent;
+  background-clip: padding-box;
+}
+
+/* Utility for backdrop blur fallback */
+.backdrop-blur-safe {
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-playfair), Georgia, 'Times New Roman', serif;
+  color: var(--color-deep-black);
+}
+
+/* Hero heading utility used across the site for large, elegant titles */
+.hero-heading{
+  font-family: var(--font-playfair);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  line-height: 0.96;
+  font-size: clamp(3rem, 8vw, 6.5rem);
+}
+
+/* Splash screen tweaks */
+.splash-logo {
+  max-width: 280px;
+}
+
+/* Splash screen styling */
+.splash-screen {
+  background: #F7E6E2;
+}
+
+.splash-ornament {
+  width: 320px;
+  opacity: 0.5;
+  filter: blur(0.5px) contrast(0.95);
+  transform: translateY(-6px) scale(1.02);
+}
+
+/* Slight floating animation on the logo for cinematic feel */
+.splash-logo {
+  max-width: 300px;
+  will-change: transform, opacity;
+}
+
+@media (min-width: 768px) {
+  .splash-logo { max-width: 360px; }
+}
+
+/* Slight tighter letter spacing for headings */
+h1, h2 {
+  letter-spacing: -0.01em;
+}
+
+/* Announcement bar */
+.announcement {
+  background: #F7E6E2;
+  color: var(--color-deep-black);
+  font-size: 1.02rem;
+  letter-spacing: 0.02em;
+}
+.opening-script{
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.75rem, 6.5vw, 4rem);
+  color: var(--color-deep-black);
+  line-height: 0.95;
+}
+
+/* Working hours styling to match definehair.ca */
+.working-hours .elementor-icon-list-items{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.working-hours .elementor-icon-list-item{
+  display: block;
+}
+.working-hours .elementor-icon-list-text{
+  font-family: var(--font-inter);
+  font-size: 18px;
+  letter-spacing: 0.04em;
+  color: var(--color-muted-text);
+  display: inline-block;
+}
+.working-hours .elementor-icon-list-item + .elementor-icon-list-item{
+  margin-top: 18px;
+}
+.working-hours .elementor-icon-list-text.font-semibold{
+  color: var(--color-deep-black);
+}
+
+/* Left column content wrapper to set consistent width */
+.visit-left-content {
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Header / nav tuning */
+.site-nav-link{
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+}
+
+/* Small layout helpers used across peggy components */
+.page {
+  margin: 0 auto;
+  max-width: 1120px;
+  padding: 64px 24px;
+}
+
+.page h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.page p {
+  margin: 0 0 24px;
+  max-width: 680px;
+  color: var(--color-muted-text);
+}
+
+.page-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+/* === User overrides: easy places to edit FAQ / nav sizes === */
+/* Edit these values to control sizes directly. Values use rem/px and support mobile caps. */
+:root {
+  --faq-title-size: 20rem; /* default desktop */
+  --faq-title-size-sm: 2rem; /* mobile */
+  --faq-question-size: 2.25rem;
+  --faq-icon-size: 2.25rem;
+  --nav-link-size: 1.35rem;
+  --page-paragraph-size: 1.125rem;
+}
+
+#faq h2 {
+  font-size: var(--faq-title-size) !important;
+  line-height: 1.02;
+}
+
+#faq .faq-question {
+  font-size: var(--faq-question-size) !important;
+}
+
+#faq .faq-icon {
+  font-size: var(--faq-icon-size) !important;
+}
+
+.site-nav-link { font-size: var(--nav-link-size) !important; }
+.page p { font-size: var(--page-paragraph-size) !important; }
+
+@media (max-width: 640px) {
+  #faq h2 { font-size: var(--faq-title-size-sm) !important; }
+  #faq .faq-question { font-size: 1.25rem !important; }
+  #faq .faq-icon { font-size: 1.25rem !important; }
+}
+
+/* End overrides */

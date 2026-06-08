@@ -1,0 +1,551 @@
+{
+  "bookings": [
+    {
+      "id": 1,
+      "customerName": "amir",
+      "email": "scicophy@gmail.com",
+      "phone": "9184045692",
+      "serviceName": "Haircut",
+      "status": "pending_payment",
+      "depositAmount": 10,
+      "currency": "usd",
+      "createdAt": "2026-06-01T13:32:51.849Z"
+    },
+    {
+      "id": 2,
+      "customerName": "amir",
+      "email": "scicophy@gmail.com",
+      "phone": "9184045692",
+      "serviceName": "Haircut",
+      "status": "rejected",
+      "depositAmount": 10,
+      "currency": "usd",
+      "createdAt": "2026-06-01T13:32:57.414Z"
+    },
+    {
+      "id": 3,
+      "customerName": "Test User",
+      "email": "test@example.com",
+      "phone": "123",
+      "serviceName": "Haircut",
+      "status": "approved",
+      "depositAmount": 10,
+      "currency": "usd",
+      "createdAt": "2026-06-01T13:35:12.526Z"
+    },
+    {
+      "id": 4,
+      "customerName": "amir",
+      "email": "scicophy@gmail.com",
+      "phone": "9184045692",
+      "serviceName": "Haircut",
+      "status": "confirmed",
+      "depositAmount": 10,
+      "currency": "usd",
+      "createdAt": "2026-06-01T13:39:29.801Z",
+      "checkoutSessionId": "fake_sess_4_1780321169801",
+      "payment": {
+        "amount_total": 1000,
+        "currency": "usd",
+        "payment_status": "paid",
+        "session_id": "fake_sess_4_1780321169801"
+      }
+    },
+    {
+      "id": 5,
+      "customerName": "Client A",
+      "email": "client@example.com",
+      "phone": "+15551234567",
+      "serviceName": "Balayage",
+      "status": "confirmed",
+      "depositAmount": 15,
+      "currency": "usd",
+      "createdAt": "2026-06-01T14:13:28.893Z",
+      "checkoutSessionId": "fake_sess_5_1780323208894",
+      "payment": {
+        "amount_total": 1500,
+        "currency": "usd",
+        "payment_status": "paid",
+        "session_id": "fake_sess_5_1780323208894"
+      },
+      "approvalToken": "3f9097768126d45af06cc6e9",
+      "approvalTokenExpires": 1780409608900,
+      "approvalSentTo": ""
+    },
+    {
+      "id": 6,
+      "customerName": "Client B",
+      "email": "b@example.com",
+      "phone": "14165187979",
+      "serviceName": "Cut",
+      "status": "confirmed",
+      "currency": "usd",
+      "createdAt": "2026-06-01T16:31:37.621Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "cfeb858698b7266a4418e41a",
+      "approvalTokenExpires": 1780417897627,
+      "approvalSentTo": ""
+    },
+    {
+      "id": 7,
+      "customerName": "SMS Test",
+      "email": "sms@example.com",
+      "phone": "+15559876543",
+      "serviceName": "Test SMS",
+      "status": "confirmed",
+      "currency": "usd",
+      "createdAt": "2026-06-01T16:33:14.960Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "b8879c39971f2a972a054a66",
+      "approvalTokenExpires": 1780417994966,
+      "approvalSentTo": ""
+    },
+    {
+      "id": 8,
+      "customerName": "Live SMS Test",
+      "email": "live@example.com",
+      "phone": "+15559876543",
+      "appointmentTime": "2026-06-02T10:00",
+      "serviceName": "Highlight",
+      "status": "confirmed",
+      "currency": "usd",
+      "createdAt": "2026-06-01T17:00:16.644Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "6c0bc8929c34bec3d77490e3",
+      "approvalTokenExpires": 1780419616650,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 9,
+      "customerName": "Local Flow Test",
+      "email": "localtest@example.com",
+      "phone": "+15559870000",
+      "appointmentTime": "2026-06-03T11:00",
+      "serviceName": "Cut & Style",
+      "status": "approved",
+      "currency": "usd",
+      "createdAt": "2026-06-01T17:58:16.490Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "389c6b466a5e258c694b4cdb",
+      "approvalTokenExpires": 1780423096496,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 10,
+      "customerName": "amir",
+      "email": "amirfarhangkhojasteh@gmail.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-09T05:05",
+      "serviceName": "Haircut",
+      "status": "confirmed",
+      "depositAmount": null,
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:05:31.076Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "7160556cec5e458f5fda270a",
+      "approvalTokenExpires": 1780423531081,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 11,
+      "customerName": "amir",
+      "email": "amirfarhangkhojasteh@gmail.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-09T05:05",
+      "serviceName": "Haircut",
+      "status": "confirmed",
+      "depositAmount": null,
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:07:17.665Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "05d011e0348919f5e473f943",
+      "approvalTokenExpires": 1780423637671,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 12,
+      "customerName": "amir",
+      "email": "peggybeauty.info@gmail.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-11T14:07",
+      "serviceName": "Haircut",
+      "status": "confirmed",
+      "depositAmount": null,
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:07:52.400Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "db660e85fbcb185e2aad92d0",
+      "approvalTokenExpires": 1780423672405,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 13,
+      "customerName": "amir",
+      "email": "fr514kh@gmail.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-18T14:12",
+      "serviceName": "Haircut",
+      "status": "confirmed",
+      "depositAmount": null,
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:12:30.627Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "1d1c20dbdb3a11f7c29a058d",
+      "approvalTokenExpires": 1780423950631,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 14,
+      "customerName": "amir",
+      "email": "scicophy@gmail.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-09T14:20",
+      "serviceName": "Haircut",
+      "status": "confirmed",
+      "depositAmount": null,
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:20:35.426Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "f32e2f8ae9a420d49c9d4a64",
+      "approvalTokenExpires": 1780424435431,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 15,
+      "customerName": "PeggyTest",
+      "email": "pt@example.com",
+      "phone": "+15551230001",
+      "appointmentTime": "2026-06-05T09:30",
+      "serviceName": "Color",
+      "status": "approved",
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:24:14.069Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "5ff12c0ffeed32b434ca4272",
+      "approvalTokenExpires": 1780424654075,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 16,
+      "customerName": "PeggyLinkTest",
+      "email": "plt@example.com",
+      "phone": "+15559870011",
+      "appointmentTime": "2026-06-06T13:45",
+      "serviceName": "Trim",
+      "status": "approved",
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:25:04.235Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "43df41914096051f054468b5",
+      "approvalTokenExpires": 1780424704241,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 17,
+      "customerName": "PeggyVerify",
+      "email": "pv@example.com",
+      "phone": "+15559870012",
+      "appointmentTime": "2026-06-07T10:00",
+      "serviceName": "Color",
+      "status": "rejected",
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:26:15.716Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "d1e73291af202c6433473acf",
+      "approvalTokenExpires": 1780424775722,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 18,
+      "customerName": "PeggyTempTest",
+      "email": "ptt@example.com",
+      "phone": "+15551230002",
+      "appointmentTime": "2026-06-08T15:00",
+      "serviceName": "TestService",
+      "status": "approved",
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:39:07.558Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "47d17f1d762a7dd15d01838c",
+      "approvalTokenExpires": 1780425547564,
+      "approvalSentTo": "+18777804236"
+    },
+    {
+      "id": 19,
+      "customerName": "amir",
+      "email": "email@email.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-09T14:40",
+      "serviceName": "Haircut",
+      "status": "confirmed",
+      "depositAmount": null,
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:40:39.611Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "c45ba2a94ca2d555977763dd",
+      "approvalTokenExpires": 1780425639617,
+      "approvalSentTo": "+18777804236"
+    },
+    {
+      "id": 20,
+      "customerName": "TwilioLiveTest",
+      "email": "tlt@example.com",
+      "phone": "+15551230003",
+      "appointmentTime": "2026-06-09T12:00",
+      "serviceName": "TestSend",
+      "status": "confirmed",
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:53:51.583Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "b103f62757197ec77281c0af",
+      "approvalTokenExpires": 1780426431590,
+      "approvalSentTo": "+18777804236"
+    },
+    {
+      "id": 21,
+      "customerName": "amir",
+      "email": "scicophy@gmail.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-09T14:57",
+      "serviceName": "Haircut",
+      "status": "rejected",
+      "depositAmount": null,
+      "currency": "usd",
+      "createdAt": "2026-06-01T18:58:02.826Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "64afdf6fd6be5cd52f2bfb9b",
+      "approvalTokenExpires": 1780426682832,
+      "approvalSentTo": "+18777804236"
+    },
+    {
+      "id": 22,
+      "customerName": "ooooo",
+      "email": "ooo@gmail.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-17T15:28",
+      "serviceName": "Haircut",
+      "status": "confirmed",
+      "depositAmount": null,
+      "currency": "usd",
+      "createdAt": "2026-06-01T19:28:20.728Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "294c297f540997b2b5e0e555",
+      "approvalTokenExpires": 1780428500736,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 23,
+      "customerName": "ferry",
+      "email": "ferypanahi@gmail.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-10T06:36",
+      "serviceName": "Haircut & Style",
+      "status": "rejected",
+      "depositAmount": 10,
+      "currency": "usd",
+      "createdAt": "2026-06-02T10:36:59.852Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "0e3c965d4f4fba78c943f028",
+      "approvalTokenExpires": 1780483019860,
+      "approvalSentTo": "+18777804236"
+    },
+    {
+      "id": 24,
+      "customerName": "amir",
+      "email": "scicophy@gmail.com",
+      "phone": "+989184045692",
+      "appointmentTime": "2026-06-17T08:49",
+      "serviceName": "Haircut & Style",
+      "status": "confirmed",
+      "depositAmount": 10,
+      "currency": "usd",
+      "createdAt": "2026-06-05T12:50:03.579Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "2b78a93eefe697268b85d264",
+      "approvalTokenExpires": 1780750203585,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 25,
+      "customerName": "amir",
+      "email": "imtestingpegah@gmail.com",
+      "phone": "+18777804236",
+      "appointmentTime": "2026-06-18T10:24",
+      "serviceName": "Balayage",
+      "status": "confirmed",
+      "depositAmount": 10,
+      "currency": "usd",
+      "createdAt": "2026-06-07T14:24:58.608Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "ddf7245f164440d17915df01",
+      "approvalTokenExpires": 1780928698614,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 26,
+      "customerName": "Auto Test",
+      "email": "autotest@example.com",
+      "phone": "+15551230000",
+      "birthday": "2026-06-07",
+      "appointmentTime": "2026-06-10T10:00",
+      "serviceName": "Haircut",
+      "status": "confirmed",
+      "depositAmount": 0,
+      "currency": "usd",
+      "createdAt": "2026-06-07T14:47:49.275Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "c697acd007509080b5cac9ee",
+      "approvalTokenExpires": 1780930069282,
+      "approvalSentTo": "+14165187979"
+    },
+    {
+      "id": 27,
+      "customerName": "amirfarhang",
+      "email": "amirooo@gmail.com",
+      "phone": "+18777804236",
+      "birthday": "2026-06-09",
+      "appointmentTime": "2026-06-10T10:56",
+      "serviceName": "Keratin Treatment",
+      "status": "rejected",
+      "depositAmount": 10,
+      "currency": "usd",
+      "createdAt": "2026-06-07T14:56:09.757Z",
+      "payment": {
+        "amount_total": 0,
+        "currency": "usd",
+        "payment_status": "not_required",
+        "session_id": null
+      },
+      "approvalToken": "3d0e40d12daa6cf23671bf14",
+      "approvalTokenExpires": 1780930569764,
+      "approvalSentTo": "+18777804236"
+    }
+  ],
+  "nextId": 28,
+  "clients": [
+    {
+      "id": 1,
+      "name": "Auto Test",
+      "email": "autotest@example.com",
+      "phone": "+15551230000",
+      "birthday": "2026-06-07",
+      "disabledBirthday": false,
+      "lastBirthdaySent": "2026"
+    },
+    {
+      "id": 2,
+      "name": "amirfarhang",
+      "email": "amirooo@gmail.com",
+      "phone": "+18777804236",
+      "birthday": "2026-06-09",
+      "disabledBirthday": false,
+      "lastBirthdaySent": "2026"
+    }
+  ],
+  "nextClientId": 3
+}

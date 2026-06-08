@@ -1,0 +1,16 @@
+.service-card {
+  background: #ffffff;
+  border: 1px solid #eadcd7;
+  border-radius: 8px;
+  box-shadow: 0 18px 40px rgba(36, 27, 32, 0.08);
+  padding: 24px;
+}
+
+.service-card h2 {
+  color: #6c2f4f;
+  margin: 0 0 10px;
+}
+
+.service-card p {
+  margin: 0;
+}
