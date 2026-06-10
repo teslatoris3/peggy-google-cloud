@@ -12,7 +12,7 @@ export default function FloatingBookButton() {
       }).catch(() => {});
     } catch (e) {}
   }
-  const open = (e) => { e.preventDefault(); try { notify() } catch (e) {} ; console.log('Opening booking URL:', url); window.open(url, '_blank') }
+  const open = (e) => { e.preventDefault(); try { notify() } catch (e) {} ; console.log('DEBUG booking url:', url); window.open(url, '_blank') }
 
   return (
     <a

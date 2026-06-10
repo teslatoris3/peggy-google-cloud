@@ -28,7 +28,7 @@ function VisitUsSection() {
 
                 {(() => {
                   const url = getBookingUrl()
-                  const open = (e) => { e.preventDefault(); console.log('Opening booking URL:', url); window.open(url, '_blank') }
+                  const open = (e) => { e.preventDefault(); console.log('DEBUG booking url:', url); window.open(url, '_blank') }
                   return <a href={url} onClick={open} rel="noopener noreferrer" className="inline-flex items-center rounded border border-black px-6 py-3 text-lg md:text-xl text-deep-black font-semibold">BOOK YOUR CONSULTATION</a>
                 })()}
               </div>

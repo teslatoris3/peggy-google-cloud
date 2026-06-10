@@ -3,7 +3,7 @@ const LOCAL_BOOKING_URL = 'http://localhost:4000';
 
 export function getBookingUrl() {
   const configuredUrl = import.meta.env.VITE_BOOKING_URL;
-  if (configuredUrl) return configuredUrl.replace(/\/$/, '');
+  if (configuredUrl && String(configuredUrl).trim() !== '') return String(configuredUrl).replace(/\/$/, '');
 
   if (typeof window !== 'undefined' && window.location.hostname === 'localhost') {
     return LOCAL_BOOKING_URL;
