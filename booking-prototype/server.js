@@ -342,6 +342,7 @@ app.get('/admin/clients', (req, res) => {
 
 // Approve/reject via token links sent in SMS to employee (public links)
 app.get('/action/approve/:token', async (req, res) => {
+    console.log('ACTION approve/reject hit, token:', req.params.token);
 	const token = String(req.params.token || '');
 	const booking = db.listBookings().find(b => b && b.approvalToken === token);
 	if (!booking) return res.status(404).send('Approval token not found or expired.');
@@ -364,6 +365,7 @@ app.get('/action/approve/:token', async (req, res) => {
 });
 
 app.get('/action/reject/:token', async (req, res) => {
+    console.log('ACTION approve/reject hit, token:', req.params.token);
 	const token = String(req.params.token || '');
 	const booking = db.listBookings().find(b => b && b.approvalToken === token);
 	if (!booking) return res.status(404).send('Approval token not found or expired.');
