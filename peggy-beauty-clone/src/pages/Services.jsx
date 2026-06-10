@@ -163,7 +163,7 @@ function Services() {
               </p>
             </div>
               {(() => { const url = getBookingUrl(); return (
-                <a href={url} onClick={(e) => { e.preventDefault(); window.open(url, '_blank') }} rel="noopener noreferrer" className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-semibold text-deep-black">
+                <a href={url} onClick={(e) => { e.preventDefault(); console.log('Opening booking URL:', url); window.open(url, '_blank') }} rel="noopener noreferrer" className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-semibold text-deep-black">
                   Book a consultation
                 </a>
               )})()}

@@ -28,9 +28,15 @@ function ServiceCard({ id, order, title, description, features, image }) {
       ) : null}
 
         <div className="mt-6">
-          <a href={getServiceBookingUrl(title)} className="inline-flex items-center gap-2 rounded bg-primary px-4 py-2 text-sm font-semibold text-deep-black" target="_blank" rel="noopener noreferrer">
-            Book Now
-          </a>
+          {(() => {
+            const url = getServiceBookingUrl(title)
+            const open = (e) => { e.preventDefault(); console.log('Opening booking URL:', url); window.open(url, '_blank') }
+            return (
+              <a href={url} onClick={open} className="inline-flex items-center gap-2 rounded bg-primary px-4 py-2 text-sm font-semibold text-deep-black" rel="noopener noreferrer">
+                Book Now
+              </a>
+            )
+          })()}
         </div>
       </div>
     </article>

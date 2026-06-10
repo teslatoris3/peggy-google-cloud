@@ -83,6 +83,7 @@ function Navbar() {
               <a href={bookingUrl} onClick={(e) => {
                 e.preventDefault();
                 try { fetch(`${bookingUrl}/notify`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ source: 'navbar', page: window.location.pathname }) }).catch(() => {}); } catch(e){}
+                console.log('Opening booking URL:', bookingUrl);
                 window.open(bookingUrl, '_blank')
               }} className="min-h-11 items-center rounded bg-primary px-6 py-3 md:px-8 md:py-3 text-lg font-semibold text-deep-black inline-flex" rel="noopener noreferrer">Book Now</a>
               <button className="flex h-11 w-11 items-center justify-center text-deep-black md:hidden" onClick={() => setIsDrawerOpen(true)} aria-label="Open menu"><Menu /></button>
@@ -123,7 +124,7 @@ function Navbar() {
                 ))}
               </nav>
                 <div className="p-4">
-                <a href={bookingUrl} onClick={(e) => { e.preventDefault(); closeDrawer(); window.open(bookingUrl, '_blank') }} className="block w-full text-center rounded bg-primary py-2" rel="noopener noreferrer">Book Now</a>
+                <a href={bookingUrl} onClick={(e) => { e.preventDefault(); closeDrawer(); console.log('Opening booking URL:', bookingUrl); window.open(bookingUrl, '_blank') }} className="block w-full text-center rounded bg-primary py-2" rel="noopener noreferrer">Book Now</a>
               </div>
             </motion.aside>
           </>

@@ -340,6 +340,74 @@ app.get('/admin/clients', (req, res) => {
 	res.json(db.listClients());
 });
 
+// Approve/reject via token links sent in SMS to employee (public links)
+app.get('/action/approve/:token', async (req, res) => {
+	const token = String(req.params.token || '');
+	const booking = db.listBookings().find(b => b && b.approvalToken === token);
+	if (!booking) return res.status(404).send('Approval token not found or expired.');
+	// check expiry
+	if (booking.approvalTokenExpires && Date.now() > booking.approvalTokenExpires) return res.status(410).send('Approval token expired.');
+	booking.status = 'approved';
+	booking.approvalToken = null;
+	booking.approvalTokenExpires = null;
+	db.updateBooking(booking);
+	// send confirmation SMS to client
+	try {
+		const when = booking.appointmentTime ? ` on ${booking.appointmentTime}` : '';
+		const name = booking.customerName || 'there';
+		const service = booking.serviceName || 'service';
+		const msg = `Hi ${name}, your appointment for ${service}${when} has been confirmed! See you then. - Peggy Beauty Salon`;
+		if (booking.phone) await sendSms(booking.phone, msg);
+		appendLog('bookings.log', `TOKEN_APPROVE id=${booking.id}`);
+	} catch (e) { console.error('Error sending client confirmation SMS', e && e.message); }
+	return res.send('<html><body><h2>Booking approved</h2><p>Thank you — the client has been notified.</p><p><a href="/admin.html">Back to admin</a></p></body></html>');
+});
+
+app.get('/action/reject/:token', async (req, res) => {
+	const token = String(req.params.token || '');
+	const booking = db.listBookings().find(b => b && b.approvalToken === token);
+	if (!booking) return res.status(404).send('Approval token not found or expired.');
+	if (booking.approvalTokenExpires && Date.now() > booking.approvalTokenExpires) return res.status(410).send('Approval token expired.');
+	booking.status = 'rejected';
+	booking.approvalToken = null;
+	booking.approvalTokenExpires = null;
+	db.updateBooking(booking);
+	try {
+		const when = booking.appointmentTime ? ` on ${booking.appointmentTime}` : '';
+		const name = booking.customerName || 'there';
+		const service = booking.serviceName || 'service';
+		const msg = `Hi ${name}, unfortunately your appointment request for ${service}${when} could not be accommodated. Please call us to reschedule. - Peggy Beauty Salon`;
+		if (booking.phone) await sendSms(booking.phone, msg);
+		appendLog('bookings.log', `TOKEN_REJECT id=${booking.id}`);
+	} catch (e) { console.error('Error sending client rejection SMS', e && e.message); }
+	return res.send('<html><body><h2>Booking rejected</h2><p>The client has been notified.</p><p><a href="/admin.html">Back to admin</a></p></body></html>');
+});
+
+// Admin: approve/reject a booking (from admin UI)
+app.post('/admin/bookings/:id/:act', basicAuth, express.json(), async (req, res) => {
+	const id = String(req.params.id || '');
+	const act = String(req.params.act || '').toLowerCase();
+	const booking = db.getBooking(id);
+	if (!booking) return res.status(404).json({ ok: false, error: 'not_found' });
+	if (act !== 'approve' && act !== 'reject') return res.status(400).json({ ok: false, error: 'invalid_action' });
+	booking.status = act === 'approve' ? 'approved' : 'rejected';
+	booking.approvalToken = null;
+	booking.approvalTokenExpires = null;
+	db.updateBooking(booking);
+	// send confirmation to client
+	try {
+		const when = booking.appointmentTime ? ` on ${booking.appointmentTime}` : '';
+		const name = booking.customerName || 'there';
+		const service = booking.serviceName || 'service';
+		const msg = act === 'approve'
+			? `Hi ${name}, your appointment for ${service}${when} has been confirmed! See you then. - Peggy Beauty Salon`
+			: `Hi ${name}, unfortunately your appointment request for ${service}${when} could not be accommodated. Please call us to reschedule. - Peggy Beauty Salon`;
+		if (booking.phone) await sendSms(booking.phone, msg);
+		appendLog('bookings.log', `ADMIN_${act.toUpperCase()} id=${booking.id}`);
+	} catch (e) { console.error('Error sending client SMS from admin action', e && e.message); }
+	return res.json({ ok: true, booking });
+});
+
 // Twilio debug endpoint (basic masking) - protected by admin basic auth
 app.get('/twilio-debug', basicAuth, async (req, res) => {
 	if (!TWILIO_SID || !TWILIO_TOKEN) return res.json({ ok: false, error: 'missing_twilio_env' });

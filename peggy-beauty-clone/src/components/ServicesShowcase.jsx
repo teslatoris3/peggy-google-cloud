@@ -63,7 +63,7 @@ function ServicesShowcase() {
                   <li key={service} className="flex items-start gap-2 text-sm"><Check size={16} aria-hidden="true" />{service}</li>
                 ))}
               </ul>
-              <a href={bookingUrl} onClick={(e) => { e.preventDefault(); window.open(bookingUrl, '_blank') }} rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded bg-primary px-4 py-2 text-deep-black font-semibold">Book a Consultation <ArrowRight size={16} /></a>
+              <a href={bookingUrl} onClick={(e) => { e.preventDefault(); console.log('Opening booking URL:', bookingUrl); window.open(bookingUrl, '_blank') }} rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded bg-primary px-4 py-2 text-deep-black font-semibold">Book a Consultation <ArrowRight size={16} /></a>
             </div>
           </article>
         ))}
