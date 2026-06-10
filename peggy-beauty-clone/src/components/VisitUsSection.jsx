@@ -26,7 +26,11 @@ function VisitUsSection() {
                 <p className="text-sm md:text-base font-bold uppercase tracking-[0.22em] text-primary">VISIT US</p>
                 <h2 className="opening-script text-5xl md:text-7xl">Opening Hours</h2>
 
-                <a href={getBookingUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded border border-black px-6 py-3 text-lg md:text-xl text-deep-black font-semibold">BOOK YOUR CONSULTATION</a>
+                {(() => {
+                  const url = getBookingUrl()
+                  const open = (e) => { e.preventDefault(); window.open(url, '_blank') }
+                  return <a href={url} onClick={open} rel="noopener noreferrer" className="inline-flex items-center rounded border border-black px-6 py-3 text-lg md:text-xl text-deep-black font-semibold">BOOK YOUR CONSULTATION</a>
+                })()}
               </div>
             </div>
 

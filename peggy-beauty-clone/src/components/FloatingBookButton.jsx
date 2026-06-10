@@ -12,12 +12,13 @@ export default function FloatingBookButton() {
       }).catch(() => {});
     } catch (e) {}
   }
+  const open = (e) => { e.preventDefault(); try { notify() } catch (e) {} ; window.open(url, '_blank') }
+
   return (
     <a
       href={url}
-      target="_blank"
+      onClick={open}
       rel="noopener noreferrer"
-      onClick={notify}
       style={{ position: 'fixed', right: 18, bottom: 18, zIndex: 9999 }}
       className="rounded-full bg-primary px-4 py-3 text-sm font-semibold text-deep-black shadow-lg hover:scale-105 transition-transform"
     >

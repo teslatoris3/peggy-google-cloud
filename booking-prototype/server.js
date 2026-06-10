@@ -32,57 +32,30 @@ function appendLog(fileName, text) {
 
 async function sendSms(to, body) {
 	if (TWILIO_SID && TWILIO_TOKEN && (TWILIO_FROM || TWILIO_MESSAGING_SERVICE_SID)) {
-		// Use direct HTTPS POST
-		const params = new URLSearchParams();
-		if (TWILIO_MESSAGING_SERVICE_SID) params.append('MessagingServiceSid', TWILIO_MESSAGING_SERVICE_SID);
-		else params.append('From', TWILIO_FROM);
-		params.append('To', to);
-		params.append('Body', body);
-		const postData = params.toString();
-		const https = require('https');
-		const auth = 'Basic ' + Buffer.from(`${TWILIO_SID}:${TWILIO_TOKEN}`).toString('base64');
-		const options = {
-			hostname: 'api.twilio.com',
-			port: 443,
-			path: `/2010-04-01/Accounts/${TWILIO_SID}/Messages.json`,
-			method: 'POST',
-			headers: {
-				Authorization: auth,
-				'Content-Type': 'application/x-www-form-urlencoded',
-				'Content-Length': Buffer.byteLength(postData),
-			},
-		};
-
-		return new Promise((resolve, reject) => {
-			const req = https.request(options, (res) => {
-				let data = '';
-				res.on('data', (chunk) => (data += chunk));
-				res.on('end', () => {
-					try {
-						const json = data ? JSON.parse(data) : {};
-						if (res.statusCode >= 200 && res.statusCode < 300) return resolve(json);
-						if (res.statusCode === 401) {
-							console.warn('Twilio authentication failed (401). Falling back to simulated SMS. Response:', json);
-							console.warn('Auth header used (masked):', auth.slice(0,8) + '...');
-							const note = `AUTH_FAIL to=${to} body=${body} resp=${JSON.stringify(json)}`;
-							appendLog('sms.log', note);
-							console.log('SIMULATED SMS to', to, '\n', body);
-							return resolve({ sid: 'SIMULATED_AUTH_FAIL', simulated: true, twilioError: json });
-						}
-						appendLog('sms.log', `ERROR status=${res.statusCode} to=${to} resp=${JSON.stringify(json)}`);
-						return reject(new Error(`Twilio API error ${res.statusCode}: ${JSON.stringify(json)}`));
-					} catch (e) {
-						return reject(e);
-					}
-				});
-			});
-			req.on('error', (e) => { console.error('HTTPS request error', e && e.message); reject(e); });
-			req.write(postData);
-			req.end();
-		});
+		// Prefer using Twilio SDK if available
+		try {
+			const twilioLib = require('twilio');
+			const client = twilioLib(TWILIO_SID, TWILIO_TOKEN);
+			const params = { to, body };
+			if (TWILIO_MESSAGING_SERVICE_SID) params.messagingServiceSid = TWILIO_MESSAGING_SERVICE_SID;
+			else params.from = TWILIO_FROM;
+			const res = await client.messages.create(params);
+			appendLog('sms.log', `SENT to=${to} sid=${res && res.sid}`);
+			console.log('SMS sent to', to);
+			return res;
+		} catch (err) {
+			// If auth error, do NOT silently simulate — surface the error so creds can be fixed.
+			try {
+				const status = err && err.status;
+				const message = err && (err.message || JSON.stringify(err));
+				appendLog('sms.log', `TWILIO_ERR status=${status} to=${to} err=${message}`);
+				console.error('Twilio send error', status, message);
+			} catch (e) {}
+			return Promise.reject(err);
+		}
 	}
 
-	// Simulate SMS for local testing
+	// Simulate SMS for local testing or when Twilio not configured
 	appendLog('sms.log', `SIMULATED to=${to} body=${body}`);
 	console.log('SIMULATED SMS to', to, '\n', body);
 	return { sid: 'SIMULATED' };

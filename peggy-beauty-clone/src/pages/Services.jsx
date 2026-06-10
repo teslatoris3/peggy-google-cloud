@@ -162,9 +162,11 @@ function Services() {
                 We work with premium brands and salon partners to deliver safer, more consistent beauty, colour, and finish services.
               </p>
             </div>
-              <a href={getBookingUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-semibold text-deep-black">
-                Book a consultation
-              </a>
+              {(() => { const url = getBookingUrl(); return (
+                <a href={url} onClick={(e) => { e.preventDefault(); window.open(url, '_blank') }} rel="noopener noreferrer" className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-semibold text-deep-black">
+                  Book a consultation
+                </a>
+              )})()}
           </div>
 
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-5">

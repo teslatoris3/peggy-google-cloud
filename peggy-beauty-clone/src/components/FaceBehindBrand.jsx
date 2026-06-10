@@ -101,7 +101,13 @@ function FaceBehindBrand() {
             </motion.ul>
 
             <motion.div className="mt-6" variants={fadeUpVariants}>
-              <a href={getBookingUrl()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center rounded bg-primary px-4 py-2 text-deep-black font-semibold">Book Now</a>
+              {(() => {
+                const url = getBookingUrl()
+                const open = (e) => { e.preventDefault(); window.open(url, '_blank') }
+                return (
+                  <a href={url} onClick={open} rel="noopener noreferrer" className="inline-flex items-center rounded bg-primary px-4 py-2 text-deep-black font-semibold">Book Now</a>
+                )
+              })()}
             </motion.div>
           </div>
         </motion.div>
