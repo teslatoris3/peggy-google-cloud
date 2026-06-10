@@ -23,6 +23,13 @@ const EMPLOYEE_PHONE = (process.env.EMPLOYEE_PHONE || '').trim();
 const TWILIO_MESSAGING_SERVICE_SID = (process.env.TWILIO_MESSAGING_SERVICE_SID || '').trim();
 const DEPOSIT_ENABLED = (process.env.DEPOSIT_ENABLED || 'false') === 'true';
 
+// Logging setup
+const LOG_DIR = path.join(__dirname, 'logs');
+try { if (!fs.existsSync(LOG_DIR)) fs.mkdirSync(LOG_DIR); } catch (e) { console.warn('Could not create logs dir', e && e.message); }
+function appendLog(fileName, text) {
+	try { fs.appendFileSync(path.join(LOG_DIR, fileName), `${new Date().toISOString()} ${text}\n`); } catch (e) { console.error('appendLog err', e && e.message); }
+}
+
 async function sendSms(to, body) {
 	if (TWILIO_SID && TWILIO_TOKEN && (TWILIO_FROM || TWILIO_MESSAGING_SERVICE_SID)) {
 		// Use direct HTTPS POST
@@ -57,9 +64,12 @@ async function sendSms(to, body) {
 						if (res.statusCode === 401) {
 							console.warn('Twilio authentication failed (401). Falling back to simulated SMS. Response:', json);
 							console.warn('Auth header used (masked):', auth.slice(0,8) + '...');
+							const note = `AUTH_FAIL to=${to} body=${body} resp=${JSON.stringify(json)}`;
+							appendLog('sms.log', note);
 							console.log('SIMULATED SMS to', to, '\n', body);
 							return resolve({ sid: 'SIMULATED_AUTH_FAIL', simulated: true, twilioError: json });
 						}
+						appendLog('sms.log', `ERROR status=${res.statusCode} to=${to} resp=${JSON.stringify(json)}`);
 						return reject(new Error(`Twilio API error ${res.statusCode}: ${JSON.stringify(json)}`));
 					} catch (e) {
 						return reject(e);
@@ -73,6 +83,7 @@ async function sendSms(to, body) {
 	}
 
 	// Simulate SMS for local testing
+	appendLog('sms.log', `SIMULATED to=${to} body=${body}`);
 	console.log('SIMULATED SMS to', to, '\n', body);
 	return { sid: 'SIMULATED' };
 }
@@ -170,6 +181,8 @@ app.post('/notify', express.json(), async (req, res) => {
 app.post('/create-booking', express.json(), async (req, res) => {
 	try {
 		const { customerName, email, phone, serviceName, depositAmount, appointmentTime, birthday } = req.body;
+		// Log incoming booking request for debugging
+		try { appendLog('bookings.log', `INBOUND ${JSON.stringify(req.body)}`); } catch (e) { console.warn('log booking err', e && e.message); }
 		// Require appointmentTime always; depositAmount only when deposit workflow is enabled
 		if (!customerName || !email || !appointmentTime || (DEPOSIT_ENABLED && (depositAmount === undefined || depositAmount === null))) {
 			return res.status(400).json({ error: 'Missing required fields' });
@@ -255,6 +268,35 @@ app.post('/create-booking', express.json(), async (req, res) => {
 	} catch (err) {
 		console.error(err);
 		res.status(500).json({ error: 'server_error', details: err.message });
+	}
+});
+
+// Admin: force re-send approval SMS for a booking
+app.post('/admin/send-approval/:bookingId', basicAuth, async (req, res) => {
+	const bookingId = String(req.params.bookingId || '');
+	try {
+		const booking = db.getBooking(bookingId);
+		if (!booking) return res.status(404).json({ ok: false, error: 'not_found' });
+		await createAndSendApproval(booking);
+		appendLog('bookings.log', `ADMIN_RESEND booking=${bookingId}`);
+		return res.json({ ok: true });
+	} catch (e) {
+		console.error('admin resend err', e && e.message);
+		return res.status(500).json({ ok: false, error: e && (e.message || e) });
+	}
+});
+
+// Admin: fetch recent log lines
+app.get('/admin/logs/:name', basicAuth, (req, res) => {
+	const name = req.params.name || 'sms';
+	const file = path.join(LOG_DIR, `${name}.log`);
+	try {
+		if (!fs.existsSync(file)) return res.json({ ok: true, lines: [] });
+		const content = fs.readFileSync(file, 'utf8');
+		const lines = content.trim().split('\n').slice(-200);
+		return res.json({ ok: true, lines });
+	} catch (e) {
+		return res.status(500).json({ ok: false, error: e && e.message });
 	}
 });
 
