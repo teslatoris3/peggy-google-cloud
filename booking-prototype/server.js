@@ -447,4 +447,3 @@ if (!process.env.VERCEL) {
 	try { sendBirthdayMessages(); } catch (e) {}
 	setInterval(sendBirthdayMessages, 24 * 60 * 60 * 1000);
 }
-*** End Patch
