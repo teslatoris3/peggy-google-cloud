@@ -1,4 +1,4 @@
-const DEFAULT_PRODUCTION_BOOKING_URL = 'https://peggy-beauty-booking.vercel.app';
+const DEFAULT_PRODUCTION_BOOKING_URL = 'https://peggybeautysalon.com';
 const LOCAL_BOOKING_URL = 'http://localhost:4000';
 
 export function getBookingUrl() {
