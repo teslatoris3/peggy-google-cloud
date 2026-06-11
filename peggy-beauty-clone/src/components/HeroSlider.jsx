@@ -8,7 +8,7 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import '../styles/HeroSlider.css'
 const slides = [
-  { image: '/images/slider/main11.png', alt: 'Salon styling and bridal-ready looks', position: 'center 50%' },
+  { image: '/images/services/hair_highlight.jpg', alt: 'Balayage and highlights — dimensional colour', position: 'center 50%' },
   { image: '/images/slider/main2.png', alt: 'Soft glam makeup and colour services', position: 'center 50%' },
   { image: '/images/slider/main3.png', alt: 'Dimensional salon colour and finish', position: 'center 50%' },
 ]
@@ -66,7 +66,7 @@ function HeroSlider() {
 
   return (
     <>
-      <section className="relative min-h-[72vh] md:h-screen w-full overflow-hidden" aria-label="Peggy Beauty hero">
+      <section className="relative h-[56vh] md:h-[64vh] w-full overflow-hidden page-hero" aria-label="Peggy Beauty hero">
         <div className="absolute inset-0">
           <AnimatePresence mode="sync">
             <motion.img
