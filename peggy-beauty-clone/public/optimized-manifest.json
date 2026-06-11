@@ -2059,12 +2059,12 @@
         {
           "format": "avif",
           "width": 1600,
-          "file": "peggy-beauty-clone/public/images/gallery/photos/img_3178-1600.avif"
+          "file": "peggy-beauty-clone/public/images/services/waxing-1600.webp"
         },
         {
           "format": "webp",
           "width": 1600,
-          "file": "peggy-beauty-clone/public/images/services/shinion.jpeg"
+          "file": "peggy-beauty-clone/public/images/services/waxing-1600.webp"
         }
       ]
     },
@@ -2235,8 +2235,7 @@
         {
           "format": "avif",
           "width": 1600,
-          "file": "peggy-beauty-clone/public/images/services/shinion.jpeg"
-          
+          "file": "peggy-beauty-clone/public/images/services/waxing-1600.webp"
         },
         {
           "format": "webp",
@@ -2940,12 +2939,12 @@
         {
           "format": "avif",
           "width": 1600,
-          "file": "peggy-beauty-clone/public/images/gallery/photos/photos/img_3178-1600.avif"
+          "file": "peggy-beauty-clone/public/images/services/waxing-1600.webp"
         },
         {
           "format": "webp",
           "width": 1600,
-          "file": "peggy-beauty-clone/public/images/services/shinion.jpeg"
+          "file": "peggy-beauty-clone/public/images/services/waxing-1600.webp"
         }
       ]
     },

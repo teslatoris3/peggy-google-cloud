@@ -96,7 +96,7 @@ function ServicesShowcase() {
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
         {[
-          '/images/gallery/photos/img_3178.jpg',
+          '/images/services/shinion.jpeg',
           '/images/slider/featured1.png',
           '/images/gallery/photos/img_3546.png',
         ].map((src, idx) => (
