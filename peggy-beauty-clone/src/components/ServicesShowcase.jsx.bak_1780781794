@@ -75,7 +75,7 @@ function ServicesShowcase() {
           <figure key={src} className="overflow-hidden rounded-lg bg-white">
             <img src={src} alt={`${galleryItems[idx]} before and after salon result`} className="w-full object-cover" />
             <figcaption className="p-3 text-sm">
-              <span className="text-muted-text block">Before / After</span>
+            
               <strong className="block">{galleryItems[idx]}</strong>
             </figcaption>
           </figure>
