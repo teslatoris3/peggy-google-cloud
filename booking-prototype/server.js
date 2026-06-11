@@ -340,6 +340,57 @@ app.get('/admin/clients', (req, res) => {
 	res.json(db.listClients());
 });
 
+// Admin: disable birthday messages for a client
+app.post('/admin/clients/:id/disable', basicAuth, express.json(), (req, res) => {
+	const id = String(req.params.id || '');
+	const client = db.getClient(id);
+	if (!client) return res.status(404).json({ ok: false, error: 'not_found' });
+	try {
+		db.updateClient(id, { disabledBirthday: true });
+		appendLog('bookings.log', `ADMIN_DISABLE_CLIENT id=${id}`);
+		return res.json({ ok: true });
+	} catch (e) {
+		console.error('disable client err', e && e.message);
+		return res.status(500).json({ ok: false, error: e && e.message });
+	}
+});
+
+// Admin: enable birthday messages for a client
+app.post('/admin/clients/:id/enable', basicAuth, express.json(), (req, res) => {
+	const id = String(req.params.id || '');
+	const client = db.getClient(id);
+	if (!client) return res.status(404).json({ ok: false, error: 'not_found' });
+	try {
+		db.updateClient(id, { disabledBirthday: false });
+		appendLog('bookings.log', `ADMIN_ENABLE_CLIENT id=${id}`);
+		return res.json({ ok: true });
+	} catch (e) {
+		console.error('enable client err', e && e.message);
+		return res.status(500).json({ ok: false, error: e && e.message });
+	}
+});
+
+// Admin: send birthday message to a client immediately
+app.post('/admin/clients/:id/send-birthday-now', basicAuth, express.json(), async (req, res) => {
+	const id = String(req.params.id || '');
+	const client = db.getClient(id);
+	if (!client) return res.status(404).json({ ok: false, error: 'not_found' });
+	if (!client.phone) return res.status(400).json({ ok: false, error: 'no_phone' });
+	try {
+		const name = client.name || 'there';
+		const msg = `Happy birthday ${name}! Wishing you a wonderful day from the salon. you have half price on all services today!`;
+		// Use sendSms (will use Twilio when configured)
+		await sendSms(client.phone, msg);
+		const yearNow = String(new Date().getFullYear());
+		db.updateClient(id, { lastBirthdaySent: yearNow });
+		appendLog('bookings.log', `ADMIN_SEND_BIRTHDAY id=${id}`);
+		return res.json({ ok: true });
+	} catch (e) {
+		console.error('send-birthday-now err', e && (e.stack || e.message || e));
+		return res.status(500).json({ ok: false, error: e && (e.message || String(e)) });
+	}
+});
+
 // Approve/reject via token links sent in SMS to employee (public links)
 app.get('/action/approve/:token', async (req, res) => {
     console.log('ACTION approve/reject hit, token:', req.params.token);
