@@ -104,7 +104,7 @@ function HeroSlider() {
                 style={{ fontSize: 'clamp(2rem, 6vw + 1rem, 4.5rem)', fontWeight: 900, lineHeight: 1 }}
                 variants={itemVariants}
               >
-                Hair Extensions & Hair Color Specialists
+                18 Years of Beauty Expertise in Toronto
               </motion.h1>
 
               <motion.p

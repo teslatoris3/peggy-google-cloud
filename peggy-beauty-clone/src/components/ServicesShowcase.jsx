@@ -51,7 +51,19 @@ function ServicesShowcase() {
         {serviceRows.map((row, index) => (
           <article key={row.eyebrow} className={`grid items-center gap-6 md:grid-cols-2 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
             <div className="order-1 md:order-0">
-              <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-64 md:h-80" />
+              {row.image && row.image.includes('hair-color') ? (
+                <video
+                  src="/videos/haircolor-loop.mp4"
+                  poster="/images/services/hair-color-poster.jpg"
+                  className="rounded-lg object-cover w-full h-64 md:h-80"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                />
+              ) : (
+                <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-64 md:h-80" />
+              )}
             </div>
 
             <div className="brand-card" style={{ padding: '1.5rem' }}>
