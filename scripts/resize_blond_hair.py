@@ -5,6 +5,11 @@ import os
 
 SRC = "/home/amir/peggy_beauty_clone2/peggy-images-backup/peggy-beauty-clone/public/images/services/blond_hair.jpeg"
 SIZES = [320, 640, 1024, 1600]
+FORMATS = [
+    ("jpeg", "JPEG"),
+    ("webp", "WEBP"),
+    ("avif", "AVIF"),
+]
 
 def main():
     if not os.path.exists(SRC):
@@ -21,11 +26,19 @@ def main():
         for w in SIZES:
             h = int(w * h0 / w0)
             img = img0.resize((w, h), Image.LANCZOS)
-            out_path = os.path.join(dirname, f"{name}-{w}.jpeg")
-            img.save(out_path, "JPEG", quality=85, optimize=True)
-            print("Saved:", out_path)
+            for ext, fmt in FORMATS:
+                out_path = os.path.join(dirname, f"{name}-{w}.{ext}")
+                try:
+                    save_kwargs = {}
+                    if fmt == "JPEG":
+                        save_kwargs.update({"quality": 85, "optimize": True})
+                    img.save(out_path, fmt, **save_kwargs)
+                    print("Saved:", out_path)
+                except Exception as e:
+                    print(f"Failed to save {out_path}: {e}")
 
     # Replace the original with the largest generated size
+    # Replace the original with the largest generated JPEG (prefer JPEG for compatibility)
     largest = SIZES[-1]
     largest_path = os.path.join(dirname, f"{name}-{largest}.jpeg")
     if os.path.exists(largest_path):
