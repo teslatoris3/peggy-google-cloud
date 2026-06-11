@@ -74,12 +74,12 @@ function FounderSection() {
               Peggy’s “why” is simple yet powerful: to help each guest feel like the best version of themselves through expert care, artistry, and attention to detail. Her dedication to modern hairstyling techniques and personalized beauty experiences has made Peggy Beauty one of the most sought-after salons in Toronto.
             </motion.p>
 
-            <motion.ul className="mt-8 grid gap-3 text-sm md:text-lg font-heading text-deep-black" variants={fadeUpVariants}>
+            {/* <motion.ul className="mt-8 grid gap-3 text-sm md:text-lg font-heading text-deep-black" variants={fadeUpVariants}>
               <li>Bellami</li>
               <li>Olaplex</li>
               <li>Redken</li>
               <li>Wella</li>
-            </motion.ul>
+            </motion.ul> */}
               </div>
 
             <motion.div className="mt-6 flex gap-3" variants={fadeUpVariants}>

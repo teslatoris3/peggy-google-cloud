@@ -6,16 +6,15 @@ import { getBookingUrl } from '../config/booking'
 
 const serviceRows = [
   {
-    title: "Signature Makeup & Beauty",
-    eyebrow: 'Makeup & Beauty',
-    image: '/images/services/makeup.png',
+    title: 'Signature Makeup Services',
+    eyebrow: "Toronto's Expertise",
+    image: '/images/services/makeup.jpg',
     description:
-      'Professional makeup services for bridal, special events, and editorial work — tailored to your skin tone and the occasion.',
+      'Professional makeup services for bridal, special events, and editorial moments. Peggy creates flattering, long-wear looks using high-quality products and custom colour techniques to suit your skin and occasion.',
     services: [
-      'Bridal makeup',
-      'Soft-glam & evening looks',
-      'Airbrush and long-wear application',
-      'Consultation and colour matching',
+      'Bridal and event makeup',
+      'Soft-glam, evening, and editorial looks',
+      'Airbrush and long-wear application options',
     ],
   },
   {
@@ -58,9 +57,9 @@ function ServicesShowcase() {
                   if (!videoFailed) {
                     return (
                       <video
-                        src="/videos/haircolor-loop.mp4"
+                        src="/videos/IMG_7017 (1).MOV"
                         poster="/images/services/hair-color-poster.svg"
-                        className="rounded-lg object-contain w-full h-64 md:h-80"
+                        className="rounded-lg object-cover w-full h-64 md:h-80"
                         autoPlay
                         loop
                         muted

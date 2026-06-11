@@ -1,33 +1,32 @@
 import { Link } from 'react-router-dom'
+import OptimizedImage from './OptimizedImage'
+import { ArrowRight, Check } from 'lucide-react'
+import { getBookingUrl } from '../config/booking'
 
 function ExtensionsFeature() {
+  const bookingUrl = getBookingUrl()
+
   return (
     <section className="mt-12 bg-[#F7E6E2]">
-      <div className="mx-auto max-w-7xl px-6 py-16 grid gap-6 md:grid-cols-2 items-center">
-        <div>
-          <p className="text-sm uppercase tracking-wide text-primary">Toronto's Expertise</p>
+      <div className="mx-auto max-w-7xl px-6 py-16">
+        <article className="grid items-center gap-6 md:grid-cols-2">
+          <div className="order-1 md:order-0">
+            <OptimizedImage src="/images/services/makeup.png" alt="Makeup & Beauty salon service" className="rounded-lg object-cover w-full h-64 md:h-80" />
+          </div>
 
-
-          <h2 className="mt-2 text-3xl md:text-4xl font-heading">Signature Makeup Services</h2>
-
-          <p className="mt-4 text-muted-text max-w-lg">
-            Professional makeup services for bridal, special events, and editorial moments. Peggy creates flattering, long-wear looks using high-quality products and custom colour techniques to suit your skin and occasion.
-          </p>
-
-          <ul className="mt-6 space-y-2 list-inside list-disc text-muted-text max-w-md">
-            <li>Bridal and event makeup</li>
-            <li>Soft-glam, evening, and editorial looks</li>
-            <li>Airbrush and long-wear application options</li>
-          </ul>
-
-          <Link to="/services" className="mt-6 inline-flex items-center rounded bg-primary px-6 py-2 text-sm font-semibold text-deep-black">
-            View services
-          </Link>
-        </div>
-
-        <div className="flex justify-center md:justify-end">
-          <img src="/images/services/makeup.jpg" alt="Makeup services" className="w-full max-w-md rounded-lg object-cover shadow-sm" />
-        </div>
+          <div className="brand-card" style={{ padding: '1.5rem' }}>
+            <p className="text-sm text-primary">Makeup &amp; Beauty</p>
+            <h3 className="mt-2 text-2xl font-semibold">Signature Makeup &amp; Beauty</h3>
+            <p className="mt-3 text-sm text-muted-text">Professional makeup services for bridal, special events, and editorial work — tailored to your skin tone and the occasion.</p>
+            <ul className="mt-4 grid gap-2">
+              <li className="flex items-start gap-2 text-sm"><Check size={16} aria-hidden="true" />Bridal makeup</li>
+              <li className="flex items-start gap-2 text-sm"><Check size={16} aria-hidden="true" />Soft-glam &amp; evening looks</li>
+              <li className="flex items-start gap-2 text-sm"><Check size={16} aria-hidden="true" />Airbrush and long-wear application</li>
+              <li className="flex items-start gap-2 text-sm"><Check size={16} aria-hidden="true" />Consultation and colour matching</li>
+            </ul>
+            <a href={bookingUrl} onClick={(e) => { e.preventDefault(); window.open(bookingUrl, '_blank') }} rel="noopener noreferrer" className="mt-6 inline-flex items-center gap-2 rounded bg-primary px-4 py-2 text-deep-black font-semibold">Book a Consultation <ArrowRight size={16} /></a>
+          </div>
+        </article>
       </div>
     </section>
   )
