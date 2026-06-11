@@ -96,7 +96,7 @@ function HeroSlider() {
                 style={{ fontSize: 'clamp(1.1rem, 2.2vw + 0.6rem, 2rem)', fontWeight: 800 }}
                 variants={itemVariants}
               >
-                Premium Hair Experience
+                Luxury Colour Services
               </motion.p>
 
               <motion.h1
@@ -104,7 +104,7 @@ function HeroSlider() {
                 style={{ fontSize: 'clamp(2rem, 6vw + 1rem, 4.5rem)', fontWeight: 900, lineHeight: 1 }}
                 variants={itemVariants}
               >
-                18 Years of Beauty Expertise in Toronto
+                Where Hair Meets Art — Book Your Transformation
               </motion.h1>
 
               <motion.p
@@ -112,7 +112,7 @@ function HeroSlider() {
                 style={{ fontSize: 'clamp(1rem, 2.8vw + 0.8rem, 2rem)', fontWeight: 600 }}
                 variants={itemVariants}
               >
-                We specialize in premium hair extensions and expert hair coloring, creating natural-looking, high-end transformations tailored to you.
+                From subtle dimension to bold colour, we craft personalized colour plans with salon-grade care.
               </motion.p>
 
               <motion.div className="mt-8 flex gap-6 items-center" variants={itemVariants}>
