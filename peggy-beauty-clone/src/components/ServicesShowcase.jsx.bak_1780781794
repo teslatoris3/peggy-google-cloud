@@ -5,7 +5,7 @@ const serviceRows = [
   {
     title: "Signature Makeup & Beauty",
     eyebrow: 'Makeup & Beauty',
-    image: '/images/services/makeup.jpg',
+    image: '/images/balayage.png',
     description:
       'Professional makeup services for bridal, special events, and editorial work — tailored to your skin tone and the occasion.',
     services: [

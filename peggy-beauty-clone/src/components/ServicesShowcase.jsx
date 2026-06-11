@@ -60,7 +60,7 @@ function ServicesShowcase() {
                       <video
                         src="/videos/IMG_7017 (1).MOV"
                         poster="/images/services/hair-color-poster.svg"
-                        className="rounded-lg object-cover w-full h-64 md:h-80"
+                        className="rounded-lg object-cover w-full h-[420px] md:h-[520px]"
                         autoPlay
                         loop
                         muted
