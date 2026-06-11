@@ -3,6 +3,10 @@ import { getBookingUrl } from '../config/booking'
 
 export default function FloatingBookButton() {
   const url = getBookingUrl()
+  if (typeof window !== 'undefined') {
+    const path = window.location.pathname || '/'
+    if (path === '/') return null
+  }
   const notify = async () => {
     try {
       fetch(`${url}/notify`, {
