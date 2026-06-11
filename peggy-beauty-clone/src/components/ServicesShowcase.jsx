@@ -71,11 +71,11 @@ function ServicesShowcase() {
                   }
 
                   return (
-                    <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : '/images/services/hair-color.png'} alt={`${row.eyebrow} salon service`} className="rounded-lg object-contain w-full h-64 md:h-80" />
+                    <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : '/images/services/hair-color.png'} alt={`${row.eyebrow} salon service`} className="rounded-lg object-contain h-[420px] md:h-[520px]" />
                   )
                 })()
               ) : (
-                <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-64 md:h-80" />
+                <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover h-[420px] md:h-[520px]" />
               )}
             </div>
 
