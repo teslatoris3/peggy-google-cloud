@@ -112,33 +112,11 @@ function HeroSlider() {
         <motion.div animate="visible" className="relative z-10 mx-auto h-full max-w-6xl px-6 text-white" initial="hidden" variants={contentVariants}>
           <div className="h-full flex items-center">
             <motion.div className="w-full md:w-1/2" variants={itemVariants}>
-              <motion.p
-                className="mb-4 text-xs font-bold uppercase tracking-[0.18em] text-primary sm:tracking-[0.28em]"
-                style={{ fontSize: 'clamp(1.1rem, 2.2vw + 0.6rem, 2rem)', fontWeight: 800 }}
-                variants={itemVariants}
-              >
-                Luxury Colour Services
-              </motion.p>
-
-              <motion.h1
-                className="text-3xl sm:text-5xl md:text-7xl font-heading leading-tight text-white hero-force-large"
-                style={{ fontSize: 'clamp(2rem, 6vw + 1rem, 4.5rem)', fontWeight: 900, lineHeight: 1 }}
-                variants={itemVariants}
-              >
-                Where Hair Meets Art — Book Your Transformation
-              </motion.h1>
-
-              <motion.p
-                className="mx-auto mt-6 max-w-3xl text-base leading-8 text-offwhite-cream/90 md:text-lg"
-                style={{ fontSize: 'clamp(1rem, 2.8vw + 0.8rem, 2rem)', fontWeight: 600 }}
-                variants={itemVariants}
-              >
-                From subtle dimension to bold colour, we craft personalized colour plans with salon-grade care.
-              </motion.p>
-
-              <motion.div className="mt-8 flex gap-6 items-center" variants={itemVariants}>
-                <Link className="rounded-md bg-primary px-3 py-1.5 text-sm md:px-8 md:py-4 md:text-xl font-semibold text-deep-black shadow-sm" to="/contact">Book Now</Link>
-                <Link className="rounded-md border border-white/30 px-3 py-1.5 text-sm md:px-8 md:py-4 md:text-xl" to="/services">Services</Link>
+              <motion.div className="w-full md:w-1/2 flex items-center justify-center md:justify-start" variants={itemVariants}>
+                <div className="flex gap-6 items-center">
+                  <Link className="rounded-md bg-primary px-3 py-1.5 text-sm md:px-8 md:py-4 md:text-xl font-semibold text-deep-black shadow-sm" to="/contact">Book Now</Link>
+                  <Link className="rounded-md border border-white/30 px-3 py-1.5 text-sm md:px-8 md:py-4 md:text-xl" to="/services">Services</Link>
+                </div>
               </motion.div>
             </motion.div>
           </div>
