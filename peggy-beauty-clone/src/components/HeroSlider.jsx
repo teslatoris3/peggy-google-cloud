@@ -66,7 +66,7 @@ function HeroSlider() {
 
   return (
     <>
-      <section className="relative h-[72vh] md:h-screen w-full overflow-hidden" aria-label="Peggy Beauty hero">
+      <section className="relative min-h-[72vh] md:h-screen w-full overflow-hidden" aria-label="Peggy Beauty hero">
         <div className="absolute inset-0">
           <AnimatePresence mode="sync">
             <motion.img
@@ -100,8 +100,8 @@ function HeroSlider() {
               </motion.p>
 
               <motion.h1
-                className="text-4xl sm:text-5xl md:text-7xl font-heading leading-tight text-white hero-force-large"
-                style={{ fontSize: 'clamp(3rem, 10vw + 2rem, 16rem)', fontWeight: 900, lineHeight: 1 }}
+                className="text-3xl sm:text-5xl md:text-7xl font-heading leading-tight text-white hero-force-large"
+                style={{ fontSize: 'clamp(2rem, 6vw + 1rem, 4.5rem)', fontWeight: 900, lineHeight: 1 }}
                 variants={itemVariants}
               >
                 Hair Extensions & Hair Color Specialists
@@ -116,8 +116,8 @@ function HeroSlider() {
               </motion.p>
 
               <motion.div className="mt-8 flex gap-6 items-center" variants={itemVariants}>
-                <Link className="rounded-md bg-primary px-8 py-4 text-xl font-semibold text-deep-black shadow-sm" to="/contact">Book Now</Link>
-                <Link className="rounded-md border border-white/30 px-8 py-4 text-xl" to="/services">Services</Link>
+                <Link className="rounded-md bg-primary px-3 py-1.5 text-sm md:px-8 md:py-4 md:text-xl font-semibold text-deep-black shadow-sm" to="/contact">Book Now</Link>
+                <Link className="rounded-md border border-white/30 px-3 py-1.5 text-sm md:px-8 md:py-4 md:text-xl" to="/services">Services</Link>
               </motion.div>
             </motion.div>
           </div>
