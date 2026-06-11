@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { useState } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
 import OptimizedImage from './OptimizedImage'
 import { getBookingUrl } from '../config/booking'
@@ -52,15 +53,27 @@ function ServicesShowcase() {
           <article key={row.eyebrow} className={`grid items-center gap-6 md:grid-cols-2 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
             <div className="order-1 md:order-0">
               {row.image && row.image.includes('hair-color') ? (
-                <video
-                  src="/videos/haircolor-loop.mp4"
-                  poster="/images/services/hair-color-poster.jpg"
-                  className="rounded-lg object-cover w-full h-64 md:h-80"
-                  autoPlay
-                  loop
-                  muted
-                  playsInline
-                />
+                (() => {
+                  const [videoFailed, setVideoFailed] = useState(false)
+                  if (!videoFailed) {
+                    return (
+                      <video
+                        src="/videos/haircolor-loop.mp4"
+                        poster="/images/services/hair-color-poster.svg"
+                        className="rounded-lg object-cover w-full h-64 md:h-80"
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        onError={() => setVideoFailed(true)}
+                      />
+                    )
+                  }
+
+                  return (
+                    <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : '/images/services/hair-color.png'} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-64 md:h-80" />
+                  )
+                })()
               ) : (
                 <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-64 md:h-80" />
               )}
