@@ -8,7 +8,7 @@ import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 import '../styles/HeroSlider.css'
 const slides = [
-  { image: '/images/services/hair_highlight.jpg', alt: 'Balayage and highlights — dimensional colour', position: 'center 50%' },
+  { image: '/images/slider/main11.png', alt: 'Salon styling and bridal-ready looks', position: 'center 50%' },
   { image: '/images/slider/main2.png', alt: 'Soft glam makeup and colour services', position: 'center 50%' },
   { image: '/images/slider/main3.png', alt: 'Dimensional salon colour and finish', position: 'center 50%' },
 ]
@@ -69,18 +69,39 @@ function HeroSlider() {
       <section className="relative h-[56vh] md:h-[64vh] w-full overflow-hidden page-hero" aria-label="Peggy Beauty hero">
         <div className="absolute inset-0">
           <AnimatePresence mode="sync">
-            <motion.img
-              key={activeSlide}
-              animate={{ opacity: 1 }}
-              alt={slides[activeSlide].alt}
-              className="absolute inset-0 h-full w-full object-cover"
-              exit={{ opacity: 0 }}
-              initial={{ opacity: 0 }}
-              src={slides[activeSlide].image}
-              onError={handleSlideError}
-              style={{ display: 'block', objectPosition: slides[activeSlide].position, transformOrigin: 'center center', willChange: 'opacity' }}
-              transition={{ duration: 1.2, ease: 'linear' }}
-            />
+            {slides[activeSlide].image.includes('main11') ? (
+              <motion.picture
+                key={activeSlide}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                initial={{ opacity: 0 }}
+                transition={{ duration: 1.2, ease: 'linear' }}
+                style={{ display: 'block', willChange: 'opacity' }}
+              >
+                <source type="image/avif" srcSet="/images/slider/main11-320.avif 320w, /images/slider/main11-640.avif 640w, /images/slider/main11-1024.avif 1024w, /images/slider/main11-1600.avif 1600w" sizes="100vw" />
+                <source type="image/webp" srcSet="/images/slider/main11-320.webp 320w, /images/slider/main11-640.webp 640w, /images/slider/main11-1024.webp 1024w, /images/slider/main11-1600.webp 1600w" sizes="100vw" />
+                <motion.img
+                  alt={slides[activeSlide].alt}
+                  className="absolute inset-0 h-full w-full object-cover"
+                  src="/images/slider/main11-1600.webp"
+                  onError={handleSlideError}
+                  style={{ objectPosition: slides[activeSlide].position, transformOrigin: 'center center' }}
+                />
+              </motion.picture>
+            ) : (
+              <motion.img
+                key={activeSlide}
+                animate={{ opacity: 1 }}
+                alt={slides[activeSlide].alt}
+                className="absolute inset-0 h-full w-full object-cover"
+                exit={{ opacity: 0 }}
+                initial={{ opacity: 0 }}
+                src={slides[activeSlide].image}
+                onError={handleSlideError}
+                style={{ display: 'block', objectPosition: slides[activeSlide].position, transformOrigin: 'center center', willChange: 'opacity' }}
+                transition={{ duration: 1.2, ease: 'linear' }}
+              />
+            )}
           </AnimatePresence>
         </div>
 
