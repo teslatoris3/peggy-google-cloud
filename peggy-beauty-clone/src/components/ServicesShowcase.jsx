@@ -6,15 +6,16 @@ import { getBookingUrl } from '../config/booking'
 
 const serviceRows = [
   {
-    title: 'Signature Makeup Services',
-    eyebrow: "Toronto's Expertise",
-    image: '/images/services/makeup.jpg',
+    title: 'Hair Highlight & Colour Services',
+    eyebrow: 'Hair Highlighting',
+    image: '/images/services/hair_highlight.jpg',
     description:
-      'Professional makeup services for bridal, special events, and editorial moments. Peggy creates flattering, long-wear looks using high-quality products and custom colour techniques to suit your skin and occasion.',
+      'Expert hair highlighting and colour services to add dimension, brightness, and natural-looking depth. We specialise in balayage, foils, and personalised colour blending to suit your skin tone and lifestyle.',
     services: [
-      'Bridal and event makeup',
-      'Soft-glam, evening, and editorial looks',
-      'Airbrush and long-wear application options',
+      'Balayage and face-framing highlights',
+      'Foil and babylight techniques',
+      'Root touch-ups and colour corrections',
+      'Glossing, toning, and brightness maintenance',
     ],
   },
   {

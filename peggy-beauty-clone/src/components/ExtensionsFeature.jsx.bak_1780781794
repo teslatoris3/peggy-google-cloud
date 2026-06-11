@@ -26,7 +26,7 @@ function ExtensionsFeature() {
         </div>
 
         <div className="flex justify-center md:justify-end">
-          <img src="/images/services/makeup.jpg" alt="Makeup services" className="w-full max-w-md rounded-lg object-cover shadow-sm" />
+          <img src="/images/hair_highlight.jpg" alt="hair high light services" className="w-full max-w-md rounded-lg object-cover shadow-sm" />
         </div>
       </div>
     </section>
