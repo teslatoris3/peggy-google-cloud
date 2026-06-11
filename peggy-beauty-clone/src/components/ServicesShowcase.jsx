@@ -34,9 +34,9 @@ const serviceRows = [
 ]
 
 const galleryItems = [
-  'Balayage Glow',
-  'Facial Contouring',
-  'Luxury Finish',
+  'Shinion and Updo',
+  'Threading',
+  'Waxing',
 ]
 
 function ServicesShowcase() {
