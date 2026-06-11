@@ -60,7 +60,7 @@ function ServicesShowcase() {
                       <video
                         src="/videos/haircolor-loop.mp4"
                         poster="/images/services/hair-color-poster.svg"
-                        className="rounded-lg object-cover w-full h-64 md:h-80"
+                        className="rounded-lg object-contain w-full h-64 md:h-80"
                         autoPlay
                         loop
                         muted
@@ -71,7 +71,7 @@ function ServicesShowcase() {
                   }
 
                   return (
-                    <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : '/images/services/hair-color.png'} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-64 md:h-80" />
+                    <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : '/images/services/hair-color.png'} alt={`${row.eyebrow} salon service`} className="rounded-lg object-contain w-full h-64 md:h-80" />
                   )
                 })()
               ) : (
