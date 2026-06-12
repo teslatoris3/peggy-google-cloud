@@ -1,94 +1,36 @@
+import { useEffect, useMemo, useState } from 'react'
 import SEO from '../components/SEO'
+import { loadGalleryMedia, DEFAULT_GALLERY_MEDIA } from '../data/galleryMedia'
 
 function Gallery() {
-  const dedupeBySrc = (items) => Array.from(new Map(items.map((item) => [item.src, item])).values())
-
   const meta = {
     title: 'Gallery — Peggy Beauty',
     description: 'Before-and-after photos and behind-the-scenes videos from Peggy Beauty salon.',
     url: 'https://example.com/gallery',
     image: '/images/hero.png'
   }
-  const media = dedupeBySrc([
-    {
-      type: 'image',
-      src: '/images/makeup_new.jpeg',
-      alt: 'Makeup artistry with a polished bridal finish',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/hair_colored_blue.png',
-      alt: 'Women color hair with vivid blue dimension',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/man_hair_cut.jpg',
-      alt: 'Men hair cut with a clean modern fade',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/boys-haircuts-fringe-up-teaneck-nj2.png',
-      alt: 'Boy haircut with a fresh fringe-up finish',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_3176.jpg',
-      alt: 'Salon transformation with soft polished styling',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_3750.png',
-      alt: 'Client look with camera-ready styling',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_3914.png',
-      alt: 'Fresh salon work with a refined finish',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_3956.jpg',
-      alt: 'Long-form colour and styling result',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_4129.png',
-      alt: 'Elegant salon transformation with detail work',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_4293.png',
-      alt: 'Signature beauty look with polished finish',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_4371.png',
-      alt: 'Clean, professional salon styling result',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_4482.png',
-      alt: 'Refined salon photo with balanced colour',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_4555.png',
-      alt: 'Finished beauty look with glossy texture',
-    },
-    {
-      type: 'video',
-      src: '/images/gallery/videos/IMG_5684 (1).MOV',
-      alt: 'Behind the scenes salon video',
-    },
-    {
-      type: 'video',
-      src: '/images/gallery/videos/IMG_7097 (1).MOV',
-      alt: 'Salon video featuring a fresh transformation',
-    },
-  ]).map((item) => ({
-    ...item,
-    resolvedSrc: encodeURI(item.src),
-  }))
+  const [media, setMedia] = useState(DEFAULT_GALLERY_MEDIA)
+
+  useEffect(() => {
+    setMedia(loadGalleryMedia())
+
+    const handleStorage = () => setMedia(loadGalleryMedia())
+    window.addEventListener('storage', handleStorage)
+    window.addEventListener('gallery-media-updated', handleStorage)
+    return () => {
+      window.removeEventListener('storage', handleStorage)
+      window.removeEventListener('gallery-media-updated', handleStorage)
+    }
+  }, [])
+
+  const resolvedMedia = useMemo(
+    () =>
+      media.map((item) => ({
+        ...item,
+        resolvedSrc: encodeURI(item.src),
+      })),
+    [media],
+  )
 
   return (
     <>
@@ -100,7 +42,7 @@ function Gallery() {
         </p>
 
         <div className="mt-6 grid grid-cols-2 gap-4 auto-rows-fr md:grid-cols-4">
-          {media.map((m, i) => (
+          {resolvedMedia.map((m, i) => (
             <figure
               key={m.src}
               className={`group overflow-hidden rounded-lg bg-white shadow-sm ${i === 0 ? 'md:col-span-2 md:row-span-2' : ''}`}

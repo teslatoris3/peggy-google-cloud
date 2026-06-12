@@ -8,6 +8,7 @@ import Services from './pages/Services'
 import Pricing from './pages/Pricing'
 import Gallery from './pages/Gallery'
 import Contact from './pages/Contact'
+import AdminGallery from './pages/AdminGallery'
 import SplashScreen from './components/SplashScreen'
 import { useState } from 'react'
 
@@ -26,6 +27,7 @@ function App() {
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/admin/gallery" element={<AdminGallery />} />
         </Routes>
       </main>
       <Footer />
