@@ -12,6 +12,11 @@ function Gallery() {
   const media = dedupeBySrc([
     {
       type: 'image',
+      src: '/images/makeup_new.jpeg',
+      alt: 'Makeup artistry with a polished bridal finish',
+    },
+    {
+      type: 'image',
       src: '/images/gallery/photos/hair_colored_blue.png',
       alt: 'Women color hair with vivid blue dimension',
     },
@@ -22,7 +27,7 @@ function Gallery() {
     },
     {
       type: 'image',
-      src: '/images/gallery/photos/boys-haircuts-fringe-up-teaneck-nj.jpg',
+      src: '/images/gallery/photos/boys-haircuts-fringe-up-teaneck-nj2.png',
       alt: 'Boy haircut with a fresh fringe-up finish',
     },
     {
@@ -74,6 +79,11 @@ function Gallery() {
       type: 'video',
       src: '/images/gallery/videos/IMG_5684 (1).MOV',
       alt: 'Behind the scenes salon video',
+    },
+    {
+      type: 'video',
+      src: '/images/gallery/videos/IMG_7097 (1).MOV',
+      alt: 'Salon video featuring a fresh transformation',
     },
   ]).map((item) => ({
     ...item,
