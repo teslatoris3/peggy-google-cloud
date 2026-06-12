@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import { ChevronDown } from 'lucide-react'
 import OptimizedImage from './OptimizedImage'
@@ -109,18 +108,6 @@ function HeroSlider() {
 
         <img src="/images/hero-accent.svg" alt="" aria-hidden="true" className="absolute bottom-0 left-0 w-full pointer-events-none" />
 
-        <motion.div animate="visible" className="relative z-10 mx-auto h-full max-w-6xl px-6 text-white" initial="hidden" variants={contentVariants}>
-          <div className="h-full flex items-center">
-            <motion.div className="w-full md:w-1/2" variants={itemVariants}>
-              <motion.div className="w-full md:w-1/2 flex items-center justify-center md:justify-start" variants={itemVariants}>
-                <div className="flex gap-6 items-center">
-                  <Link className="rounded-md bg-primary px-3 py-1.5 text-sm md:px-8 md:py-4 md:text-xl font-semibold text-deep-black shadow-sm" to="/contact">Book Now</Link>
-                  <Link className="rounded-md border border-white/30 px-3 py-1.5 text-sm md:px-8 md:py-4 md:text-xl" to="/services">Services</Link>
-                </div>
-              </motion.div>
-            </motion.div>
-          </div>
-        </motion.div>
 
         {/* Chevron removed per request */}
       </section>
