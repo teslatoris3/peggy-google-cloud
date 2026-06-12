@@ -135,6 +135,69 @@ app.use((req, res, next) => {
 	next();
 });
 
+function timeToMinutes(value) {
+	const match = String(value || '').match(/^(\d{2}):(\d{2})$/);
+	if (!match) return null;
+	const hours = Number(match[1]);
+	const minutes = Number(match[2]);
+	if (hours > 23 || minutes > 59) return null;
+	return hours * 60 + minutes;
+}
+
+function normalizeDate(value) {
+	const match = String(value || '').match(/^(\d{4}-\d{2}-\d{2})/);
+	return match ? match[1] : '';
+}
+
+function normalizeAppointmentTime(value) {
+	const match = String(value || '').match(/T(\d{2}:\d{2})/);
+	return match ? match[1] : '';
+}
+
+function validateAvailabilityPayload(payload) {
+	const openTime = String(payload.openTime || '').trim();
+	const closeTime = String(payload.closeTime || '').trim();
+	const openMinutes = timeToMinutes(openTime);
+	const closeMinutes = timeToMinutes(closeTime);
+	if (openMinutes === null || closeMinutes === null) return { error: 'invalid_hours' };
+	if (openMinutes >= closeMinutes) return { error: 'invalid_hour_range' };
+
+	const closedDates = Array.isArray(payload.closedDates)
+		? payload.closedDates.map(normalizeDate).filter(Boolean)
+		: [];
+
+	return {
+		availability: {
+			open: payload.open !== false,
+			openTime,
+			closeTime,
+			closedDates: Array.from(new Set(closedDates)).sort(),
+		},
+	};
+}
+
+function getAvailabilityConflict(appointmentTime) {
+	const availability = db.getAvailability();
+	const appointmentDate = normalizeDate(appointmentTime);
+	const appointmentClock = normalizeAppointmentTime(appointmentTime);
+	if (!availability.open) return 'Online booking is closed right now. Please call the salon to book.';
+	if (!appointmentDate || !appointmentClock) return 'Please choose an appointment date and time.';
+	if (availability.closedDates.includes(appointmentDate)) return 'Peggy is closed on that date. Please choose another day.';
+
+	const appointmentMinutes = timeToMinutes(appointmentClock);
+	const openMinutes = timeToMinutes(availability.openTime);
+	const closeMinutes = timeToMinutes(availability.closeTime);
+	if (appointmentMinutes === null || openMinutes === null || closeMinutes === null) return 'Please choose a valid appointment time.';
+	if (appointmentMinutes < openMinutes || appointmentMinutes >= closeMinutes) {
+		return `Please choose a time between ${availability.openTime} and ${availability.closeTime}.`;
+	}
+	return '';
+}
+
+app.get('/availability', (req, res) => {
+	res.json(db.getAvailability());
+});
+
 // Endpoint to receive lightweight notifications (e.g., Book Now clicked)
 app.post('/notify', express.json(), async (req, res) => {
 	try {
@@ -159,6 +222,11 @@ app.post('/create-booking', express.json(), async (req, res) => {
 		// Require appointmentTime always; depositAmount only when deposit workflow is enabled
 		if (!customerName || !email || !appointmentTime || (DEPOSIT_ENABLED && (depositAmount === undefined || depositAmount === null))) {
 			return res.status(400).json({ error: 'Missing required fields' });
+		}
+		const availabilityConflict = getAvailabilityConflict(appointmentTime);
+		if (availabilityConflict) {
+			appendLog('bookings.log', `UNAVAILABLE appointmentTime=${appointmentTime} reason=${availabilityConflict}`);
+			return res.status(409).json({ error: 'unavailable', message: availabilityConflict });
 		}
 
 		const created = db.createBooking({
@@ -338,6 +406,23 @@ app.get('/admin/bookings', (req, res) => {
 
 app.get('/admin/clients', (req, res) => {
 	res.json(db.listClients());
+});
+
+app.get('/admin/availability', (req, res) => {
+	res.json(db.getAvailability());
+});
+
+app.post('/admin/availability', basicAuth, express.json(), (req, res) => {
+	try {
+		const result = validateAvailabilityPayload(req.body || {});
+		if (result.error) return res.status(400).json({ ok: false, error: result.error });
+		const availability = db.updateAvailability(result.availability);
+		appendLog('bookings.log', `ADMIN_AVAILABILITY open=${availability.open} hours=${availability.openTime}-${availability.closeTime} closedDates=${availability.closedDates.join(',')}`);
+		return res.json({ ok: true, availability });
+	} catch (e) {
+		console.error('availability update err', e && e.message);
+		return res.status(500).json({ ok: false, error: e && e.message });
+	}
 });
 
 // Admin: disable birthday messages for a client

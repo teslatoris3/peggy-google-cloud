@@ -17,6 +17,17 @@
     thead th{background:#fff;border-bottom:2px solid #efe8e2;padding:12px;text-align:left}
     tbody td{background:#fff;border:1px solid #efe8e2;padding:12px;vertical-align:top}
     .actions button{background:var(--brand-accent);border:none;padding:8px 10px;border-radius:8px;margin-right:8px;color:#111;cursor:pointer}
+    .panel{background:#fff;border:1px solid #efe8e2;border-radius:10px;padding:14px;margin:16px 0 20px}
+    .availability-form{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;align-items:end}
+    .availability-form label{display:grid;gap:6px;font-size:13px;color:var(--muted)}
+    .availability-form input{padding:10px;border:1px solid #e6dcca;border-radius:8px;font:inherit}
+    .availability-form button,.closed-date button{background:var(--brand-accent);border:none;padding:10px 12px;border-radius:8px;color:#111;cursor:pointer;font-weight:600}
+    .switch{display:flex;gap:8px;align-items:center;color:var(--brand-deep)}
+    .switch input{width:auto}
+    .closed-dates{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .closed-date{display:inline-flex;gap:8px;align-items:center;background:#f7f3f0;border:1px solid #e6dcca;border-radius:8px;padding:6px 8px}
+    .closed-date button{padding:4px 8px}
+    .status-note{font-size:13px;color:var(--muted);margin-top:8px;min-height:18px}
 
     /* Mobile friendly cards */
     .card-list{display:none}
@@ -27,6 +38,7 @@
       .card .meta{font-size:13px;color:var(--muted);margin-bottom:8px}
       .card .row{display:flex;justify-content:space-between;align-items:center}
       .card .row button{margin-left:8px}
+      .availability-form{grid-template-columns:1fr}
     }
   </style>
 </head>
@@ -35,6 +47,29 @@
     <h1>Bookings Admin</h1>
     <div class="note">Approve or reject bookings. This admin view is responsive for mobile devices.</div>
     <div id="info"></div>
+
+    <section class="panel" aria-label="Salon availability">
+      <h2 style="margin:0 0 8px;font-family:'Playfair Display',serif">Salon availability</h2>
+      <div class="note" style="margin-bottom:12px">Control online booking hours and closed days.</div>
+      <form id="availability-form" class="availability-form">
+        <label class="switch">
+          <input id="availabilityOpen" type="checkbox" />
+          Online booking open
+        </label>
+        <label>Open time
+          <input id="openTime" type="time" required />
+        </label>
+        <label>Close time
+          <input id="closeTime" type="time" required />
+        </label>
+        <label>Close this date
+          <input id="closedDateInput" type="date" />
+        </label>
+        <button type="submit">Save availability</button>
+      </form>
+      <div id="availabilityStatus" class="status-note"></div>
+      <div id="closedDates" class="closed-dates"></div>
+    </section>
 
     <table aria-hidden="false">
       <thead>
@@ -54,6 +89,74 @@
   </div>
 
   <script>
+    let availability = { open: true, openTime: '09:00', closeTime: '17:00', closedDates: [] };
+
+    function renderClosedDates() {
+      const el = document.getElementById('closedDates');
+      el.innerHTML = '';
+      if (!availability.closedDates || !availability.closedDates.length) {
+        el.innerHTML = '<span class="status-note">No closed dates selected.</span>';
+        return;
+      }
+      availability.closedDates.forEach(date => {
+        const chip = document.createElement('span');
+        chip.className = 'closed-date';
+        chip.innerHTML = `<span>${date}</span><button type="button" onclick="removeClosedDate('${date}')">Remove</button>`;
+        el.appendChild(chip);
+      });
+    }
+
+    async function loadAvailability() {
+      try {
+        const res = await fetch('/admin/availability');
+        availability = await res.json();
+        document.getElementById('availabilityOpen').checked = availability.open !== false;
+        document.getElementById('openTime').value = availability.openTime || '09:00';
+        document.getElementById('closeTime').value = availability.closeTime || '17:00';
+        renderClosedDates();
+      } catch (e) {
+        document.getElementById('availabilityStatus').textContent = 'Could not load availability.';
+      }
+    }
+
+    async function saveAvailability(message) {
+      const status = document.getElementById('availabilityStatus');
+      const payload = {
+        open: document.getElementById('availabilityOpen').checked,
+        openTime: document.getElementById('openTime').value,
+        closeTime: document.getElementById('closeTime').value,
+        closedDates: availability.closedDates || []
+      };
+      const newClosedDate = document.getElementById('closedDateInput').value;
+      if (newClosedDate && !payload.closedDates.includes(newClosedDate)) payload.closedDates.push(newClosedDate);
+      try {
+        const res = await fetch('/admin/availability', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload)
+        });
+        const json = await res.json();
+        if (!json.ok) throw new Error(json.error || 'save_failed');
+        availability = json.availability;
+        document.getElementById('closedDateInput').value = '';
+        renderClosedDates();
+        status.textContent = message || 'Availability saved.';
+      } catch (e) {
+        status.textContent = 'Error saving availability: ' + (e.message || 'unknown');
+      }
+    }
+
+    async function removeClosedDate(date) {
+      availability.closedDates = (availability.closedDates || []).filter(d => d !== date);
+      renderClosedDates();
+      await saveAvailability('Closed date removed.');
+    }
+
+    document.getElementById('availability-form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      await saveAvailability();
+    });
+
     async function load() {
       const res = await fetch('/admin/bookings');
       const data = await res.json();
@@ -108,6 +211,7 @@
       }
     }
 
+    loadAvailability();
     load();
     setInterval(load, 5000);
 

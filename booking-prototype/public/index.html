@@ -22,7 +22,10 @@
     .row > *{flex:1}
     .small{font-size:13px;color:var(--muted)}
     .btn{background:var(--brand-accent);border:none;color:#111;padding:12px 16px;border-radius:10px;font-weight:600;cursor:pointer}
+    .btn:disabled{opacity:.55;cursor:not-allowed}
     .muted-note{font-size:13px;color:var(--muted)}
+    .availability-note{font-size:13px;color:var(--muted);margin-top:6px}
+    .availability-error{font-size:13px;color:#8a2d2d;margin-top:6px;min-height:18px}
     @media (max-width:520px){.row{flex-direction:column}}
   </style>
 </head>
@@ -61,6 +64,8 @@
         </label>
         <label>Appointment date & time
           <input id="appointmentTime" name="appointmentTime" type="datetime-local" required />
+          <div id="availabilityNote" class="availability-note"></div>
+          <div id="availabilityError" class="availability-error"></div>
         </label>
 
         <label>Deposit amount (USD)
@@ -69,7 +74,7 @@
         <div class="small muted-note">Deposits may be collected via the payment flow. If payment is unavailable, the booking will still be recorded and confirmed by the salon.</div>
 
         <div style="margin-top:8px;display:flex;gap:10px;align-items:center">
-          <button class="btn" type="submit">Book and Pay Deposit</button>
+          <button id="submitBtn" class="btn" type="submit">Book and Pay Deposit</button>
           <div class="small">We will email confirmation after booking.</div>
         </div>
       </form>
@@ -78,8 +83,71 @@
 
   <script>
     const form = document.getElementById('booking-form');
+    const appointmentInput = document.getElementById('appointmentTime');
+    const availabilityNote = document.getElementById('availabilityNote');
+    const availabilityError = document.getElementById('availabilityError');
+    const submitBtn = document.getElementById('submitBtn');
+    let availability = { open: true, openTime: '09:00', closeTime: '17:00', closedDates: [] };
+
+    function datePart(value) {
+      return String(value || '').slice(0, 10);
+    }
+
+    function timePart(value) {
+      return String(value || '').slice(11, 16);
+    }
+
+    function timeToMinutes(value) {
+      const parts = String(value || '').split(':').map(Number);
+      if (parts.length !== 2 || parts.some(Number.isNaN)) return null;
+      return parts[0] * 60 + parts[1];
+    }
+
+    function getAvailabilityMessage(value) {
+      if (!availability.open) return 'Online booking is closed right now. Please call the salon to book.';
+      if (!value) return '';
+      const date = datePart(value);
+      const selectedTime = timeToMinutes(timePart(value));
+      const openTime = timeToMinutes(availability.openTime);
+      const closeTime = timeToMinutes(availability.closeTime);
+      if ((availability.closedDates || []).includes(date)) return 'Peggy is closed on that date. Please choose another day.';
+      if (selectedTime === null || openTime === null || closeTime === null) return '';
+      if (selectedTime < openTime || selectedTime >= closeTime) {
+        return `Please choose a time between ${availability.openTime} and ${availability.closeTime}.`;
+      }
+      return '';
+    }
+
+    function updateAvailabilityMessage() {
+      const message = getAvailabilityMessage(appointmentInput.value);
+      availabilityError.textContent = message;
+      submitBtn.disabled = Boolean(message);
+      return message;
+    }
+
+    async function loadAvailability() {
+      try {
+        const res = await fetch('/availability');
+        availability = await res.json();
+        availabilityNote.textContent = availability.open
+          ? `Online booking hours: ${availability.openTime} to ${availability.closeTime}.`
+          : 'Online booking is closed right now. Please call the salon to book.';
+        updateAvailabilityMessage();
+      } catch (e) {
+        availabilityNote.textContent = 'Availability will be confirmed by the salon.';
+      }
+    }
+
+    appointmentInput.addEventListener('input', updateAvailabilityMessage);
+    loadAvailability();
+
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
+      const availabilityMessage = updateAvailabilityMessage();
+      if (availabilityMessage) {
+        alert(availabilityMessage);
+        return;
+      }
       const data = Object.fromEntries(new FormData(form).entries());
       data.depositAmount = parseFloat(data.depositAmount || 0);
 
@@ -95,8 +163,9 @@
         } else if (json.ok || json.bookingId) {
           alert('Booking created — reference: ' + (json.bookingId || 'n/a'));
           form.reset();
+          updateAvailabilityMessage();
         } else {
-          alert('Error creating booking: ' + (json.error || 'unknown'));
+          alert('Error creating booking: ' + (json.message || json.error || 'unknown'));
         }
       } catch (err) {
         alert('Network error creating booking');

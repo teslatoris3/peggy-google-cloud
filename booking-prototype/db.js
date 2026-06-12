@@ -5,17 +5,40 @@ const file = process.env.PERSIST_FILE || (
   process.env.VERCEL ? path.join('/tmp', 'peggy-booking-persist.json') : path.join(__dirname, 'persist.json')
 );
 
+const DEFAULT_AVAILABILITY = {
+  open: true,
+  openTime: '09:00',
+  closeTime: '17:00',
+  closedDates: [],
+};
+
+function normalizeAvailability(availability) {
+  const source = availability && typeof availability === 'object' ? availability : {};
+  const openTime = typeof source.openTime === 'string' && /^\d{2}:\d{2}$/.test(source.openTime) ? source.openTime : DEFAULT_AVAILABILITY.openTime;
+  const closeTime = typeof source.closeTime === 'string' && /^\d{2}:\d{2}$/.test(source.closeTime) ? source.closeTime : DEFAULT_AVAILABILITY.closeTime;
+  const closedDates = Array.isArray(source.closedDates)
+    ? Array.from(new Set(source.closedDates.filter((date) => typeof date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(date)))).sort()
+    : [];
+  return {
+    open: typeof source.open === 'boolean' ? source.open : DEFAULT_AVAILABILITY.open,
+    openTime,
+    closeTime,
+    closedDates,
+  };
+}
+
 function _read() {
-  if (!fs.existsSync(file)) return { bookings: [], nextId: 1, clients: [], nextClientId: 1 };
+  if (!fs.existsSync(file)) return { bookings: [], nextId: 1, clients: [], nextClientId: 1, availability: normalizeAvailability() };
   try {
     const d = JSON.parse(fs.readFileSync(file, 'utf8'));
     if (!d.bookings) d.bookings = [];
     if (!d.nextId) d.nextId = 1;
     if (!d.clients) d.clients = [];
     if (!d.nextClientId) d.nextClientId = 1;
+    d.availability = normalizeAvailability(d.availability);
     return d;
   } catch (e) {
-    return { bookings: [], nextId: 1, clients: [], nextClientId: 1 };
+    return { bookings: [], nextId: 1, clients: [], nextClientId: 1, availability: normalizeAvailability() };
   }
 }
 
@@ -129,6 +152,19 @@ function updateBooking(b) {
   return b;
 }
 
+function getAvailability() {
+  const data = _read();
+  return normalizeAvailability(data.availability);
+}
+
+function updateAvailability(updates) {
+  const data = _read();
+  const current = normalizeAvailability(data.availability);
+  data.availability = normalizeAvailability(Object.assign({}, current, updates || {}));
+  _write(data);
+  return data.availability;
+}
+
 module.exports = {
   createBooking,
   listBookings,
@@ -141,5 +177,7 @@ module.exports = {
   upsertClient,
   updateClient,
   getClient,
+  getAvailability,
+  updateAvailability,
   file,
 };
