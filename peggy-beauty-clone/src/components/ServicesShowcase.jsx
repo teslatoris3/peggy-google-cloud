@@ -75,7 +75,7 @@ function ServicesShowcase() {
                   )
                 })()
               ) : (
-                <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover h-[420px] md:h-[520px]" />
+                <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-[420px] md:h-[520px]" />
               )}
             </div>
 
