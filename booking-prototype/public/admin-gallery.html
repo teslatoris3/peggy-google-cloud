@@ -233,6 +233,21 @@
 
           <div style="height:18px"></div>
 
+          <div class="panel" style="border-radius:16px;background:#fff;margin:0 0 18px">
+            <div class="panel-head" style="padding-bottom:0">
+              <h3 style="font-size:20px">Upload from device</h3>
+              <div class="note">Use this to browse Peggy’s phone, tablet, or computer and add files directly to the gallery.</div>
+            </div>
+            <div class="panel-body">
+              <input id="fileInput" type="file" accept="image/*,video/*" multiple hidden />
+              <div class="toolbar" style="margin-top:0">
+                <button class="btn secondary" type="button" id="browseBtn">Browse files</button>
+                <button class="btn" type="button" id="uploadBtn">Upload selected</button>
+              </div>
+              <div id="fileSummary" class="helper" style="margin-top:10px">No files selected.</div>
+            </div>
+          </div>
+
           <div class="field">
             <label for="jsonInput">Import / export JSON</label>
             <textarea id="jsonInput" spellcheck="false" placeholder='[{"type":"image","src":"/images/...","alt":"..."}]'></textarea>
@@ -273,6 +288,18 @@
 
     function escapeText(value) {
       return String(value || '');
+    }
+
+    function updateFileSummary() {
+      const input = el('fileInput');
+      const summary = el('fileSummary');
+      const files = Array.from(input.files || []);
+      if (!files.length) {
+        summary.textContent = 'No files selected.';
+        return;
+      }
+      const names = files.map((file) => file.name).join(', ');
+      summary.textContent = `${files.length} file${files.length === 1 ? '' : 's'} selected: ${names}`;
     }
 
     function previewMarkup(item) {
@@ -469,6 +496,39 @@
         setStatus('Gallery reset to defaults.');
       } catch (err) {
         setStatus('Could not reset: ' + (err.message || 'unknown error'), true);
+      }
+    });
+
+    el('browseBtn').addEventListener('click', () => {
+      el('fileInput').click();
+    });
+
+    el('fileInput').addEventListener('change', updateFileSummary);
+
+    el('uploadBtn').addEventListener('click', async () => {
+      const input = el('fileInput');
+      const files = Array.from(input.files || []);
+      if (!files.length) {
+        setStatus('Choose one or more files first.', true);
+        return;
+      }
+      try {
+        setStatus('Uploading files...');
+        const formData = new FormData();
+        files.forEach((file) => formData.append('files', file, file.name));
+        const res = await fetch('/admin/gallery-upload', {
+          method: 'POST',
+          body: formData,
+        });
+        const json = await res.json();
+        if (!json.ok) throw new Error(json.error || 'upload_failed');
+        items = sanitize([...(json.items || []), ...items]);
+        render();
+        await saveItems(`Uploaded ${json.items.length} file${json.items.length === 1 ? '' : 's'} and added them to the gallery.`);
+        input.value = '';
+        updateFileSummary();
+      } catch (err) {
+        setStatus('Upload failed: ' + (err.message || 'unknown error'), true);
       }
     });
 

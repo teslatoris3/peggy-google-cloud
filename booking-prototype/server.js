@@ -6,6 +6,7 @@ const express = require('express');
 const app = express();
 const stripeSecret = process.env.STRIPE_SECRET_KEY || '';
 const stripe = stripeSecret ? require('stripe')(stripeSecret) : null;
+const multer = require('multer');
 
 // Persistence
 const db = require('./db');
@@ -13,6 +14,8 @@ const galleryMedia = require('./gallery-media');
 
 const crypto = require('crypto');
 const fs = require('fs');
+const UPLOAD_DIR = path.join(__dirname, 'public', 'images', 'gallery', 'uploads');
+try { fs.mkdirSync(UPLOAD_DIR, { recursive: true }); } catch (e) { console.warn('Could not create upload dir', e && e.message); }
 const DOCUMENTS_FILE = process.env.DOCUMENTS_FILE || (
 	process.env.VERCEL ? path.join('/tmp', 'peggy-booking-documents.txt') : path.join(__dirname, 'documents.txt')
 );
@@ -65,6 +68,36 @@ async function sendSms(to, body) {
 function generateToken() {
 	return crypto.randomBytes(12).toString('hex');
 }
+
+function safeUploadFilename(originalName) {
+	const ext = path.extname(originalName || '').toLowerCase();
+	const base = path.basename(originalName || 'media', ext)
+		.replace(/[^a-zA-Z0-9_-]+/g, '-')
+		.replace(/-+/g, '-')
+		.replace(/^-|-$/g, '') || 'media';
+	return `${Date.now()}-${crypto.randomBytes(4).toString('hex')}-${base}${ext}`;
+}
+
+function isAllowedMedia(file) {
+	const mimetype = String(file && file.mimetype || '').toLowerCase();
+	const ext = path.extname(file && file.originalname || '').toLowerCase();
+	const allowedExts = new Set(['.jpg', '.jpeg', '.png', '.webp', '.gif', '.avif', '.mp4', '.mov', '.m4v', '.webm', '.heic', '.heif']);
+	return mimetype.startsWith('image/') || mimetype.startsWith('video/') || allowedExts.has(ext);
+}
+
+const galleryUploadStorage = multer.diskStorage({
+	destination: (req, file, cb) => cb(null, UPLOAD_DIR),
+	filename: (req, file, cb) => cb(null, safeUploadFilename(file.originalname)),
+});
+
+const galleryUpload = multer({
+	storage: galleryUploadStorage,
+	limits: { fileSize: 250 * 1024 * 1024, files: 10 },
+	fileFilter: (req, file, cb) => {
+		if (!isAllowedMedia(file)) return cb(new Error('Only image and video files are allowed'));
+		cb(null, true);
+	},
+});
 
 async function createAndSendApproval(booking) {
 	const token = generateToken();
@@ -363,6 +396,35 @@ app.get('/admin/gallery-media', basicAuth, (req, res) => {
 		console.error('admin gallery media read err', e && e.message);
 		res.status(500).json({ ok: false, error: e && e.message });
 	}
+});
+
+app.post('/admin/gallery-upload', basicAuth, (req, res) => {
+	galleryUpload.array('files', 10)(req, res, (err) => {
+		if (err) {
+			console.error('gallery upload err', err && err.message);
+			return res.status(400).json({ ok: false, error: err && err.message ? err.message : 'upload_failed' });
+		}
+		try {
+			const files = Array.isArray(req.files) ? req.files : [];
+			if (!files.length) return res.status(400).json({ ok: false, error: 'no_files' });
+			const items = files.map((file) => {
+				const type = String(file.mimetype || '').toLowerCase().startsWith('video/') ? 'video' : 'image';
+				return {
+					type,
+					src: `/images/gallery/uploads/${file.filename}`,
+					alt: path.basename(file.originalname || file.filename, path.extname(file.originalname || file.filename))
+						.replace(/[-_]+/g, ' ')
+						.replace(/\s+/g, ' ')
+						.trim(),
+				};
+			});
+			appendLog('bookings.log', `ADMIN_GALLERY_UPLOAD count=${items.length}`);
+			return res.json({ ok: true, items });
+		} catch (e) {
+			console.error('gallery upload err', e && e.message);
+			return res.status(500).json({ ok: false, error: e && e.message });
+		}
+	});
 });
 
 app.post('/admin/gallery-media', basicAuth, express.json({ limit: '2mb' }), (req, res) => {
