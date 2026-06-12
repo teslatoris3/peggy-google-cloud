@@ -7,15 +7,15 @@ function ServiceCard({ id, order, title, description, features, image }) {
   return (
     <article className="rounded-3xl border border-gray-100 bg-white overflow-hidden shadow-sm transition duration-200 hover:-translate-y-1 hover:shadow-md">
       {image && (
-        <div className="relative h-44 w-full">
+        <div className="relative h-40 w-full sm:h-44">
           <OptimizedImage src={image} alt={title} className="h-full w-full object-cover" />
           <div className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-sm font-semibold">{order}</div>
         </div>
       )}
 
-      <div className="p-6">
-        <h3 className="text-3xl font-semibold mb-4">{title}</h3>
-        <p className="text-base md:text-lg text-muted-text leading-8">{description}</p>
+      <div className="p-5 sm:p-6">
+        <h3 className="text-2xl sm:text-3xl font-semibold mb-4">{title}</h3>
+        <p className="text-sm sm:text-base md:text-lg text-muted-text leading-7 sm:leading-8">{description}</p>
       {features?.length ? (
         <ul className="mt-5 space-y-3 text-sm text-muted-text">
           {features.map((feature) => (

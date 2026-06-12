@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom'
-import { motion } from 'framer-motion'
 import { useEffect } from 'react'
 import ServiceCard from '../components/ServiceCard'
 import servicesData from '../data/services'
@@ -111,26 +110,6 @@ function Services() {
     url: 'https://example.com/services',
     image: '/images/salon/salon-interior.png'
   }
-  const container = {
-    hidden: {},
-    visible: { transition: { staggerChildren: 0.08 } },
-  }
-
-  const fadeIn = {
-    hidden: { opacity: 0, y: 18 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.5 } },
-  }
-
-  const pricing = [
-    { title: 'Haircut — Women', price: '$95+', duration: '60–90 min' },
-    { title: 'Haircut — Men', price: '$55+', duration: '30–45 min' },
-    { title: 'Blowout & Style', price: '$45+', duration: '30–60 min' },
-  ]
-
-  const faqs = [
-    { q: 'Do I need a consultation?', a: 'For new clients we recommend a consultation to discuss goals and assess hair health.' },
-    { q: 'How long do appointments take?', a: 'Appointment length varies by service; colour and bridal makeup can take multiple hours.' },
-  ]
 
   return (
     <>
@@ -144,17 +123,17 @@ function Services() {
         />
       </div>
 
-      <motion.div className="mt-8 mx-auto w-full px-4" variants={fadeIn}>
+      <div className="mt-8 mx-auto w-full px-4">
         <div className="mx-auto max-w-4xl overflow-hidden rounded-3xl border border-gray-100 bg-white/80 p-6 md:p-8 shadow-sm">
           <p className="text-base md:text-lg leading-8 text-muted-text max-w-3xl mx-auto">
             Peggy Beauty offers a curated range of services tailored to your unique hair goals — from precision haircuts and bespoke colour to hand-painted balayage. Each service includes a personalized consultation and aftercare guidance so your results stay vibrant and healthy. See full pricing on our <Link to="/pricing">Pricing</Link> page.
           </p>
         </div>
-      </motion.div>
+      </div>
 
-      <motion.section className="page" initial="hidden" whileInView="visible" viewport={{ once: true, amount: 0.16 }} variants={container}>
+      <section className="page">
 
-        <motion.div className="mt-10 overflow-hidden rounded-3xl border border-gray-200 bg-white/80 p-6 shadow-sm" variants={fadeIn}>
+        <div className="mt-10 overflow-hidden rounded-3xl border border-gray-200 bg-white/80 p-6 shadow-sm">
           <div className="grid gap-4 sm:grid-cols-[1fr_auto] sm:items-center">
             <div>
               <p className="text-sm uppercase tracking-wide text-primary">Trusted partners</p>
@@ -162,11 +141,23 @@ function Services() {
                 We work with premium brands and salon partners to deliver safer, more consistent beauty, colour, and finish services.
               </p>
             </div>
-              {(() => { const url = getBookingUrl(); return (
-                <a href={url} onClick={(e) => { e.preventDefault(); console.log('DEBUG booking url:', url); window.open(url, '_blank') }} rel="noopener noreferrer" className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-semibold text-deep-black">
+            {(() => {
+              const url = getBookingUrl()
+              return (
+                <a
+                  href={url}
+                  onClick={(e) => {
+                    e.preventDefault()
+                    console.log('DEBUG booking url:', url)
+                    window.open(url, '_blank')
+                  }}
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center rounded bg-primary px-4 py-2 text-sm font-semibold text-deep-black"
+                >
                   Book a consultation
                 </a>
-              )})()}
+              )
+            })()}
           </div>
 
           <div className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-5">
@@ -176,27 +167,27 @@ function Services() {
               </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-10 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {servicesData
             .slice()
             .sort((a, b) => a.order - b.order)
             .map((service) => (
-              <motion.div key={service.id} variants={fadeIn}>
+              <div key={service.id}>
                 <ServiceCard {...service} />
-              </motion.div>
+              </div>
             ))}
-        </motion.div>
+        </div>
 
         {/* Starting prices removed per request */}
 
         {/* Pricing moved to the dedicated Pricing page */}
 
-        <motion.section className="mt-12 max-w-3xl" variants={fadeIn}>
+        <div className="mt-12 max-w-3xl">
           <FAQSection />
-        </motion.section>
-      </motion.section>
+        </div>
+      </section>
     </>
   )
 }

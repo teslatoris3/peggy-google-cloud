@@ -215,10 +215,11 @@ h1, h2 {
 /* === User overrides: easy places to edit FAQ / nav sizes === */
 /* Edit these values to control sizes directly. Values use rem/px and support mobile caps. */
 :root {
-  --faq-title-size: 20rem; /* default desktop */
-  --faq-title-size-sm: 2rem; /* mobile */
-  --faq-question-size: 2.25rem;
-  --faq-icon-size: 2.25rem;
+  --faq-title-size: clamp(2rem, 4vw, 3.25rem);
+  --faq-title-size-sm: 2rem;
+  --faq-question-size: clamp(1rem, 2vw, 1.18rem);
+  --faq-answer-size: 0.98rem;
+  --faq-icon-size: 1.5rem;
   --nav-link-size: 1.35rem;
   --page-paragraph-size: 1.125rem;
 }
