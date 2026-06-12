@@ -31,7 +31,7 @@ function VisitUsSection() {
 
     async function loadAvailability() {
       try {
-        const res = await fetch(getAvailabilityUrl())
+        const res = await fetch(getAvailabilityUrl(), { cache: 'no-store' })
         if (!res.ok) return
         const availability = await res.json()
         if (!ignore && Array.isArray(availability.closedDates)) {
@@ -43,8 +43,13 @@ function VisitUsSection() {
     }
 
     loadAvailability()
+    const refreshTimer = window.setInterval(loadAvailability, 15000)
+    window.addEventListener('focus', loadAvailability)
+
     return () => {
       ignore = true
+      window.clearInterval(refreshTimer)
+      window.removeEventListener('focus', loadAvailability)
     }
   }, [])
 

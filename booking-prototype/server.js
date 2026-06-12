@@ -198,6 +198,10 @@ app.get('/availability', (req, res) => {
 	res.json(db.getAvailability());
 });
 
+app.get('/booking/availability', (req, res) => {
+	res.json(db.getAvailability());
+});
+
 // Endpoint to receive lightweight notifications (e.g., Book Now clicked)
 app.post('/notify', express.json(), async (req, res) => {
 	try {

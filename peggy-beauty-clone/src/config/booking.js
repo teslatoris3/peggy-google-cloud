@@ -19,6 +19,5 @@ export function getServiceBookingUrl(serviceName) {
 }
 
 export function getAvailabilityUrl() {
-  const url = new URL(getBookingUrl());
-  return `${url.origin}/availability`;
+  return `${getBookingUrl()}/availability`;
 }
