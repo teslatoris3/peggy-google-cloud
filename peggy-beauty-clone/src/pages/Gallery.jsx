@@ -32,11 +32,6 @@ function Gallery() {
     },
     {
       type: 'image',
-      src: '/images/gallery/photos/img_3178.jpg',
-      alt: 'Salon result with dimensional shine and shape',
-    },
-    {
-      type: 'image',
       src: '/images/gallery/photos/img_3272.png',
       alt: 'Beautifully finished hair colour result',
     },
@@ -49,11 +44,6 @@ function Gallery() {
       type: 'image',
       src: '/images/gallery/photos/img_3750.png',
       alt: 'Client look with camera-ready styling',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_3848.png',
-      alt: 'Glossy, healthy-looking salon finish',
     },
     {
       type: 'image',
