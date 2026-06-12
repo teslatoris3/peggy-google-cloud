@@ -1,9 +1,6 @@
-import React, { useEffect, useState } from 'react'
-import { useEffect as useEffectOnce } from 'react'
-import PageHero from '../components/PageHero'
-import { motion } from 'framer-motion'
-import services from '../data/services'
+import { useEffect, useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
+import LocationMap from '../components/LocationMap'
 
 function Contact() {
   // Render an internal contact page. This page is informational only and does not
@@ -46,8 +43,11 @@ function Contact() {
       'telephone': '+14165187979',
       'address': {
         '@type': 'PostalAddress',
-        'addressLocality': '',
+        'addressLocality': 'North York',
+        'addressRegion': 'ON',
+        'addressCountry': 'CA',
       },
+      'hasMap': 'https://www.google.com/maps/search/?api=1&query=Peggy+Beauty+North+York+Toronto',
       'description': desc,
     }
 
@@ -97,6 +97,13 @@ function Contact() {
       </div>
 
       <p style={{ color: '#6B6B6B', marginTop: 14 }}>Note: To make a booking, please use the booking page (external) or call us directly.</p>
+
+      <div style={{ marginTop: 28, maxWidth: 1100 }}>
+        <LocationMap
+          title="Find us on the map"
+          caption="Open Peggy Beauty in Google Maps for the most direct route and neighborhood context."
+        />
+      </div>
     </div>
   )
 }

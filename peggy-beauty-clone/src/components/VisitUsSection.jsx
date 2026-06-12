@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
-import { Link } from 'react-router-dom'
 import { getAvailabilityUrl, getBookingUrl } from '../config/booking'
+import LocationMap from './LocationMap'
 
 
 const hoursList = [
@@ -87,7 +87,7 @@ function VisitUsSection() {
               </div>
             </div>
 
-            <div className="pl-8">
+            <div className="space-y-6 md:pl-8">
               <div className="md:h-full md:flex md:items-center">
                 <div className="border-l border-gray-300 h-full md:pl-8 flex items-center">
                   <div className="working-hours md:min-h-[420px] w-full">
@@ -108,6 +108,11 @@ function VisitUsSection() {
                   </div>
                 </div>
               </div>
+
+              <LocationMap
+                title="Peggy Beauty location"
+                caption="Find Peggy Beauty in North York, Toronto and open directions in Google Maps."
+              />
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { motion } from 'framer-motion'
 import ExtensionsFeature from '../components/ExtensionsFeature'
 import FounderSection from '../components/FounderSection'
 import PageHero from '../components/PageHero'
+import LocationMap from '../components/LocationMap'
 
 function About() {
   const container = {
@@ -96,6 +97,13 @@ function About() {
             Every service is performed with meticulous attention to detail, precision, and the highest standards of cleanliness and care.
           </motion.p>
         </div>
+
+        <motion.div className="mt-10" variants={fadeUp}>
+          <LocationMap
+            title="Visit Peggy Beauty"
+            caption="We keep our location visible here so guests can quickly plan a visit before booking their appointment."
+          />
+        </motion.div>
 
         <motion.div className="mt-10" variants={fadeUp}>
           <ExtensionsFeature />
