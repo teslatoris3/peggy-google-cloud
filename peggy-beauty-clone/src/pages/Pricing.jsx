@@ -43,8 +43,8 @@ const pricingCategories = [
   {
     title: 'HAIR TREATMENTS',
     items: [
-      { name: 'Keratin Treatment', details: 'Short $150 (2 hours) · Medium $200 (2.5 hours) · Long $250 (3 hours)' },
-      { name: 'Botox Hair Treatment', details: 'Short $150 (2 hours) · Medium $200 (2.5 hours) · Long $250 (3 hours)' },
+      { name: 'Keratin Treatment', details: 'Short Start at $200 (2 hours 30 minutes) · Medium Start at $250 (3 hours) · Long Start at $300 (3 hours)' },
+      { name: 'Botox Hair Treatment', details: 'Short Start at $200 (2 hours 30 minutes) · Medium Start at $250 (3 hours) · Long Start at $300 (3 hours)' },
     ],
   },
   {
@@ -52,11 +52,11 @@ const pricingCategories = [
     items: [
       { name: 'Eyebrow Threading', details: 'Start at $20 (15 minutes)' },
       { name: 'Upper Lip Threading', details: 'Start at $10 (5 minutes)' },
-      { name: 'Full Face Threading', details: 'Start at $30 (30 minutes)' },
+      { name: 'Full Face Threading', details: 'Start at $40 (30 minutes)' },
       { name: 'Underarm Waxing', details: 'Start at $30 (5 minutes)' },
       { name: 'Eyebrow Waxing', details: 'Start at $20 (15 minutes)' },
-      { name: 'Full Face Waxing', details: 'Start at $30 (30 minutes)' },
-      { name: 'Party Makeup', details: 'Start at $50 (45 minutes)' },
+      { name: 'Full Face Waxing', details: 'Start at $35 (30 minutes)' },
+      { name: 'Party Makeup', details: 'Start at $180 (1 hour)' },
     ],
   },
 ]
