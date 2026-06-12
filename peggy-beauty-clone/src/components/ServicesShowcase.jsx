@@ -74,15 +74,15 @@ function GalleryImageCard({ title, images, type }) {
 
   return (
     <figure className="overflow-hidden rounded-lg bg-white">
-      <div className={isSlideshow ? 'gallery-crossfade' : 'block w-full'}>
-        {images.map((image, imageIndex) => (
+      <div className={isSlideshow ? 'gallery-card-slider' : 'block w-full'}>
+        {images.map((image) => (
           <OptimizedImage
             key={image.src}
             src={image.src}
             alt={image.alt}
             className={
               isSlideshow
-                ? `gallery-crossfade__image ${imageIndex === 0 ? 'gallery-crossfade__image--first' : 'gallery-crossfade__image--second'}`
+                ? 'gallery-card-slider__image'
                 : 'w-full h-[220px] sm:h-[300px] object-cover'
             }
           />
