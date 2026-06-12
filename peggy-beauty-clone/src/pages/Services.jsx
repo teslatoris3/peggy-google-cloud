@@ -12,11 +12,11 @@ const services = [
   {
     title: 'Makeup & Bridal Beauty',
     description:
-      'Professional makeup and bridal beauty services including trials, airbrush options, and long-wear techniques for special events.',
+      'With 15 years of makeup artistry experience, Peggy creates polished, camera-ready looks that feel timeless, flattering, and completely personal. From soft glam to full bridal beauty, every application is tailored to your features, your skin tone, and the moment you are celebrating.',
     features: [
-      'Bridal makeup and trials',
-      'Airbrush and long-wear application',
-      'Custom colour matching and consultation',
+      'Custom bridal and special event makeup',
+      'Soft glam, full glam, and editorial finishes',
+      'Long-wear application with a seamless, skin-like result',
     ],
   },
   {
