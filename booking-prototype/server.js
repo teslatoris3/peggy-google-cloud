@@ -9,6 +9,7 @@ const stripe = stripeSecret ? require('stripe')(stripeSecret) : null;
 
 // Persistence
 const db = require('./db');
+const galleryMedia = require('./gallery-media');
 
 const crypto = require('crypto');
 const fs = require('fs');
@@ -345,6 +346,49 @@ app.get('/admin/logs/:name', basicAuth, (req, res) => {
 	}
 });
 
+// Gallery media endpoints for the VPS admin editor
+app.get('/gallery-media.json', (req, res) => {
+	try {
+		res.json(galleryMedia.getGalleryMedia());
+	} catch (e) {
+		console.error('gallery media read err', e && e.message);
+		res.status(500).json({ ok: false, error: e && e.message });
+	}
+});
+
+app.get('/admin/gallery-media', basicAuth, (req, res) => {
+	try {
+		res.json({ ok: true, items: galleryMedia.getGalleryMedia() });
+	} catch (e) {
+		console.error('admin gallery media read err', e && e.message);
+		res.status(500).json({ ok: false, error: e && e.message });
+	}
+});
+
+app.post('/admin/gallery-media', basicAuth, express.json({ limit: '2mb' }), (req, res) => {
+	try {
+		const items = Array.isArray(req.body) ? req.body : req.body && Array.isArray(req.body.items) ? req.body.items : null;
+		if (!items) return res.status(400).json({ ok: false, error: 'invalid_payload' });
+		const normalized = galleryMedia.setGalleryMedia(items);
+		appendLog('bookings.log', `ADMIN_GALLERY_MEDIA_SAVE count=${normalized.length}`);
+		return res.json({ ok: true, items: normalized });
+	} catch (e) {
+		console.error('admin gallery media save err', e && e.message);
+		return res.status(500).json({ ok: false, error: e && e.message });
+	}
+});
+
+app.post('/admin/gallery-media/reset', basicAuth, express.json(), (req, res) => {
+	try {
+		const items = galleryMedia.resetGalleryMedia();
+		appendLog('bookings.log', `ADMIN_GALLERY_MEDIA_RESET count=${items.length}`);
+		return res.json({ ok: true, items });
+	} catch (e) {
+		console.error('admin gallery media reset err', e && e.message);
+		return res.status(500).json({ ok: false, error: e && e.message });
+	}
+});
+
 // Endpoint to list bookings (for quick testing)
 app.get('/bookings', (req, res) => {
 	res.json(db.listBookings());
@@ -414,6 +458,10 @@ app.get('/admin/clients', (req, res) => {
 
 app.get('/admin/availability', (req, res) => {
 	res.json(db.getAvailability());
+});
+
+app.get(['/admin/gallery', '/admin/gallery/'], (req, res) => {
+	res.sendFile(path.join(__dirname, 'public', 'admin-gallery.html'));
 });
 
 app.post('/admin/availability', basicAuth, express.json(), (req, res) => {

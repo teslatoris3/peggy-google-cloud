@@ -1,0 +1,480 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Peggy — Gallery Admin</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #f7f3f0;
+      --panel: #ffffff;
+      --ink: #222228;
+      --muted: #6b6b6b;
+      --accent: #c7936b;
+      --line: #ece1d7;
+      --soft: #fcf9f6;
+      --danger: #b54747;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(199,147,107,.12), transparent 28%),
+        radial-gradient(circle at top right, rgba(34,34,40,.06), transparent 22%),
+        var(--bg);
+      color: var(--ink);
+      padding: 20px;
+    }
+    .wrap { max-width: 1200px; margin: 0 auto; }
+    .hero {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 16px;
+      align-items: end;
+      margin-bottom: 18px;
+    }
+    h1, h2, h3 { margin: 0; font-family: "Playfair Display", Georgia, serif; }
+    h1 { font-size: clamp(30px, 3.6vw, 48px); line-height: 1; }
+    .sub {
+      color: var(--muted);
+      margin-top: 8px;
+      max-width: 760px;
+      line-height: 1.6;
+    }
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .btn {
+      border: 0;
+      border-radius: 999px;
+      padding: 11px 16px;
+      font: inherit;
+      font-weight: 600;
+      cursor: pointer;
+      background: var(--accent);
+      color: #111;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .btn.secondary { background: #fff; border: 1px solid var(--line); }
+    .btn.danger { background: #f1d7d7; color: #8d2c2c; }
+    .grid {
+      display: grid;
+      grid-template-columns: 420px 1fr;
+      gap: 18px;
+      align-items: start;
+    }
+    .panel {
+      background: rgba(255,255,255,.92);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      box-shadow: 0 18px 50px rgba(34, 34, 40, .06);
+      overflow: hidden;
+    }
+    .panel-head {
+      padding: 18px 18px 0;
+    }
+    .panel-body { padding: 18px; }
+    .note { color: var(--muted); line-height: 1.55; font-size: 14px; }
+    .field {
+      display: grid;
+      gap: 6px;
+      margin-bottom: 14px;
+    }
+    .field label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .field input, .field select, .field textarea {
+      width: 100%;
+      padding: 12px 13px;
+      border: 1px solid #e4d8cc;
+      border-radius: 12px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      outline: none;
+    }
+    .field textarea { min-height: 180px; resize: vertical; }
+    .split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .status {
+      margin-top: 10px;
+      min-height: 20px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .list {
+      display: grid;
+      gap: 14px;
+    }
+    .item {
+      background: var(--soft);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      overflow: hidden;
+    }
+    .item-top {
+      display: grid;
+      grid-template-columns: 140px 1fr;
+      gap: 14px;
+      padding: 14px;
+      align-items: start;
+    }
+    .preview {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border-radius: 14px;
+      overflow: hidden;
+      background: #ece3da;
+      display: grid;
+      place-items: center;
+      color: var(--muted);
+      font-size: 13px;
+    }
+    .preview img, .preview video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .item-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 12px;
+    }
+    .tiny {
+      padding: 8px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: #fff;
+      cursor: pointer;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 600;
+    }
+    .tiny.primary { background: var(--accent); color: #111; border-color: transparent; }
+    .tiny.danger { background: #f6e0e0; color: #9a3535; border-color: transparent; }
+    .muted { color: var(--muted); }
+    .helper {
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 2px;
+      line-height: 1.5;
+    }
+    @media (max-width: 980px) {
+      .grid { grid-template-columns: 1fr; }
+      .item-top { grid-template-columns: 1fr; }
+      .preview { aspect-ratio: 16 / 10; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <h1>Gallery Admin</h1>
+        <div class="sub">Manage the photos and videos that Peggy shows on the live site. Changes are saved on the VPS, so the gallery can be updated without touching the rest of the booking system.</div>
+      </div>
+      <div class="actions">
+        <a class="btn secondary" href="/admin.html">Back to Bookings Admin</a>
+        <a class="btn secondary" href="/gallery-media.json" target="_blank" rel="noreferrer">View JSON</a>
+      </div>
+    </div>
+
+    <div class="grid">
+      <section class="panel">
+        <div class="panel-head">
+          <h2 style="font-size:24px">Add media</h2>
+          <div class="note">Use a public path like <code>/images/gallery/photos/example.jpg</code> or a hosted URL. The server keeps the list in order and removes duplicates by path.</div>
+        </div>
+        <div class="panel-body">
+          <form id="addForm">
+            <div class="field">
+              <label for="type">Type</label>
+              <select id="type">
+                <option value="image">Image</option>
+                <option value="video">Video</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="src">Media path or URL</label>
+              <input id="src" placeholder="/images/gallery/photos/new-photo.jpg" required />
+            </div>
+            <div class="field">
+              <label for="alt">Alt text</label>
+              <input id="alt" placeholder="Short descriptive caption for accessibility" />
+            </div>
+            <div class="toolbar">
+              <button class="btn" type="submit">Add to gallery</button>
+              <button class="btn secondary" type="button" id="reloadBtn">Reload from server</button>
+            </div>
+          </form>
+
+          <div style="height:18px"></div>
+
+          <div class="field">
+            <label for="jsonInput">Import / export JSON</label>
+            <textarea id="jsonInput" spellcheck="false" placeholder='[{"type":"image","src":"/images/...","alt":"..."}]'></textarea>
+            <div class="helper">Peggy can paste a JSON array here, then press import. Export fills this box with the current gallery list.</div>
+          </div>
+          <div class="toolbar">
+            <button class="btn secondary" type="button" id="exportBtn">Export current list</button>
+            <button class="btn secondary" type="button" id="importBtn">Import JSON</button>
+            <button class="btn danger" type="button" id="resetBtn">Reset defaults</button>
+          </div>
+          <div id="status" class="status"></div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel-head">
+          <h2 style="font-size:24px">Current gallery items</h2>
+          <div class="note">Reorder them, edit their text, or remove broken/duplicate entries. The server keeps only one copy of each media path.</div>
+        </div>
+        <div class="panel-body">
+          <div id="count" class="note" style="margin-bottom:12px"></div>
+          <div id="list" class="list"></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    let items = [];
+
+    const el = (id) => document.getElementById(id);
+
+    function setStatus(message, isError = false) {
+      const node = el('status');
+      node.textContent = message;
+      node.style.color = isError ? '#9a3535' : '#6b6b6b';
+    }
+
+    function escapeText(value) {
+      return String(value || '');
+    }
+
+    function previewMarkup(item) {
+      const src = encodeURI(item.src || '');
+      if (!src) return '<div class="preview">No source</div>';
+      if (item.type === 'video') {
+        return `<div class="preview"><video src="${src}" controls playsinline muted></video></div>`;
+      }
+      return `<div class="preview"><img src="${src}" alt="${escapeText(item.alt)}" loading="lazy" /></div>`;
+    }
+
+    function moveItem(index, delta) {
+      const next = index + delta;
+      if (next < 0 || next >= items.length) return;
+      const copy = items.slice();
+      const tmp = copy[index];
+      copy[index] = copy[next];
+      copy[next] = tmp;
+      items = copy;
+      render();
+    }
+
+    function updateItem(index, patch) {
+      if (!items[index]) return;
+      items[index] = { ...items[index], ...patch };
+    }
+
+    function removeItem(index) {
+      items = items.filter((_, i) => i !== index);
+      render();
+    }
+
+    function sanitize(itemsToSave) {
+      const seen = new Set();
+      return (Array.isArray(itemsToSave) ? itemsToSave : [])
+        .map((item) => ({
+          type: item && item.type === 'video' ? 'video' : 'image',
+          src: String(item && item.src ? item.src : '').trim(),
+          alt: String(item && item.alt ? item.alt : '').trim(),
+        }))
+        .filter((item) => item.src)
+        .filter((item) => {
+          if (seen.has(item.src)) return false;
+          seen.add(item.src);
+          return true;
+        });
+    }
+
+    async function loadItems() {
+      setStatus('Loading gallery from server...');
+      const res = await fetch('/admin/gallery-media');
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.error || 'load_failed');
+      items = sanitize(json.items);
+      render();
+      setStatus(`Loaded ${items.length} items.`);
+    }
+
+    async function saveItems(message) {
+      const res = await fetch('/admin/gallery-media', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(items),
+      });
+      const json = await res.json();
+      if (!json.ok) throw new Error(json.error || 'save_failed');
+      items = sanitize(json.items);
+      render();
+      setStatus(message || `Saved ${items.length} items.`);
+    }
+
+    function render() {
+      const list = el('list');
+      list.innerHTML = '';
+      el('count').textContent = `${items.length} item${items.length === 1 ? '' : 's'} in the gallery.`;
+
+      items.forEach((item, index) => {
+        const row = document.createElement('article');
+        row.className = 'item';
+        row.innerHTML = `
+          <div class="item-top">
+            ${previewMarkup(item)}
+            <div>
+              <div class="field">
+                <label>Type</label>
+                <select data-key="type">
+                  <option value="image" ${item.type === 'image' ? 'selected' : ''}>Image</option>
+                  <option value="video" ${item.type === 'video' ? 'selected' : ''}>Video</option>
+                </select>
+              </div>
+              <div class="field">
+                <label>Source</label>
+                <input data-key="src" value="${escapeAttr(item.src)}" />
+              </div>
+              <div class="field">
+                <label>Alt text</label>
+                <input data-key="alt" value="${escapeAttr(item.alt)}" />
+              </div>
+              <div class="item-actions">
+                <button class="tiny" data-action="up" ${index === 0 ? 'disabled' : ''}>Move up</button>
+                <button class="tiny" data-action="down" ${index === items.length - 1 ? 'disabled' : ''}>Move down</button>
+                <button class="tiny primary" data-action="save">Save order & edits</button>
+                <button class="tiny danger" data-action="delete">Remove</button>
+              </div>
+              <div class="helper">Order matters. The live gallery can read this list directly from the VPS.</div>
+            </div>
+          </div>
+        `;
+
+        const inputs = row.querySelectorAll('[data-key]');
+        inputs.forEach((input) => {
+          input.addEventListener('input', () => {
+            updateItem(index, { [input.dataset.key]: input.value });
+          });
+          input.addEventListener('change', () => {
+            updateItem(index, { [input.dataset.key]: input.value });
+          });
+        });
+
+        row.querySelector('[data-action="up"]').addEventListener('click', () => moveItem(index, -1));
+        row.querySelector('[data-action="down"]').addEventListener('click', () => moveItem(index, 1));
+        row.querySelector('[data-action="delete"]').addEventListener('click', () => {
+          if (confirm('Remove this gallery item?')) removeItem(index);
+        });
+        row.querySelector('[data-action="save"]').addEventListener('click', async () => {
+          try {
+            await saveItems('Gallery item saved.');
+          } catch (err) {
+            setStatus('Could not save: ' + (err.message || 'unknown error'), true);
+          }
+        });
+
+        list.appendChild(row);
+      });
+    }
+
+    function escapeAttr(value) {
+      return String(value || '')
+        .replace(/&/g, '&amp;')
+        .replace(/"/g, '&quot;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;');
+    }
+
+    el('addForm').addEventListener('submit', async (event) => {
+      event.preventDefault();
+      const type = el('type').value;
+      const src = el('src').value.trim();
+      const alt = el('alt').value.trim();
+      if (!src) return setStatus('Please enter a media path or URL.', true);
+      items = sanitize([{ type, src, alt }, ...items]);
+      render();
+      try {
+        await saveItems('New item added and saved.');
+        el('src').value = '';
+        el('alt').value = '';
+      } catch (err) {
+        setStatus('Could not save: ' + (err.message || 'unknown error'), true);
+      }
+    });
+
+    el('reloadBtn').addEventListener('click', async () => {
+      try {
+        await loadItems();
+      } catch (err) {
+        setStatus('Could not load: ' + (err.message || 'unknown error'), true);
+      }
+    });
+
+    el('exportBtn').addEventListener('click', () => {
+      el('jsonInput').value = JSON.stringify(items, null, 2);
+      setStatus('Exported current gallery JSON.');
+    });
+
+    el('importBtn').addEventListener('click', async () => {
+      try {
+        const parsed = JSON.parse(el('jsonInput').value || '[]');
+        items = sanitize(parsed);
+        render();
+        await saveItems('JSON imported and saved.');
+      } catch (err) {
+        setStatus('Invalid JSON: ' + (err.message || 'unknown error'), true);
+      }
+    });
+
+    el('resetBtn').addEventListener('click', async () => {
+      if (!confirm('Reset the gallery to the default server list?')) return;
+      try {
+        const res = await fetch('/admin/gallery-media/reset', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: '{}' });
+        const json = await res.json();
+        if (!json.ok) throw new Error(json.error || 'reset_failed');
+        items = sanitize(json.items);
+        render();
+        setStatus('Gallery reset to defaults.');
+      } catch (err) {
+        setStatus('Could not reset: ' + (err.message || 'unknown error'), true);
+      }
+    });
+
+    loadItems().catch((err) => {
+      setStatus('Could not load gallery: ' + (err.message || 'unknown error'), true);
+    });
+  </script>
+</body>
+</html>
