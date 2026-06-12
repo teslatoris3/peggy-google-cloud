@@ -71,7 +71,7 @@ function FounderSection() {
             </motion.p>
 
             <motion.p className="mt-6 leading-8 text-muted-text" variants={fadeUpVariants} style={{ fontSize: 'var(--faq-answer-size)' }}>
-              Peggy’s “why” is simple yet powerful: to help each guest feel like the best version of themselves through expert care, artistry, and attention to detail. Her dedication to modern hairstyling techniques and personalized beauty experiences has made Peggy Beauty one of the most sought-after salons in Toronto.
+              Peggy's "why" is simple yet powerful: to help each guest feel like the best version of themselves through expert care, artistry, and attention to detail. Her dedication to modern hairstyling techniques and personalized beauty experiences has made Peggy Beauty one of the most sought-after salons in North York.
             </motion.p>
 
             {/* <motion.ul className="mt-8 grid gap-3 text-sm md:text-lg font-heading text-deep-black" variants={fadeUpVariants}>

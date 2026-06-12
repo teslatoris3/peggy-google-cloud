@@ -3,7 +3,7 @@ import { AnimatePresence, motion } from 'framer-motion'
 
 const faqs = [
   {
-    question: 'What makes Peggy Beauty the best salon in Vaughan?',
+    question: 'What makes Peggy Beauty the best salon in North York?',
     answer:
       'Peggy Beauty combines advanced colour and makeup artistry with a luxury guest experience focused on healthy, natural-looking results.',
   },
