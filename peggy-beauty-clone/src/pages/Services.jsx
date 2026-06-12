@@ -178,7 +178,7 @@ function Services() {
           </div>
         </motion.div>
 
-        <motion.div className="mt-10 page-grid">
+        <motion.div className="mt-10 grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {servicesData
             .slice()
             .sort((a, b) => a.order - b.order)
