@@ -32,16 +32,6 @@ function Gallery() {
     },
     {
       type: 'image',
-      src: '/images/gallery/photos/img_3272.png',
-      alt: 'Beautifully finished hair colour result',
-    },
-    {
-      type: 'image',
-      src: '/images/gallery/photos/img_3546.png',
-      alt: 'Luxury salon styling with a smooth finish',
-    },
-    {
-      type: 'image',
       src: '/images/gallery/photos/img_3750.png',
       alt: 'Client look with camera-ready styling',
     },
