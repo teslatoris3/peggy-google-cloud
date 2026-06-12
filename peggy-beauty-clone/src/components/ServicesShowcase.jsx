@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom'
 import { useState } from 'react'
 import { ArrowRight, Check } from 'lucide-react'
 import OptimizedImage from './OptimizedImage'
@@ -33,11 +32,95 @@ const serviceRows = [
   },
 ]
 
-const galleryItems = [
-  'Shinion and Updo',
-  'Threading',
-  'Waxing',
+const featuredGalleryItems = [
+  {
+    type: 'image',
+    title: 'Shinion and Updo',
+    images: [
+      {
+        src: '/images/services/shinion_high_quality.png',
+        alt: 'Shinion and updo salon result',
+      },
+    ],
+  },
+  {
+    type: 'slideshow',
+    title: 'Threading and waxing',
+    images: [
+      {
+        src: '/images/services/threading_waxing-2048.avif',
+        alt: 'Threading before and after salon result',
+      },
+      {
+        src: '/images/services/waxing-1600.webp',
+        alt: 'Waxing before and after salon result',
+      },
+    ],
+  },
+  {
+    type: 'image',
+    title: 'makeup',
+    images: [
+      {
+        src: '/images/makeup_new.jpeg',
+        alt: 'Makeup salon result',
+      },
+    ],
+  },
 ]
+
+function GalleryImageCard({ title, images, type }) {
+  const isSlideshow = type === 'slideshow' && images.length > 1
+
+  return (
+    <figure className="overflow-hidden rounded-lg bg-white">
+      <div className={isSlideshow ? 'gallery-crossfade' : 'block w-full'}>
+        {images.map((image, imageIndex) => (
+          <OptimizedImage
+            key={image.src}
+            src={image.src}
+            alt={image.alt}
+            className={
+              isSlideshow
+                ? `gallery-crossfade__image ${imageIndex === 0 ? 'gallery-crossfade__image--first' : 'gallery-crossfade__image--second'}`
+                : 'w-full h-[220px] sm:h-[300px] object-cover'
+            }
+          />
+        ))}
+      </div>
+      <figcaption className="p-3 text-sm">
+        <strong className="block">{title}</strong>
+      </figcaption>
+    </figure>
+  )
+}
+
+function HairColorMedia({ fallbackImage, alt }) {
+  const [videoFailed, setVideoFailed] = useState(false)
+
+  if (videoFailed) {
+    return (
+      <OptimizedImage
+        src={fallbackImage}
+        alt={alt}
+        className="rounded-lg object-cover w-full h-[260px] sm:h-[420px] md:h-[520px]"
+      />
+    )
+  }
+
+  return (
+    <video
+      src="/videos/IMG_7017 (1).MOV"
+      poster="/images/services/hair-color-poster.svg"
+      className="rounded-lg object-cover w-full h-[260px] sm:h-[420px] md:h-[520px]"
+      autoPlay
+      loop
+      muted
+      playsInline
+      onError={() => setVideoFailed(true)}
+    />
+  )
+}
 
 function ServicesShowcase() {
   const bookingUrl = getBookingUrl()
@@ -53,27 +136,10 @@ function ServicesShowcase() {
           <article key={row.eyebrow} className={`grid items-center gap-6 md:grid-cols-2 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
             <div className="order-2 md:order-1">
               {row.image && row.image.includes('hair-color') ? (
-                (() => {
-                  const [videoFailed, setVideoFailed] = useState(false)
-                  if (!videoFailed) {
-                    return (
-                      <video
-                        src="/videos/IMG_7017 (1).MOV"
-                        poster="/images/services/hair-color-poster.svg"
-                        className="rounded-lg object-cover w-full h-[260px] sm:h-[420px] md:h-[520px]"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        onError={() => setVideoFailed(true)}
-                      />
-                    )
-                  }
-
-                  return (
-                    <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : '/images/services/hair-color.png'} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-[260px] sm:h-[420px] md:h-[520px]" />
-                  )
-                })()
+                <HairColorMedia
+                  fallbackImage="/images/services/hair-color.png"
+                  alt={`${row.eyebrow} salon service`}
+                />
               ) : (
                 <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-[260px] sm:h-[420px] md:h-[520px]" />
               )}
@@ -95,20 +161,8 @@ function ServicesShowcase() {
       </div>
 
       <div className="mt-12 grid gap-4 sm:grid-cols-2 md:grid-cols-3">
-        {[
-          '/images/services/shinion_high_quality.png',
-          '/images/slider/featured1.png',
-          '/images/gallery/photos/img_3546.png',
-        ].map((src, idx) => (
-          <figure key={src} className="overflow-hidden rounded-lg bg-white">
-            <picture className="block w-full">
-              <OptimizedImage src={src} alt={`${galleryItems[idx]} before and after salon result`} className="w-full h-[220px] sm:h-[300px] object-cover" />
-            </picture>
-            <figcaption className="p-3 text-sm">
-        
-              <strong className="block">{galleryItems[idx]}</strong>
-            </figcaption>
-          </figure>
+        {featuredGalleryItems.map((item) => (
+          <GalleryImageCard key={item.title} {...item} />
         ))}
       </div>
     </section>

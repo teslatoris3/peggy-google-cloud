@@ -47,6 +47,63 @@ iframe {
   max-width: 100%;
 }
 
+.gallery-crossfade {
+  display: grid;
+  height: 220px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.gallery-crossfade picture,
+.gallery-crossfade__image {
+  grid-area: 1 / 1;
+  height: 100%;
+  width: 100%;
+}
+
+.gallery-crossfade__image {
+  animation: galleryCrossfade 6s ease-in-out infinite;
+  display: block;
+  object-fit: cover;
+}
+
+.gallery-crossfade__image--second {
+  animation-delay: -3s;
+}
+
+@keyframes galleryCrossfade {
+  0%,
+  42% {
+    opacity: 1;
+  }
+
+  50%,
+  92% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 640px) {
+  .gallery-crossfade {
+    height: 300px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gallery-crossfade__image {
+    animation: none;
+  }
+
+  .gallery-crossfade__image--second {
+    opacity: 0;
+  }
+}
+
 /* Custom scrollbar */
 * {
   scrollbar-width: thin;
