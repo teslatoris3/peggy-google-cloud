@@ -9,7 +9,7 @@ const hoursList = [
   { dayKey: 'Friday', label: 'FRIDAY', time: '10am-6pm' },
   { dayKey: 'Saturday', label: 'SATURDAY', time: '9am-4pm' },
   { dayKey: 'Sunday', label: 'SUNDAY', time: 'CLOSED' },
-  { dayKey: 'Monday', label: 'MONDAY', time: 'CLOSED' },
+  { dayKey: 'Monday', label: 'MONDAY', time: '6am-10pm' },
 ]
 
 
