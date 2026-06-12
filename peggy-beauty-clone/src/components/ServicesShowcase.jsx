@@ -8,7 +8,7 @@ const serviceRows = [
   {
     title: 'Hair Highlight & Colour Services',
     eyebrow: 'Hair Highlighting',
-    image: '/images/services/hair_highlight.jpg',
+    image: '/images/replace_hair_highlight.jpeg',
     description:
       'Expert hair highlighting and colour services to add dimension, brightness, and natural-looking depth. We specialise in balayage, foils, and personalised colour blending to suit your skin tone and lifestyle.',
     services: [
