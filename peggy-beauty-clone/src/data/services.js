@@ -29,7 +29,7 @@ const services = [
     id: 'colour',
     order: 3,
     title: 'Full Colour & Correction',
-    image: '/images/services/hair-color.png',
+    image: '/images/Hair-Colour.jpeg',
     description:
       'Precision colour, retouch, and correction services that restore balance while protecting hair integrity.',
     features: [
@@ -64,19 +64,7 @@ const services = [
       'Luxury treatment packages for healthier texture',
     ],
   },
-  {
-    id: 'bridal',
-    order: 6,
-    title: 'Bridal & Event Beauty',
-    image: '/images/services/makeup.jpg',
-    description:
-      'Effortless bridal styling, trial sessions, and polished event looks for your most meaningful moments.',
-    features: [
-      'Consultation and trial styling',
-      'On-site bridal hair support',
-      'Long-lasting finish for wedding day and events',
-    ],
-  },
+
   {
     id: 'threading',
     order: 7,
