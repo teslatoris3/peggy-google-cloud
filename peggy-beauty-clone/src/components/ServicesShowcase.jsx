@@ -51,7 +51,7 @@ function ServicesShowcase() {
       <div className="mt-8 grid gap-12">
         {serviceRows.map((row, index) => (
           <article key={row.eyebrow} className={`grid items-center gap-6 md:grid-cols-2 ${index % 2 === 1 ? 'md:grid-flow-col-dense' : ''}`}>
-            <div className="order-1 md:order-0">
+            <div className="order-2 md:order-1">
               {row.image && row.image.includes('hair-color') ? (
                 (() => {
                   const [videoFailed, setVideoFailed] = useState(false)
@@ -60,7 +60,7 @@ function ServicesShowcase() {
                       <video
                         src="/videos/IMG_7017 (1).MOV"
                         poster="/images/services/hair-color-poster.svg"
-                        className="rounded-lg object-cover w-full h-[420px] md:h-[520px]"
+                        className="rounded-lg object-cover w-full h-[260px] sm:h-[420px] md:h-[520px]"
                         autoPlay
                         loop
                         muted
@@ -71,15 +71,15 @@ function ServicesShowcase() {
                   }
 
                   return (
-                    <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : '/images/services/hair-color.png'} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover h-[420px] md:h-[520px]" />
+                    <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : '/images/services/hair-color.png'} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-[260px] sm:h-[420px] md:h-[520px]" />
                   )
                 })()
               ) : (
-                <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-[420px] md:h-[520px]" />
+                <OptimizedImage src={row.image === '/images/gallery/photos/featured_remote.jpg' ? '/images/gallery/photos/featured_remote_resized.jpg' : row.image} alt={`${row.eyebrow} salon service`} className="rounded-lg object-cover w-full h-[260px] sm:h-[420px] md:h-[520px]" />
               )}
             </div>
 
-            <div className="brand-card" style={{ padding: '1.5rem' }}>
+            <div className="brand-card order-1 md:order-2" style={{ padding: '1.5rem' }}>
               <p className="text-sm text-primary">{row.eyebrow}</p>
               <h3 className="mt-2 text-2xl font-semibold">{row.title}</h3>
               <p className="mt-3 text-sm text-muted-text">{row.description}</p>
@@ -101,7 +101,9 @@ function ServicesShowcase() {
           '/images/gallery/photos/img_3546.png',
         ].map((src, idx) => (
           <figure key={src} className="overflow-hidden rounded-lg bg-white">
-            <OptimizedImage src={src} alt={`${galleryItems[idx]} before and after salon result`} className="w-full object-cover" />
+            <picture className="block w-full">
+              <OptimizedImage src={src} alt={`${galleryItems[idx]} before and after salon result`} className="w-full h-[220px] sm:h-[300px] object-cover" />
+            </picture>
             <figcaption className="p-3 text-sm">
         
               <strong className="block">{galleryItems[idx]}</strong>

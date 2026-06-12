@@ -31,6 +31,8 @@
   background-color: var(--brand-bg);
   border: 1px solid var(--brand-border);
   border-radius: 0.5rem;
+  overflow: visible;
+  height: auto;
 }
 .brand-card--padded {
   padding: 1.5rem;

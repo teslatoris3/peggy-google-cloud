@@ -6,11 +6,11 @@ function ExtensionsFeature() {
     <section className="mt-12 bg-[#F7E6E2]">
       <div className="mx-auto max-w-7xl px-6 py-16">
         <article className="grid items-center gap-6 md:grid-cols-2">
-          <div className="order-1 md:order-0">
-            <OptimizedImage src="/images/balayage.png" alt="Balayage salon service" className="rounded-lg object-cover w-full h-[420px] md:h-[520px]" />
+          <div className="order-2 md:order-1">
+            <OptimizedImage src="/images/balayage.png" alt="Balayage salon service" className="rounded-lg object-cover w-full h-[260px] sm:h-[420px] md:h-[520px]" />
           </div>
 
-          <div className="brand-card" style={{ padding: '1.5rem' }}>
+          <div className="brand-card order-1 md:order-2" style={{ padding: '1.5rem' }}>
             <p className="text-sm text-primary">Balayage</p>
             <h3 className="mt-2 text-2xl font-semibold">Balayage & Dimension Colouring</h3>
             <p className="mt-3 text-sm text-muted-text">Custom freehand balayage and highlighting to create natural, sun-kissed dimension with minimal upkeep. We tailor placement, tone, and processing to protect hair health and deliver a seamless, lived-in finish.</p>
