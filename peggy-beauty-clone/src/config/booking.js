@@ -17,3 +17,8 @@ export function getServiceBookingUrl(serviceName) {
   url.searchParams.set('service', serviceName);
   return url.toString();
 }
+
+export function getAvailabilityUrl() {
+  const url = new URL(getBookingUrl());
+  return `${url.origin}/availability`;
+}
