@@ -12,6 +12,7 @@ const navigation = [
   { to: '/services', label: 'Services' },
   { to: '/pricing', label: 'Pricing' },
   { to: '/gallery', label: 'Gallery' },
+  { to: '/products', label: 'Products' },
   { to: '/contact', label: 'Contact' },
 ]
 
