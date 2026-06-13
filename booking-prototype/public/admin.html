@@ -74,6 +74,16 @@
       <div id="closedDates" class="closed-dates"></div>
     </section>
 
+    <section class="panel" aria-label="Opening hours" style="margin-top:0">
+      <h2 style="margin:0 0 8px;font-family:'Playfair Display',serif">Opening Hours</h2>
+      <div class="note" style="margin-bottom:12px">Set the salon's public opening hours for each day. These appear on the website's home page.</div>
+      <div id="hoursForm" style="display:grid;gap:10px"></div>
+      <div style="margin-top:12px">
+        <button onclick="saveOpeningHours()" style="background:var(--brand-accent);border:none;padding:10px 16px;border-radius:8px;color:#111;cursor:pointer;font-weight:600">Save Opening Hours</button>
+      </div>
+      <div id="hoursStatus" class="status-note"></div>
+    </section>
+
     <table aria-hidden="false">
       <thead>
         <tr><th>ID</th><th>Customer</th><th>Birthday</th><th>Service</th><th>Deposit</th><th>Status</th><th>Actions</th></tr>
@@ -240,6 +250,77 @@
         });
       } catch (e) { console.error('loadClients err', e && e.message); }
     }
+
+    // ── Opening hours ──────────────────────────────────────
+    let hoursData = [];
+
+    function renderHoursForm() {
+      const container = document.getElementById('hoursForm');
+      container.innerHTML = '';
+      hoursData.forEach((entry, i) => {
+        const row = document.createElement('div');
+        row.style.cssText = 'display:grid;grid-template-columns:110px 80px auto auto;gap:10px;align-items:center;background:#f7f3f0;border-radius:8px;padding:10px 12px';
+        row.innerHTML = `
+          <span style="font-weight:600">${entry.day}</span>
+          <label style="display:flex;gap:6px;align-items:center;font-size:13px">
+            <input type="checkbox" id="open_${i}" ${entry.open ? 'checked' : ''} onchange="toggleDay(${i})" />
+            Open
+          </label>
+          <label style="font-size:13px;display:flex;gap:6px;align-items:center">
+            Opens:
+            <input type="time" id="openTime_${i}" value="${entry.openTime}" ${!entry.open ? 'disabled' : ''} style="padding:6px;border:1px solid #e6dcca;border-radius:6px;font:inherit" />
+          </label>
+          <label style="font-size:13px;display:flex;gap:6px;align-items:center">
+            Closes:
+            <input type="time" id="closeTime_${i}" value="${entry.closeTime}" ${!entry.open ? 'disabled' : ''} style="padding:6px;border:1px solid #e6dcca;border-radius:6px;font:inherit" />
+          </label>`;
+        container.appendChild(row);
+      });
+    }
+
+    function toggleDay(i) {
+      const isOpen = document.getElementById('open_' + i).checked;
+      document.getElementById('openTime_' + i).disabled = !isOpen;
+      document.getElementById('closeTime_' + i).disabled = !isOpen;
+    }
+
+    async function loadOpeningHours() {
+      try {
+        const res = await fetch('/opening-hours');
+        hoursData = await res.json();
+        renderHoursForm();
+      } catch (e) {
+        document.getElementById('hoursStatus').textContent = 'Could not load opening hours.';
+      }
+    }
+
+    async function saveOpeningHours() {
+      const status = document.getElementById('hoursStatus');
+      const payload = hoursData.map((entry, i) => ({
+        day: entry.day,
+        open: document.getElementById('open_' + i).checked,
+        openTime: document.getElementById('openTime_' + i).value || entry.openTime,
+        closeTime: document.getElementById('closeTime_' + i).value || entry.closeTime,
+      }));
+      try {
+        const res = await fetch('/admin/opening-hours', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+        const json = await res.json();
+        if (!json.ok) throw new Error(json.error || 'save_failed');
+        hoursData = json.hours;
+        renderHoursForm();
+        status.textContent = 'Opening hours saved!';
+        setTimeout(() => { status.textContent = ''; }, 3000);
+      } catch (e) {
+        status.textContent = 'Error saving: ' + (e.message || 'unknown');
+      }
+    }
+
+    loadOpeningHours();
+    // ──────────────────────────────────────────────────────
 
     loadClients();
     setInterval(loadClients, 60 * 60 * 1000);

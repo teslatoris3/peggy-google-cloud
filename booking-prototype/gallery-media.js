@@ -21,6 +21,7 @@ const DEFAULT_GALLERY_MEDIA = [
   { type: 'image', src: '/images/gallery/photos/img_4555.png', alt: 'Finished beauty look with glossy texture' },
   { type: 'video', src: '/images/gallery/videos/IMG_5684 (1).MOV', alt: 'Behind the scenes salon video' },
   { type: 'video', src: '/images/gallery/videos/IMG_7097 (1).MOV', alt: 'Salon video featuring a fresh transformation' },
+  { type: 'video', src: '/images/gallery/videos/IMG_7097 (1)2.MOV', alt: 'Salon video — latest transformation' },
 ];
 
 function normalizeItems(items) {

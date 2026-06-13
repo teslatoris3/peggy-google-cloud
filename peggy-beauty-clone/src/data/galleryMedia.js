@@ -76,6 +76,11 @@ export const DEFAULT_GALLERY_MEDIA = [
     src: '/images/gallery/videos/IMG_7097 (1).MOV',
     alt: 'Salon video featuring a fresh transformation',
   },
+  {
+    type: 'video',
+    src: '/images/gallery/videos/IMG_7097 (1)2.MOV',
+    alt: 'Salon video — latest transformation',
+  },
 ]
 
 export function normalizeGalleryMedia(items) {

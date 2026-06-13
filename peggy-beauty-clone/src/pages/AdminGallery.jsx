@@ -8,6 +8,7 @@ import {
   resetGalleryMedia,
   saveGalleryMedia,
 } from '../data/galleryMedia'
+import { getGalleryMediaUrl } from '../config/booking'
 
 const emptyDraft = {
   type: 'image',
@@ -66,11 +67,27 @@ function AdminGallery() {
     })
   }
 
-  function handleSave() {
+  async function handleSave() {
     saveGalleryMedia(previewItems)
     setItems(loadGalleryMedia())
     window.dispatchEvent(new Event('gallery-media-updated'))
-    window.alert('Gallery media saved in this browser.')
+
+    // Also push to VPS server so uploaded changes appear on the live site
+    try {
+      const res = await fetch(getGalleryMediaUrl().replace('/gallery-media.json', '/admin/gallery-media'), {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(previewItems),
+      })
+      const json = await res.json()
+      if (json.ok) {
+        window.alert('Gallery saved to browser and live site.')
+      } else {
+        window.alert('Saved to browser. Could not reach live server — changes will sync when connection is restored.')
+      }
+    } catch {
+      window.alert('Saved to browser. Live server unreachable — will sync automatically on next load.')
+    }
   }
 
   function handleReset() {

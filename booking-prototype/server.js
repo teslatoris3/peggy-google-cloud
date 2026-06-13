@@ -11,6 +11,7 @@ const multer = require('multer');
 // Persistence
 const db = require('./db');
 const galleryMedia = require('./gallery-media');
+const openingHours = require('./opening-hours');
 
 const crypto = require('crypto');
 const fs = require('fs');
@@ -437,6 +438,28 @@ app.post('/admin/gallery-media', basicAuth, express.json({ limit: '2mb' }), (req
 	} catch (e) {
 		console.error('admin gallery media save err', e && e.message);
 		return res.status(500).json({ ok: false, error: e && e.message });
+	}
+});
+
+// Opening hours — public read
+app.get('/opening-hours', (req, res) => {
+	try {
+		res.json(openingHours.getHours());
+	} catch (e) {
+		res.status(500).json({ ok: false, error: e && e.message });
+	}
+});
+
+// Opening hours — admin update
+app.post('/admin/opening-hours', basicAuth, express.json({ limit: '64kb' }), (req, res) => {
+	try {
+		const data = Array.isArray(req.body) ? req.body : req.body && Array.isArray(req.body.hours) ? req.body.hours : null;
+		if (!data) return res.status(400).json({ ok: false, error: 'invalid_payload' });
+		const hours = openingHours.setHours(data);
+		appendLog('bookings.log', `ADMIN_OPENING_HOURS_SAVE count=${hours.length}`);
+		return res.json({ ok: true, hours });
+	} catch (e) {
+		res.status(500).json({ ok: false, error: e && e.message });
 	}
 });
 

@@ -54,7 +54,7 @@ function ProductCard({ product, index }) {
         </div>
 
         <p className="text-xs text-muted-text">
-          Available in-salon only &middot; Tax not included
+          Available in-salon only &middot; <strong className="text-deep-black">NO TAX</strong>
         </p>
       </div>
     </motion.div>
@@ -80,7 +80,7 @@ function Products() {
           <p className="mt-3 text-muted-text">
             Professional beauty products available exclusively in-salon.
             <br />
-            Prices shown are discounted salon prices — no tax applied at checkout.
+            Prices shown are discounted salon prices — <strong className="text-deep-black">NO TAX</strong> applied at checkout.
           </p>
         </div>
 

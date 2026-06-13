@@ -1,6 +1,20 @@
 import { useEffect, useMemo, useState } from 'react'
 import SEO from '../components/SEO'
-import { loadGalleryMedia, DEFAULT_GALLERY_MEDIA } from '../data/galleryMedia'
+import { DEFAULT_GALLERY_MEDIA, loadGalleryMedia } from '../data/galleryMedia'
+import { getGalleryMediaUrl } from '../config/booking'
+
+async function fetchWithRetry(url, retries = 3, delayMs = 1500) {
+  for (let i = 0; i <= retries; i++) {
+    try {
+      const res = await fetch(url, { cache: 'no-store' })
+      if (!res.ok) throw new Error(`HTTP ${res.status}`)
+      return await res.json()
+    } catch (err) {
+      if (i === retries) throw err
+      await new Promise((r) => setTimeout(r, delayMs * (i + 1)))
+    }
+  }
+}
 
 function Gallery() {
   const meta = {
@@ -12,12 +26,34 @@ function Gallery() {
   const [media, setMedia] = useState(DEFAULT_GALLERY_MEDIA)
 
   useEffect(() => {
-    setMedia(loadGalleryMedia())
+    let ignore = false
 
-    const handleStorage = () => setMedia(loadGalleryMedia())
+    async function loadMedia() {
+      // 1. Try to fetch from the VPS server (source of truth for admin-uploaded content)
+      try {
+        const serverMedia = await fetchWithRetry(getGalleryMediaUrl())
+        if (!ignore && Array.isArray(serverMedia) && serverMedia.length) {
+          setMedia(serverMedia)
+          return
+        }
+      } catch {
+        // server unreachable — fall through to localStorage
+      }
+
+      // 2. Fall back to localStorage (admin panel edits made in-browser)
+      if (!ignore) {
+        const local = loadGalleryMedia()
+        setMedia(local)
+      }
+    }
+
+    loadMedia()
+
+    const handleStorage = () => loadMedia()
     window.addEventListener('storage', handleStorage)
     window.addEventListener('gallery-media-updated', handleStorage)
     return () => {
+      ignore = true
       window.removeEventListener('storage', handleStorage)
       window.removeEventListener('gallery-media-updated', handleStorage)
     }
@@ -57,8 +93,8 @@ function Gallery() {
                 <div className="relative h-48 w-full bg-black md:h-full">
                   {(() => {
                     const base = m.resolvedSrc.replace(/\.(mov|mp4|webm)$/i, '')
-                    const webm = `${base}-opt.webm`
                     const mp4 = `${base}-opt.mp4`
+                    const webm = `${base}-opt.webm`
                     return (
                       <video
                         className="h-full w-full object-cover"

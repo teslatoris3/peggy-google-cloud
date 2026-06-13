@@ -8,8 +8,8 @@ const products = [
   {
     id: 1,
     name: 'Product 1',
-    image: '/images/products/40-orig-40-inplace.png',
-    origPrice: 40,
+    image: '/images/products/49-orig-40-inplace.png',
+    origPrice: 49,
     salonPrice: 40,
   },
   {

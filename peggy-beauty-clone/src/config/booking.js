@@ -21,3 +21,11 @@ export function getServiceBookingUrl(serviceName) {
 export function getAvailabilityUrl() {
   return `${getBookingUrl()}/availability`;
 }
+
+export function getOpeningHoursUrl() {
+  return `${getBookingUrl()}/opening-hours`;
+}
+
+export function getGalleryMediaUrl() {
+  return `${getBookingUrl()}/gallery-media.json`;
+}
